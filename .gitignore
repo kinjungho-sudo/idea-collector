@@ -2,7 +2,3 @@
 .venv/
 __pycache__/
 *.pyc
-ideas/source/*.json
-ideas/reports/*.md
-!ideas/source/.gitkeep
-!ideas/reports/.gitkeep

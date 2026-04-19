@@ -87,12 +87,12 @@ def _claude_commentary(top: list[dict], model: str) -> str:
     return "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
 
 
-def _send_telegram(text: str) -> None:
+def _send_telegram(text: str) -> bool:
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
         print("[weekly] 텔레그램 env 없음, 전송 스킵", file=sys.stderr)
-        return
+        return False
     payload = urllib.parse.urlencode(
         {"chat_id": chat_id, "text": text[:4000], "disable_web_page_preview": "true"}
     ).encode("utf-8")
@@ -103,6 +103,7 @@ def _send_telegram(text: str) -> None:
     )
     with urllib.request.urlopen(req, timeout=20) as resp:
         resp.read()
+    return True
 
 
 def render(end: str, top: list[dict], commentary: str) -> str:
@@ -160,8 +161,8 @@ def main() -> int:
     print(f"[weekly] → {out_path}")
 
     try:
-        _send_telegram(_render_telegram(args.end_date, top))
-        print("[weekly] 텔레그램 전송 완료")
+        if _send_telegram(_render_telegram(args.end_date, top)):
+            print("[weekly] 텔레그램 전송 완료")
     except Exception as exc:  # noqa: BLE001
         print(f"[weekly] 텔레그램 실패: {exc}", file=sys.stderr)
 
