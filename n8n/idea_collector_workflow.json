@@ -1,0 +1,101 @@
+{
+  "name": "idea-collector-daily",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "cronExpression", "expression": "0 8 * * *" }
+          ]
+        }
+      },
+      "id": "schedule-daily",
+      "name": "매일 08:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "command": "cd /opt/comindworks-ai && python .claude/skills/idea-collector/scripts/crawl_sources.py --limit 15"
+      },
+      "id": "crawl",
+      "name": "RSS 수집 + raw 저장",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "command": "cd /opt/comindworks-ai && python .claude/skills/idea-evaluator/scripts/evaluate_all_raw.py"
+      },
+      "id": "evaluate",
+      "name": "Claude 5기준 평가",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [720, 300]
+    },
+    {
+      "parameters": {
+        "command": "cd /opt/comindworks-ai && python .claude/skills/idea-evaluator/scripts/notify_new_candidates.py --since 120"
+      },
+      "id": "notify",
+      "name": "텔레그램 신규 후보 알림",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "continueOnFail": true,
+      "position": [980, 220]
+    },
+    {
+      "parameters": {
+        "command": "cd /opt/comindworks-ai && bash .claude/skills/git-sync/scripts/git_commit_push.sh"
+      },
+      "id": "git-sync",
+      "name": "Git 커밋 + 푸시",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "continueOnFail": true,
+      "position": [980, 380]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "cronExpression", "expression": "0 9 * * 1" }
+          ]
+        }
+      },
+      "id": "schedule-weekly",
+      "name": "매주 월요일 09:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [200, 600]
+    },
+    {
+      "parameters": {
+        "command": "cd /opt/comindworks-ai && python .claude/skills/idea-reporter/scripts/weekly_report.py"
+      },
+      "id": "weekly",
+      "name": "주간 Top 3 리포트",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [460, 600]
+    }
+  ],
+  "connections": {
+    "매일 08:00": { "main": [[{ "node": "RSS 수집 + raw 저장", "type": "main", "index": 0 }]] },
+    "RSS 수집 + raw 저장": { "main": [[{ "node": "Claude 5기준 평가", "type": "main", "index": 0 }]] },
+    "Claude 5기준 평가": {
+      "main": [
+        [
+          { "node": "텔레그램 신규 후보 알림", "type": "main", "index": 0 },
+          { "node": "Git 커밋 + 푸시", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "매주 월요일 09:00": { "main": [[{ "node": "주간 Top 3 리포트", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1", "timezone": "Asia/Seoul" },
+  "active": false,
+  "version": 1
+}

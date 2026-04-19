@@ -1,86 +1,109 @@
-# 창업 아이디어 스크리닝 에이전트 — 오케스트레이터
+# 창업 아이디어 수집 자동화 에이전트 — 오케스트레이터
 
-매일 해외 + 국내 창업 신호를 자동 수집하고, 오너 맥락에 맞는 아이디어만 골라 점수 매겨 리포트로 받는 시스템.
+외부에서 아이디어를 자동 수집하고, 정호의 검증 기준 5가지로 필터링해서 MVP 후보 리스트를 만드는 에이전트.
 
-## 오너 프로필 (평가 기준 맥락)
-- 87년생 남성
-- 네트워크 보안 13년 경력
-- AI 에이전트 기반 업무 자동화 1인 창업 준비 중
-- 위 프로필은 Claude 스크리닝 프롬프트의 시스템 컨텍스트에 고정 주입
+## 오너 프로필 / 목표 맥락
+- 정호 (코마인드웍스)
+- 목표: 월 MRR 300만원, 1~2달에 MVP 1개씩 출시
+- 관심 도메인: AI 에이전트 / 업무 자동화 / 1인창업 / 교육 / 콘텐츠
+- 파이프라인 정의: Raw 수집 → Claude 평가 → 후보 DB → 텔레그램 알림
 
-## 평가 기준 (100점 만점)
+## 검증 기준 (Must 조건 — 5가지 전부 통과해야 후보 등록)
 
-| 항목 | 배점 | 평가 기준 |
+| # | 기준 | 조건 | 점수 범위 |
+|---|------|------|----------|
+| 1 | 기획 속도 | 1주일 내 기획/설계 완성 가능한가? | 0~10 |
+| 2 | MVP 속도 | 4주 내 MVP 완성 가능한가? | 0~10 |
+| 3 | 고객 확보 | 5주 내 테스트 고객 확보 가능한가? | 0~10 |
+| 4 | 수익 가능성 | 2달 내 MRR 30만원 달성 가능한가? | 0~10 |
+| 5 | 반복 수익 | 구독/재계약/반복 구매 구조를 만들 수 있는가? | 0~10 |
+
+**통과 기준**: 5개 항목 모두 6점 이상 → `candidates/` 등록. 한 항목이라도 5점 이하면 Raw만 보관 + 탈락 사유 기록.
+
+## 가치관 필터 (즉시 탈락)
+- 단순 노동 대체 (사람을 해고하기 위한 자동화)
+- 사기/기만적 요소 포함 비즈니스
+- 관심 도메인 밖 (에너지 / 제조 / 금융 / 정치 등)
+
+## 데이터 소스
+
+### 국내
+| 소스 | 유형 | 수집 방식 |
 |------|------|----------|
-| 문제 선명도 | 25 | 해결하는 문제가 구체적이고 반복적으로 발생하는가? |
-| 타겟 명확도 | 25 | 돈을 낼 고객이 누구인지 즉시 특정 가능한가? |
-| 사업 기회 크기 | 20 | 시장 규모와 성장성이 충분한가? 해외 검증 사례가 있는가? |
-| 초기 비용 / 진입 난이도 | 20 | 1인 창업자가 3개월 내 MVP 가능한가? |
-| 국내 시장 실현 가능성 | 10 | 한국 고객이 지금 당장 돈을 낼 이유가 있는가? |
+| 디시인사이드 창업갤 | 커뮤니티 | 크롤링 |
+| 에펨코리아 자유게시판 | 커뮤니티 | 크롤링 |
+| 네이버 블로그 (1인창업 태그) | 블로그 | RSS |
+| 유튜브 (AI솔로프래너, 1인창업) | 영상 | 자막 추출 (v1.1) |
 
-**AI 활용도 / 보안 도메인 연계는 참고 정보로만 표시 (배점 제외).**
-
-- 총점 70+ → 심층 분석 대상 (TOP 10)
-- 총점 50~69 → 관심 목록 보관
-- 총점 49 이하 → 자동 필터링
-
-## 데이터 소스 (하루 수집량: 소스당 최대 20개, 총 100개 이하)
-- Reddit (r/entrepreneur, r/SaaS, r/smallbusiness)
-- Hacker News (Show HN, Ask HN)
-- ProductHunt (오늘의 런칭 제품)
-- X(트위터) 트렌딩 키워드 (창업/자동화/AI 관련, v1.1)
-- Google Trends (국내 + 글로벌)
+### 해외
+| 소스 | 유형 | 수집 방식 |
+|------|------|----------|
+| Reddit r/SideProject | 커뮤니티 | RSS |
+| Reddit r/Entrepreneur | 커뮤니티 | RSS |
+| Product Hunt | 제품 런칭 | RSS |
+| Indie Hackers | 커뮤니티 | RSS |
 
 ## 파이프라인
 
 ```
-[수집 소스] → [n8n 스케줄 07:00] → [소스별 수집]
-  → [1차 필터링 (n8n, 무료)] → [/ideas/source/*.json 저장]
-  → [Claude 스크리닝 (Sonnet, 비용 발생)] → [리포트 생성]
-  → [/ideas/reports/*.md 저장] → [Notion DB] → [텔레그램 TOP 3]
+[n8n 스케줄 08:00] → [소스별 수집 + 중복 URL 제거 + 본문 추출]
+  → [ideas/raw/YYYY-MM-DD_<slug>.md] 저장
+  → [Claude 평가 (5기준 + 가치관 필터)]
+    ├─ 통과 → [ideas/candidates/<slug>.md] 저장
+    └─ 탈락 → Raw만 유지 + 탈락 사유 기록
+  → [ideas/index.md 업데이트] → [ideas/log.md 이력 기록]
+  → [Git commit + push] → [텔레그램 "✅ 새 아이디어 후보: ..."]
 ```
 
-주간 집계는 매주 일요일 09:00에 7일치 리포트를 Claude에 재분석, `weekly_summary_*.md` 저장.
+주간 리뷰: 매주 월요일 09:00, 지난 7일치 후보 분석 → Top 3 추천 + 텔레그램 발송.
 
 ## 스킬 구성
-- `.claude/skills/idea-collector/` — 소스별 수집 (Python 스크립트)
-- `.claude/skills/idea-screener/` — Claude API 스크리닝 + 평가 기준 프롬프트
-- `.claude/skills/report-generator/` — Markdown 리포트 (일일 + 주간)
-- `.claude/skills/notion-sync/` — Notion DB 저장
-- `.claude/skills/alert-sender/` — 텔레그램 TOP 3 알림
+- `.claude/skills/idea-collector/` — 소스별 수집 + 본문 추출 + raw 저장
+- `.claude/skills/idea-evaluator/` — Claude 5기준 평가 + 가치관 필터
+- `.claude/skills/idea-reporter/` — 주간 Top 3 리포트
+- `.claude/skills/git-sync/` — Git 커밋/푸시
 
 ## 데이터 위치
-- Raw: `ideas/source/YYYY-MM-DD_raw.json`
-- Daily: `ideas/reports/idea_report_YYYY-MM-DD.md`
-- Weekly: `ideas/reports/weekly_summary_YYYY-WW.md`
-- Notion DB: https://www.notion.so/bf511b94aec84d25a4a6283f491d1a6a
+- Raw: `ideas/raw/YYYY-MM-DD_<slug>.md`
+- 후보: `ideas/candidates/<slug>.md`
+- 목록: `ideas/index.md` (상태: 실험중/검토중/후보/탈락)
+- 이력: `ideas/log.md`
 
 ## 환경 변수 (.env)
 ```
 ANTHROPIC_API_KEY=
-REDDIT_CLIENT_ID=
-REDDIT_CLIENT_SECRET=
-REDDIT_USER_AGENT=idea-collector/1.0
-PRODUCTHUNT_TOKEN=          # optional; RSS로도 동작
-NOTION_TOKEN=
-NOTION_DATABASE_ID=bf511b94aec84d25a4a6283f491d1a6a
+EVAL_MODEL=claude-sonnet-4-6
 TELEGRAM_BOT_TOKEN=
 TELEGRAM_CHAT_ID=
+REDDIT_USER_AGENT=idea-collector/1.0
+GIT_AUTHOR_NAME=idea-bot
+[email protected]
 ```
 
 ## 실행 방법 (로컬)
 ```bash
 # 전체 파이프라인
-python -m scripts.pipeline                  # collect → screen → report → sync → alert
+python -m scripts.pipeline
+
+# 수동 아이디어 평가
+python .claude/skills/idea-evaluator/scripts/evaluate_idea.py --text "아이디어 내용"
+python .claude/skills/idea-evaluator/scripts/evaluate_idea.py --file ideas/raw/2026-04-19_xyz.md
 
 # 단계별
-python .claude/skills/idea-collector/scripts/reddit_scraper.py
-python .claude/skills/idea-collector/scripts/hn_fetcher.py
-python .claude/skills/idea-collector/scripts/producthunt_rss.py
-python .claude/skills/idea-screener/scripts/screen_ideas.py --date 2026-04-18
-python .claude/skills/report-generator/scripts/daily_report.py --date 2026-04-18
-python .claude/skills/notion-sync/scripts/save_to_notion.py --date 2026-04-18
-python .claude/skills/alert-sender/scripts/send_telegram.py --date 2026-04-18
+python .claude/skills/idea-collector/scripts/crawl_sources.py
+python .claude/skills/idea-evaluator/scripts/evaluate_all_raw.py
+python .claude/skills/idea-reporter/scripts/weekly_report.py
+bash .claude/skills/git-sync/scripts/git_commit_push.sh
 ```
 
-n8n 워크플로우는 `n8n/idea_screener_workflow.json` 참고.
+n8n 워크플로우: `n8n/idea_collector_workflow.json`.
+
+## 비용
+아이디어 1건 평가 ~$0.003, 하루 50건 기준 월 ~$4.5.
+
+## 로드맵
+- v1.0: RSS 수집 + Claude 평가 + 텔레그램 알림 (현재)
+- v1.1: 유튜브 자막 수집
+- v1.2: 주간 Top 3 자동 리포트
+- v2.0: 후보 → MVP 설계서 자동 생성
+- v3.0: 실험 결과 피드백 루프 (수익 데이터 연동)

@@ -1,35 +1,43 @@
 # idea-collector
 
-창업 아이디어 스크리닝 에이전트 v1.0 — 매일 07:00 해외 + 국내 창업 신호를 자동 수집하고, 오너 맥락 기반 5항목 채점으로 TOP 10을 리포트로 받는 시스템.
+창업 아이디어 수집 자동화 에이전트 v1.0 — 외부 소스에서 매일 아이디어를 수집하고, 정호의 5가지 검증 기준으로 필터링해 MVP 후보 DB를 축적하는 시스템.
 
 ## 구성
-- `CLAUDE.md` — 오케스트레이터 (평가 기준, 파이프라인, 환경)
-- `.claude/skills/` — 수집·스크리닝·리포트·Notion·알림 스킬
-- `.claude/agents/` — 작업별 에이전트 정의
-- `scripts/pipeline.py` — 엔드투엔드 드라이버
-- `n8n/idea_screener_workflow.json` — n8n 일일/주간 워크플로우
-- `ideas/source/` — 소스별 원시 + 병합 + 스코어 JSON
-- `ideas/reports/` — 일일/주간 Markdown 리포트
+- `CLAUDE.md` — 오케스트레이터 (5기준 + 가치관 필터 고정)
+- `.claude/skills/idea-collector/` — RSS/크롤링 수집
+- `.claude/skills/idea-evaluator/` — Claude 평가 + 통과/탈락 분류
+- `.claude/skills/idea-reporter/` — 주간 Top 3 리포트
+- `.claude/skills/git-sync/` — 자동 커밋/푸시
+- `scripts/pipeline.py` — E2E 드라이버
+- `n8n/idea_collector_workflow.json` — n8n 일일 08:00 / 주간 월요일 09:00
+- `ideas/{raw,candidates,reports}` + `ideas/index.md` + `ideas/log.md`
 
 ## 빠른 시작
 ```bash
-cp .env.example .env   # 키 입력
+cp .env.example .env    # 키 입력
 pip install -r requirements.txt
-python -m scripts.pipeline            # 전체 실행
-# 또는 단계별:
-python .claude/skills/idea-collector/scripts/collect_all.py
-python .claude/skills/idea-screener/scripts/screen_ideas.py
-python .claude/skills/report-generator/scripts/daily_report.py
-python .claude/skills/notion-sync/scripts/save_to_notion.py
-python .claude/skills/alert-sender/scripts/send_telegram.py
+
+# 전체 파이프라인
+python -m scripts.pipeline
+
+# 수동 아이디어 1건
+python .claude/skills/idea-evaluator/scripts/evaluate_idea.py --text "AI 자동화 아이디어 내용..."
+
+# 단계별
+python .claude/skills/idea-collector/scripts/crawl_sources.py --limit 15
+python .claude/skills/idea-evaluator/scripts/evaluate_all_raw.py
+python .claude/skills/idea-evaluator/scripts/notify_new_candidates.py --since 180
+bash .claude/skills/git-sync/scripts/git_commit_push.sh
+
+# 주간
+python .claude/skills/idea-reporter/scripts/weekly_report.py
 ```
 
-## 평가 기준
-상세는 `CLAUDE.md` 참고. 100점 만점: 문제 선명도(25) / 타겟 명확도(25) / 사업 기회(20) / 초기 비용(20) / 국내 가능성(10). AI 활용도·보안 연계는 참고 정보(배점 제외).
+## 검증 기준 (5개 전부 6점 이상 + 가치관 필터 통과)
+- 기획 속도 / MVP 속도 / 고객 확보 / 수익 가능성 / 반복 수익 (각 0~10)
+- 가치관 필터: 단순 노동 대체, 사기, 관심 도메인 밖 → 즉시 탈락
 
-- 70+ → 심층 분석 TOP 10
-- 50~69 → 관심 목록
-- 49 이하 → 자동 필터링
+자세한 내용은 `CLAUDE.md`.
 
 ## 비용
-Claude API는 스크리닝 단계에서만 호출. 일일 ~$0.01, 월 ~$0.30 예상.
+아이디어 1건 평가 ~$0.003, 하루 50건 기준 월 ~$4.5.

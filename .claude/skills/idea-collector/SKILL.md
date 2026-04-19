@@ -1,50 +1,57 @@
 ---
 name: idea-collector
-description: Reddit, Hacker News, ProductHunt, Google Trends에서 창업 신호를 일 단위로 수집해 ideas/source/*.json으로 저장
+description: Reddit(r/SideProject, r/Entrepreneur), Product Hunt, Indie Hackers RSS와 국내 커뮤니티 크롤링으로 창업 아이디어 원천을 수집해 ideas/raw/*.md로 저장
 ---
 
 # idea-collector
 
 ## 역할
-- 소스별 스크립트를 병렬 실행해 원시 아이디어 리스트를 확보
-- 1차 필터링: 중복 제거, 키워드 매칭 (창업/자동화/AI/SaaS/문제/불편), 최소 반응 임계치
-- 결과를 `ideas/source/YYYY-MM-DD_raw.json`에 저장
+외부 소스에서 창업 아이디어 원천을 자동 수집해 `ideas/raw/YYYY-MM-DD_<slug>.md`로 저장.
+중복 URL은 `ideas/index.md`와 비교해 스킵. 본문은 텍스트 추출해서 저장.
 
-## 소스별 상한
-| 소스 | 상한 | 엔드포인트 |
-|------|------|-----------|
-| Reddit | 20 | PRAW (r/entrepreneur, r/SaaS, r/smallbusiness) |
-| Hacker News | 20 | Algolia API `/search` (Show HN, Ask HN, 48h) |
-| ProductHunt | 20 | RSS https://www.producthunt.com/feed |
-| Google Trends | 20 | pytrends (daily trending KR + US) |
+## 소스 (v1.0)
 
-총합 100개 이하로 제한.
+### RSS 기반 (우선 구현)
+| 소스 | URL |
+|------|-----|
+| Reddit r/SideProject | https://www.reddit.com/r/SideProject/.rss |
+| Reddit r/Entrepreneur | https://www.reddit.com/r/Entrepreneur/.rss |
+| Product Hunt | https://www.producthunt.com/feed |
+| Indie Hackers | https://www.indiehackers.com/feed.xml |
 
-## 출력 스키마 (ideas/source/*.json)
-```json
-[
-  {
-    "id": "reddit_abc123",
-    "source": "reddit",
-    "title": "...",
-    "url": "...",
-    "text": "...",
-    "author": "...",
-    "score": 42,
-    "comments": 15,
-    "created_at": "2026-04-18T06:21:00Z",
-    "subreddit_or_tag": "r/SaaS"
-  }
-]
+### 크롤링 기반 (국내)
+| 소스 | URL | 주의사항 |
+|------|-----|---------|
+| 디시인사이드 창업갤 | https://gall.dcinside.com/board/lists/?id=entrepreneur | robots.txt + 요청 간격 ≥3s |
+| 에펨코리아 자유게시판 | https://www.fmkorea.com/index.php?mid=free | 동일 |
+| 네이버 블로그 (1인창업 태그) | https://rss.blog.naver.com/<blogId>.xml | RSS 가능 |
+
+## 출력 스키마
+
+Raw 파일(`ideas/raw/YYYY-MM-DD_<slug>.md`) 구조:
+```markdown
+---
+id: <source>_<hash>
+source: reddit|producthunt|indiehackers|dc|fmkorea|naverblog|youtube|manual
+url: https://...
+title: "..."
+author: "..."
+collected_at: 2026-04-19T08:00:00Z
+status: raw
+---
+
+<본문 텍스트>
 ```
 
-## 실패 처리
-- 한 소스가 실패하면 해당 소스만 스킵하고 로그 (`ideas/source/collect.log`)
-- 모든 소스 실패 시 종료 코드 1 반환 (n8n이 에스컬레이션)
-
 ## 스크립트
-- `scripts/reddit_scraper.py`
-- `scripts/hn_fetcher.py`
-- `scripts/producthunt_rss.py`
-- `scripts/trends_fetcher.py`
-- `scripts/collect_all.py` — 4개 병렬 호출 + 병합 + 1차 필터링
+- `scripts/crawl_sources.py` — 소스별 병렬 수집 + 본문 추출 + raw 저장 + 중복 제거
+- `scripts/extract_text.py` — HTML → 순수 텍스트 헬퍼 (크롤링 소스 공용)
+
+## 실패 처리
+- 크롤링 실패: 재시도 2회 → 해당 소스만 스킵 + `ideas/log.md` 기록
+- 본문 추출 실패: 제목만 저장
+- 모든 소스 실패 시 종료 코드 1
+
+## 환경 변수
+- `REDDIT_USER_AGENT` — 필수
+- (옵션) 유튜브 자막은 v1.1 추가 예정
