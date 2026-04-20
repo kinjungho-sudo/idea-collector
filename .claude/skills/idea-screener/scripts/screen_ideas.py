@@ -100,9 +100,13 @@ def main() -> int:
         print("[screen] raw 비어있음", file=sys.stderr)
         return 1
 
-    system, messages = _build_messages(raw)
-    data = _call_claude(system, messages, args.model)
-    results = data.get("results", [])
+    batch_size = 20
+    results = []
+    for i in range(0, len(raw), batch_size):
+        batch = raw[i:i + batch_size]
+        system, messages = _build_messages(batch)
+        data = _call_claude(system, messages, args.model)
+        results.extend(data.get("results", []))
     top, watch = _partition(results)
 
     url_by_id = {it["id"]: it.get("url") for it in raw}

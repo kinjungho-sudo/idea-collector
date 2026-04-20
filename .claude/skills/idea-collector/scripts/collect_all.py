@@ -17,9 +17,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from hn_fetcher import fetch_all as fetch_hn
+from indiehackers_rss import fetch_all as fetch_ih
 from producthunt_rss import fetch_all as fetch_ph
 from reddit_scraper import fetch_all as fetch_reddit
-from trends_fetcher import fetch_all as fetch_trends
 
 KEYWORDS = re.compile(
     r"창업|자동화|불편|문제|사업|부업|SaaS|saas|"
@@ -66,7 +66,7 @@ def main() -> int:
         "reddit": fetch_reddit,
         "hn": fetch_hn,
         "producthunt": fetch_ph,
-        "trends": fetch_trends,
+        "indiehackers": fetch_ih,
     }
     gathered: list[dict] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
