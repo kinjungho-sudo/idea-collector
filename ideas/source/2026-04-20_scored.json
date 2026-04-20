@@ -1,0 +1,676 @@
+{
+  "date": "2026-04-20",
+  "generated_at": "2026-04-20T22:44:50.827839+00:00",
+  "summary": {
+    "total_collected": 30,
+    "top_count": 1,
+    "watchlist_count": 5,
+    "rejected_count": 24
+  },
+  "top": [
+    {
+      "uid": "91d929668406",
+      "title": "Show HN: MCPfinder – An MCP server that finds and installs other MCP servers",
+      "source": "hackernews/show_hn",
+      "source_url": "https://mcpfinder.dev/",
+      "date": "2026-04-20",
+      "total": 76,
+      "grade": "심층분석",
+      "scores": {
+        "problem_clarity": 21,
+        "target_clarity": 18,
+        "market_opportunity": 14,
+        "entry_cost": 18,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "MCP 에코시스템 내 실제 존재하는 DX 페인(수동 설정 반복)을 정확히 짚었으나, 타겟이 'AI 에이전트 개발자' 전반으로 다소 넓고 국내 MCP 채택률이 아직 낮아 한국 시장 즉시 수익화는 제한적",
+      "deep": {
+        "mvp": "MCPfinder 서버를 npx 한 줄로 설치 가능한 형태로 배포하고, Claude Desktop / Cursor 등 주요 클라이언트와의 연동 가이드를 README에 포함한 오픈소스 패키지로 4주 내 공개 가능.",
+        "first_revenue_path": "Pro 플랜(월 $9~19)으로 프라이빗 MCP 서버 등록·팀 공유·자동 env 암호화 기능을 제공하거나, Smithery·Glama 같은 레지스트리와 제휴 트래픽 수익 계약을 체결.",
+        "domestic_angle": "국내 AI 에이전트 스터디·개발자 커뮤니티(오픈카톡, FESTA 밋업)에 한국어 설정 가이드와 함께 소개하고, 카카오워크·Slack 연동 MCP 서버 템플릿을 번들로 제공해 국내 기업 SaaS 수요를 선점."
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "uid": "5e118e1785a1",
+      "title": "Show HN: Myanon – fast, deterministic MySQL dump anonymizer",
+      "source": "hackernews/show_hn",
+      "source_url": "https://ppomes.github.io/myanon/",
+      "date": "2026-04-20",
+      "total": 64,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 15,
+        "market_opportunity": 10,
+        "entry_cost": 16,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "DB 익명화 툴은 개발자/DBA 대상 실재하는 니즈지만, 오픈소스 CLI 도구 형태로는 직접 수익화 경로가 불명확하고 한국 시장 특화 각도도 약함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d6737e341b0b",
+      "title": "Show HN: I built Comrade – the security-focused AI agent",
+      "source": "hackernews/show_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47839520",
+      "date": "2026-04-20",
+      "total": 57,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 14,
+        "market_opportunity": 11,
+        "entry_cost": 15,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "보안팀 대상 로컬 퍼스트 AI 워크스페이스라는 방향성은 있으나, 구체적으로 어떤 Pain을 해결하는지(취약점 분석? 인시던트 대응? 컴플라이언스?)가 불분명하고, 오픈소스 공개 프로젝트로 수익 모델이 없어 MRR 300만원 달성 경로가 모호함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "96a9f4485346",
+      "title": "Show HN: A tiny macOS app that clears app caches and NPM/Docker/Xcode junk",
+      "source": "hackernews/show_hn",
+      "source_url": "https://apps.apple.com/us/app/woof-disk-cleaner-organizer/id6761780156?mt=12",
+      "date": "2026-04-20",
+      "total": 52,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 13,
+        "market_opportunity": 6,
+        "entry_cost": 15,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "macOS 캐시 정리 유틸리티는 실재하는 불편함을 해결하지만, 개발자 대상 틈새 도구로 시장이 협소하고 CleanMyMac 등 강력한 기존 경쟁자가 있으며, AI 에이전트·업무자동화 전문성과 무관하고 국내 SaaS 판매 가능성도 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "899199a34e29",
+      "title": "Ask HN: Monetizing a Supplements Dataset",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47840930",
+      "date": "2026-04-20",
+      "total": 52,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 10,
+        "market_opportunity": 10,
+        "entry_cost": 14,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "보충제 성분 데이터셋은 흥미롭지만 오너 프로필(보안/AI 자동화)과 도메인 미스매치, 타겟(B2C 소비자? B2B 제조사? 연구자?)이 불명확하며 한국 보충제 시장 적용 시 라이선스/식약처 규제 이슈 존재",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "05eb4c3d0c48",
+      "title": "Ask HN: How to help AI find financials in large PDF faster?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47834474",
+      "date": "2026-04-20",
+      "total": 50,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 10,
+        "market_opportunity": 10,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "대용량 PDF에서 특정 페이지만 추출해 LLM에 전달하는 기술적 질문으로, 완성된 사업 아이디어라기보다 개발 중인 툴의 기술적 문제 해결 요청에 가까움. 타겟(기업 등기 조회 수요자)은 존재하나 한국 시장 적합성 낮고, 경쟁 솔루션(PDF 파싱 라이브러리, LlamaIndex 등) 이미 다수 존재.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "uid": "b81f3373cd44",
+      "title": "Show HN: CLI – A Go command-line library shaped like net/HTTP",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/mzattahri/cli",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "Go CLI 라이브러리는 오픈소스 개발 도구로, AI 에이전트/업무자동화/교육/콘텐츠/SaaS 관심 도메인과 무관하며, 수익화 모델·타겟 고객·사업 기회 모두 부재함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "55d386883809",
+      "title": "Show HN: Dynamic Hybrid Search That Beats Pure Dense and Fixed Hybrid",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/nickswami/dasein-python-sdk/blob/master/README.md",
+      "date": "2026-04-20",
+      "total": 38,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 8,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "본문이 없어 실제 구현 내용·타겟·문제를 확인할 수 없고, 제목만으로는 '동적 하이브리드 검색'이 무엇을 해결하는지, 누구를 위한 것인지, 어떤 비즈니스 모델인지 파악 불가 — 기술 데모 수준의 단편 정보.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "faf995a90afc",
+      "title": "Show HN: Eris – desktop PGP workstation with simple GUI",
+      "source": "hackernews/show_hn",
+      "source_url": "https://eris.sibexi.co/",
+      "date": "2026-04-20",
+      "total": 35,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 4,
+        "entry_cost": 14,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "PGP GUI 도구는 틈새 시장이나 국내 수요·상업화 경로가 매우 제한적이고, 오픈소스 무료 도구로 수익화 구조가 사실상 부재하며 오너 프로필(AI 에이전트·SaaS)과도 거리가 멀다.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "0414ec9e665d",
+      "title": "Show HN: Virtual Frame – Microfront end projection for the web",
+      "source": "hackernews/show_hn",
+      "source_url": "https://virtual-frame.level0x40.com/",
+      "date": "2026-04-20",
+      "total": 29,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 5,
+        "target_clarity": 5,
+        "market_opportunity": 6,
+        "entry_cost": 10,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "본문이 없고 제목만으로는 마이크로프론트엔드 투영 도구인지 추정만 가능하며, 오너 프로필(AI 에이전트·업무자동화)과 도메인 미스매치, 문제·타겟·수익모델 모두 불분명함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "88888fd66317",
+      "title": "Show HN: Holos – QEMU/KVM with a compose-style YAML, GPUs and health checks",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/zeroecco/holos",
+      "date": "2026-04-20",
+      "total": 46,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 10,
+        "market_opportunity": 7,
+        "entry_cost": 12,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "QEMU/KVM 설정 복잡성이라는 실제 Pain은 존재하나, 타겟이 Linux 고급 개발자/인프라 엔지니어로 극도로 좁고, 국내 수요 기반이 약하며, 오너의 AI 에이전트/자동화 창업 방향과 도메인 정합성이 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "2655a5d13a8c",
+      "title": "Show HN: I Built SwiftUI but for macOS MDM",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/photon-hq/Astrolabe",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문 내용이 없어 아이디어를 평가할 수 없으며, 제목만으로는 'SwiftUI for macOS MDM'이 구체적으로 무엇을 해결하는지 불명확함. 또한 MDM(모바일 기기 관리)은 엔터프라이즈 IT/네트워크 인프라 도메인에 가까워 오너 프로필의 관심 도메인(AI 에이전트, 업무 자동화, 교육, 콘텐츠, SaaS)과 핵심 방향이 불일치함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "1313450684d0",
+      "title": "Show HN: GeoFastMapAPI – open-source Fast vector and raster server for mapmakers",
+      "source": "hackernews/show_hn",
+      "source_url": "https://geofastmap.com/",
+      "date": "2026-04-20",
+      "total": 43,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 10,
+        "target_clarity": 8,
+        "market_opportunity": 8,
+        "entry_cost": 14,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "지도/공간데이터 서버 오픈소스 프로젝트로 기술적 완성도는 있으나, 오너 프로필(AI 에이전트·업무자동화·교육·SaaS)과 도메인 미스매치가 크고, 한국 B2B 수익화 경로가 불명확하며 GIS 전문가 외 타겟이 좁아 MRR 300만원 달성 경로가 희박함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "1e273e8994f3",
+      "title": "Show HN: Simple CLI tool to convert PDFs to dark mode, with TOC preservation",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/rngil/dark-pdf",
+      "date": "2026-04-20",
+      "total": 41,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 4,
+        "entry_cost": 18,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "야간 PDF 독서용 다크모드 변환 CLI는 Pain 자체는 실재하나 너무 니치하고 무료 대안(브라우저 확장, Adobe 자체 기능)이 많아 수익화 경로가 극히 제한적이며, 1인 SaaS로 MRR 300만원 달성은 현실적으로 어려움.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4b277aff4235",
+      "title": "Show HN: Explain The Law – Simplified legislation and executive orders using AI",
+      "source": "hackernews/show_hn",
+      "source_url": "https://explainthelaw.com/",
+      "date": "2026-04-20",
+      "total": 47,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 15,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "정치/입법 도메인은 즉시 탈락 조건의 '정치 도메인'에 해당하나, 법률 정보 접근성 개선 서비스로 볼 여지도 있어 탈락은 적용하지 않음. 단, 미국 법률 중심이라 국내 적용성이 극히 낮고, 타겟이 '정치에 관심 있는 일반인'으로 넓어 수익 모델이 불명확하며, 유사 경쟁 서비스가 이미 다수 존재해 사업 기회가 제한적임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "977c8c5578f3",
+      "title": "Show HN: The Guesthouse – A quiet place to begin the day",
+      "source": "hackernews/show_hn",
+      "source_url": "https://theguesthouse.app/",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 비어있고 제목만으로는 어떤 문제를 해결하는 제품/서비스인지 전혀 파악 불가능하며, 평가할 수 있는 정보가 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "fd8583dfe30c",
+      "title": "Show HN: Resume Script for VLC",
+      "source": "hackernews/show_hn",
+      "source_url": "https://gist.github.com/hq6/3d1f291de5b808da7d545ed44d6fc82b",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "VLC 재생 위치 저장 스크립트는 단순 개인 유틸리티로, AI 에이전트·업무자동화·교육·콘텐츠·SaaS 관심 도메인과 무관하며 사업 기회 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "17e1f1770428",
+      "title": "Ask HN: Could you introduce me to medics with EEG knowledge for my research",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47841829",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 사업 아이디어가 아니라 EEG 연구 협력자를 구하는 개인 네트워킹 요청이며, 오너 프로필(AI 에이전트/업무자동화/SaaS)과 도메인이 전혀 맞지 않는 신경과학 연구 초기 탐색 단계 포스팅으로 창업 아이디어로서 평가 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "ad24774aa297",
+      "title": "Artem",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47841801",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "제목 외 본문이 전혀 없어 아이디어 내용을 판단할 수 없음 — 평가 불가",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "22fa091d17b3",
+      "title": "Tell HN: Do not include co-authored-by Claude in your commits",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47840791",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 비즈니스 아이디어가 아니라 오픈소스 커뮤니티의 AI 학습 데이터 정책에 대한 의견 글(Tell HN)이며, 사업화 가능한 문제·타겟·시장이 전혀 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "13a2e5b9df16",
+      "title": "OpenAI's Chronicles is basically what I open-sourced last week, to continue?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47839782",
+      "date": "2026-04-20",
+      "total": 38,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 6,
+        "entry_cost": 14,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "OpenAI가 동일 원리의 Chronicles를 출시한 시점에서 오픈소스 프로젝트 지속 여부를 고민하는 글로, 해결하려는 문제나 타겟이 구체적으로 서술되지 않았고 빅테크 직접 경쟁 리스크가 명확함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "82ecf6aaabde",
+      "title": "Ask HN: Why do most LLMs refuse to call themselves an idiot?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47839198",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "비즈니스 아이디어가 아닌 LLM 동작에 관한 단순 기술적 호기심 질문으로, 해결할 문제·타겟·시장·수익 모델이 전혀 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a774f0c51e3c",
+      "title": "What Are We Doing?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47839002",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "구체적인 사업 아이디어가 없는 단순 감정적 불만 게시물로, 채점 가능한 아이디어 자체가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "659639bf3c90",
+      "title": "Everything is AI now – does this kill the excitment of software development?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47838741",
+      "date": "2026-04-20",
+      "total": 34,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 5,
+        "entry_cost": 12,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "개발자 감성 토로 수준의 HN 토론글이며, 해결할 구체적 문제나 제품 아이디어가 없음 — 단순 커뮤니티 감상 공유로 사업화 연결점 부재",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c7664bb2ecb8",
+      "title": "Ask HN: How do you respond to blog posts that seem AI assisted?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47838257",
+      "date": "2026-04-20",
+      "total": 21,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 4,
+        "target_clarity": 3,
+        "market_opportunity": 2,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "이 글은 AI 콘텐츠에 대한 독자 반응을 묻는 설문/토론 포스트로, 창업 아이디어가 아님 — 해결할 문제·타겟·비즈니스 모델이 전혀 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "b037dffae103",
+      "title": "Ask HN: Why there is no media coverage on full internet blackout in Iran?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47837758",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "정치 도메인(이란 인터넷 검열/정치적 사안) 관련 내용으로 즉시 탈락 조건에 해당하며, 사업 아이디어 자체가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "af13835a224c",
+      "title": "Ask HN: A good self-hosted development platform for open source repositories",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47837673",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 창업 아이디어가 아니라 개인 기술 질문(Ask HN)으로, 평가할 사업 아이디어 자체가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "9430b6c286d6",
+      "title": "Ask HN: Is GitHub's #1 repo fake? build-your-own-x 491K stars",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47836356",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 GitHub 저장소 스타 수의 진위를 의심하는 토론 게시물로, 해결할 문제나 비즈니스 아이디어가 전혀 없음. 창업 아이디어로 평가할 수 없는 단순 커뮤니티 토론 콘텐츠.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "2e98b40a80f1",
+      "title": "Tell HN: Codex/Claude Code one-off credit purchases are a money sink",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47836090",
+      "date": "2026-04-20",
+      "total": 22,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 5,
+        "entry_cost": 0,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "HN 愚痴 포스팅으로, AI 크레딧 비용 불투명성에 대한 불만을 토로하는 글일 뿐 구체적 아이디어나 솔루션 제안이 없음 — 사업 아이디어로 전환 가능성 매우 낮음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "942bafbcb590",
+      "title": "Warning: If you search \"Claude Desktop\" on Google, the 2nd ad result is a scam",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47834270",
+      "date": "2026-04-20",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 콘텐츠는 사업 아이디어가 아니라 구글 광고 사기 제보 게시물이며, 스파이웨어·비밀번호 탈취 등 사기/기만적 요소를 다루는 정보성 경고문이므로 즉시 탈락 조건(사기/기만적 요소 관련 도메인)에 해당함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    }
+  ]
+}
