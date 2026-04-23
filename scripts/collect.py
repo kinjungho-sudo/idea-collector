@@ -29,6 +29,12 @@ RSS_SOURCES = [
     {"source": "devto", "tag": "startup",           "url": "https://dev.to/feed/tag/startup"},
     {"source": "devto", "tag": "saas",              "url": "https://dev.to/feed/tag/saas"},
     {"source": "devto", "tag": "indiehacker",       "url": "https://dev.to/feed/tag/indiehacker"},
+    # fallback sources (accessible when primary sources are blocked)
+    {"source": "hackernews", "tag": "HN-RSS",       "url": "https://news.ycombinator.com/rss"},
+    {"source": "techcrunch", "tag": "startup",      "url": "https://techcrunch.com/feed/"},
+    {"source": "medium", "tag": "startup",          "url": "https://medium.com/feed/tag/startup"},
+    {"source": "medium", "tag": "saas",             "url": "https://medium.com/feed/tag/saas"},
+    {"source": "entrepreneurs-hb", "tag": "startup","url": "https://entrepreneurshandbook.co/feed"},
 ]
 
 HN_SOURCES = [

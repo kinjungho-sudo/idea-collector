@@ -1,0 +1,742 @@
+{
+  "date": "2026-04-23",
+  "generated_at": "2026-04-23T22:46:06.211141+00:00",
+  "summary": {
+    "total_collected": 33,
+    "top_count": 1,
+    "watchlist_count": 4,
+    "rejected_count": 28
+  },
+  "top": [
+    {
+      "uid": "5635cab2b615",
+      "title": "\"Build, Don't Buy\" AI Agents: A Practitioner's Guide to Replacing SaaS",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/sebastian_chedal/build-dont-buy-ai-agents-a-practitioners-guide-to-replacing-saas-35pl",
+      "date": "Thu, 23 Ap",
+      "total": 75,
+      "grade": "심층분석",
+      "scores": {
+        "problem_clarity": 20,
+        "target_clarity": 16,
+        "market_opportunity": 15,
+        "entry_cost": 17,
+        "domestic_feasibility": 7
+      },
+      "reasoning": "SaaS 비용 과다 지출 문제는 실재하나, 타겟이 '1인 창업자~CIO 수준 기업'으로 너무 넓고, 실제 '가이드 콘텐츠' 외에 사업 모델이 본문에서 불분명함.",
+      "deep": {
+        "mvp": "특정 SaaS 1~2종(예: Notion, Zapier)을 AI 에이전트로 대체하는 실습 과정을 노션 기반 유료 가이드 또는 코호트 강의 형태로 4주 내 출시.",
+        "first_revenue_path": "네트워크 보안·IT 실무자 커뮤니티(오픈채팅, 링크드인)에 '내가 SaaS 3개를 AI 에이전트로 대체한 방법' 사례 글 배포 후 유료 가이드 PDF/워크숍으로 전환.",
+        "domestic_angle": "국내 스타트업·프리랜서 대상으로 'SaaS 구독료 월 50만원 줄이기' 프레임으로 포지셔닝하면 비용 민감도 높은 1인 사업자·소규모 팀에 직접 소구 가능."
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "uid": "a3b6b1c26c94",
+      "title": "Build-in-Public: What I Learned Building an AI Image SaaS",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/gozel_t_8f2c084ded7672955/build-in-public-what-i-learned-building-an-ai-image-saas-2bnb",
+      "date": "Wed, 22 Ap",
+      "total": 65,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 17,
+        "market_opportunity": 12,
+        "entry_cost": 13,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "이커머스 광고 소재 자동화라는 문제는 실재하나, AI 이미지 생성 SaaS는 이미 Canva AI·Ideogram·Adobe Firefly 등 글로벌 강자가 포화 상태이고, 국내 이커머스(스마트스토어·쿠팡) 맥락에 맞는 차별화 각도가 약하며 오너의 보안/자동화 전문성과 연결고리도 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "5db8751e07c1",
+      "title": "Why I stopped using PDFs to grow my newsletter (and built a \"Web-Native\" alternative)",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/lin-dev/why-i-stopped-using-pdfs-to-grow-my-newsletter-and-built-a-web-native-alternative-1hg9",
+      "date": "Thu, 23 Ap",
+      "total": 64,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 14,
+        "market_opportunity": 12,
+        "entry_cost": 15,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "PDF 뉴스레터 게이팅의 UX 불편함은 실재하지만, 크리에이터 이메일 리스트 구축 니즈와 충돌하는 구조적 딜레마가 해결책을 복잡하게 만들고, 타겟(크리에이터 vs 독자)과 수익 모델이 불명확하며 국내 크리에이터 생태계는 아직 해외 대비 성숙도가 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "7f9fbba0dde5",
+      "title": "If I Started My $1M AI Agent Challenge Over, Here's What I'd Do Differently (Day 41)",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/joeytbuilds/if-i-started-my-1m-ai-agent-challenge-over-heres-what-id-do-differently-day-41-4c89",
+      "date": "Tue, 21 Ap",
+      "total": 58,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 12,
+        "market_opportunity": 11,
+        "entry_cost": 16,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "창업 실패 회고록 형태의 콘텐츠로, 뚜렷한 제품/서비스 아이디어가 없고 '무엇을 팔겠다'는 핵심이 빠진 채 방법론 반성에 그침 — 아이디어 자체보다 인사이트 글에 가까워 사업 기회 평가가 제한적",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "9d2d4285d91e",
+      "title": "Unlock Google Sheets Data Visualization Secrets in 60 Seconds",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/prompt_wise_659948129d708/unlock-google-sheets-data-visualization-secrets-in-60-seconds-1ga",
+      "date": "Thu, 23 Ap",
+      "total": 51,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 11,
+        "market_opportunity": 10,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "Google Sheets 시각화 자동화는 실재하는 Pain이나, '60초', '비밀 공개' 식의 마케팅 글 톤이 강해 실제 제품 아이디어보다 콘텐츠 낚시성이 짙고, 타겟이 '스타트업 파운더~마케팅 매니저' 수준으로 뭉뚱그려져 있으며, Looker Studio·Power BI·Rows.com 등 이미 성숙한 경쟁자가 즐비해 차별점이 불분명함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "uid": "74b1b7fb6d0e",
+      "title": "Versioning as Code: A Testable, Fail-Fast Strategy for Enterprise Releases",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/zhamdi/versioning-as-code-a-testable-fail-fast-strategy-for-enterprise-releases-1gej",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "평가 실패: Expecting value: line 1 column 1 (char 0)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "0976647218f2",
+      "title": "Navigating the Regulatory Maze: How RegTech Integrates with API-First Payment Infrastructure in B2B SaaS",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/mehmet_akifzdemie_7452d/navigating-the-regulatory-maze-how-regtech-integrates-with-api-first-payment-infrastructure-in-b2b-1mgb",
+      "date": "Thu, 23 Ap",
+      "total": 33,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 10,
+        "target_clarity": 8,
+        "market_opportunity": 8,
+        "entry_cost": 4,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "RegTech+임베디드파이낸스 개념 글로 문제의식은 있으나 구체적 Pain이 아닌 업계 트렌드 소개 수준이고, 금융 규제 도메인 인접·라이선스 비용·한국 금융당국 규제 장벽으로 1인 창업 실현가능성 매우 낮음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "f3f03d11f1c7",
+      "title": "5 Frontier Models Compared",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/speedy_devv/5-frontier-models-compared-3mgb",
+      "date": "Thu, 23 Ap",
+      "total": 48,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 10,
+        "market_opportunity": 8,
+        "entry_cost": 14,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "모델 비교 콘텐츠로 문제의식은 있으나 SaaS/사업 아이디어라기보다 리뷰 글에 가깝고, 타겟·수익모델·국내 적용 각도가 불분명하며 본문도 미완성 상태임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "45f0b0c4c71b",
+      "title": "How I Built a Production-Ready Link-in-Bio SaaS with Next.js 15 & Tailwind 4 (Full Guide)",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/panos1607/how-i-built-a-production-ready-link-in-bio-saas-with-nextjs-15-tailwind-4-full-guide-l9n",
+      "date": "Thu, 23 Ap",
+      "total": 39,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 12,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "Link-in-bio는 이미 Linktree 등 강자가 장악한 레드오션이며, 본문은 실제 문제 해결보다 기술 스택 홍보·Product Hunt 마케팅에 가까워 Pain 실재성·차별성 모두 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "b0d81d7d26ca",
+      "title": "I Built a Simpler Uptime Monitoring Tool",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/shura_dev/i-built-a-simpler-uptime-monitoring-tool-4oef",
+      "date": "Thu, 23 Ap",
+      "total": 46,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 14,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "업타임 모니터링은 이미 UptimeRobot, BetterUptime 등 무료/저가 강자들이 장악한 레드오션이며, 'simpler'라는 차별점만으로는 전환 유인이 약하고 AI 에이전트/자동화 오너 역량과도 거리가 멈.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "6b2dc1edb587",
+      "title": "The Best Customer Churn Dashboards and Software for 2026",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/james_dong_fe741d15cf974d/the-best-customer-churn-dashboards-and-software-for-2026-590o",
+      "date": "Thu, 23 Ap",
+      "total": 29,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 6,
+        "entry_cost": 5,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "이 글은 타사 SaaS 도구 비교 콘텐츠로, 오너가 직접 실행할 수 있는 아이디어가 아니라 마케팅 블로그 포스트임 — 특정 Pain이나 타겟, MVP 방향성이 도출되기 어려움",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "932d71dfd63d",
+      "title": "How We Took a New SaaS From Search Confusion to a Clean Google Entity Before Launch",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/zologic/how-we-took-a-new-saas-from-search-confusion-to-a-clean-google-entity-before-launch-2o6e",
+      "date": "Thu, 23 Ap",
+      "total": 38,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 7,
+        "entry_cost": 10,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "이 글은 SaaS 런칭 전 구글 엔티티 혼동을 해결한 SEO 사례 공유 콘텐츠로, 실제 판매 가능한 아이디어가 아니라 마케팅/브랜딩 경험담이며, 핵심 제품인 'pre-return recovery' 자체도 Shopify/WooCommerce 생태계 의존도 높고 국내 적용성 낮아 오너 프로필과 접점이 거의 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a8bd7f1698df",
+      "title": "I Slept Only After Fixing the Bug 😴🐛 — A Developer Story in Memes & Code",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/abhishek99/i-slept-only-after-fixing-the-bug-a-developer-story-in-memes-code-53ko",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 개발자 경험을 밈과 유머로 풀어낸 에세이/콘텐츠로, 해결하려는 비즈니스 문제나 제품 아이디어가 전혀 없음 — 스크리닝 대상 아이디어가 아님.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "06db0d9a43e7",
+      "title": "Looking for beta testers – free API abuse detection tool for early-stage SaaS startups",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/nsk394/looking-for-beta-testers-free-api-abuse-detection-tool-for-early-stage-saas-startups-31kp",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "평가 실패: Unterminated string starting at: line 13 column 23 (char 594)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "71863eb8c32d",
+      "title": "6 Days Left to $1K: What an AI Agent Does at Midnight When the Clock Is Running (Day 51 Update)",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/joeytbuilds/6-days-left-to-1k-what-an-ai-agent-does-at-midnight-when-the-clock-is-running-day-51-update-lkb",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "평가 실패: Expecting value: line 1 column 1 (char 0)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "930c8e163bb7",
+      "title": "I Spent Months Manually Validating SaaS Ideas. Then I Automated It.",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/drok_ai/i-spent-months-manually-validating-saas-ideas-then-i-automated-it-5aom",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "평가 실패: Unterminated string starting at: line 13 column 23 (char 698)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4712d83ca239",
+      "title": "Stripe's 2026 Annual Letter: 5 Signals That Actually Matter for Indie SaaS Founders",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/juleake/stripes-2026-annual-letter-5-signals-that-actually-matter-for-indie-saas-founders-36jh",
+      "date": "Thu, 23 Ap",
+      "total": 45,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 12,
+        "market_opportunity": 8,
+        "entry_cost": 14,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "Stripe 연례 서한 분석 콘텐츠로 인디 SaaS 창업자 대상 인사이트 제공이지만, 실제 제품/서비스 아이디어가 아닌 콘텐츠 아티클이며 해결하는 Pain이 불명확하고 국내 적용성도 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4c087a4bfd4a",
+      "title": "Anthropic Almost Removed Claude Code From the Pro Plan: What Happened and What It Means for Indie Hackers",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/devtoolpicks/anthropic-almost-removed-claude-code-from-the-pro-plan-what-happened-and-what-it-means-for-indie-1904",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 사업 아이디어가 아니라 Anthropic의 가격 정책 변경 사건을 다룬 뉴스/분석 기사이므로 채점 대상 아이디어가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "2b608d2e6bb5",
+      "title": "ChatGPT Images 2.0 Just Launched: What Changed and Is It Worth It for Indie Hackers?",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/devtoolpicks/chatgpt-images-20-just-launched-what-changed-and-is-it-worth-it-for-indie-hackers-50i3",
+      "date": "Wed, 22 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 아이디어 제안이 아니라 ChatGPT Images 2.0 신기능 소개 기사로, 해결하는 문제·타겟·비즈니스 모델이 전혀 정의되어 있지 않아 채점 대상 아이디어로 성립하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "342ca72e3455",
+      "title": "Pricing Psychology for Cold Outreach: How I Frame $497 to Strangers (Day 40 AI Agent Update)",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/joeytbuilds/pricing-psychology-for-cold-outreach-how-i-frame-497-to-strangers-day-40-ai-agent-update-n2o",
+      "date": "Tue, 21 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "평가 실패: Expecting value: line 1 column 1 (char 0)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "93d87a8d4741",
+      "title": "The Exact Pricing Psychology I Use to Justify $497 to Cold Prospects Who Never Heard of Me (Day 40 AI Agent Update)",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/joeytbuilds/the-exact-pricing-psychology-i-use-to-justify-497-to-cold-prospects-who-never-heard-of-me-day-40-14ej",
+      "date": "Tue, 21 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "평가 실패: Expecting value: line 1 column 1 (char 0)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c174fdf47abd",
+      "title": "The Exact 48-Hour Follow-Up Window That Doubles Cold Email Reply Rates (Day 38 AI Agent Update)",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/joeytbuilds/the-exact-48-hour-follow-up-window-that-doubles-cold-email-reply-rates-day-38-ai-agent-update-od3",
+      "date": "Tue, 21 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "평가 실패: Expecting value: line 1 column 1 (char 0)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "b9fa3a99cb4e",
+      "title": "Crisp vs Intercom vs Tidio for Indie Hackers in 2026: Which Support Tool Is Worth It?",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/devtoolpicks/crisp-vs-intercom-vs-tidio-for-indie-hackers-in-2026-which-support-tool-is-worth-it-g47",
+      "date": "Tue, 21 Ap",
+      "total": 39,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 10,
+        "target_clarity": 12,
+        "market_opportunity": 6,
+        "entry_cost": 8,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "고객지원 툴 비교 콘텐츠로, 해결하는 '문제'가 오너 프로필의 AI 에이전트 자동화 창업과 직접 연관이 없고, 이 자체가 사업 아이디어라기보다 마케팅성 비교 글(어필리에이트/트래픽 유입용)에 가까움. 국내 시장 적용성도 낮고, 1인 창업 SaaS 기회로 발전시키기 어려운 구조.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "5ca718acc1d7",
+      "title": "Day 30: $0 Revenue, 75 Articles, 10 Days Left — The One Thing I'd Change",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/joeytbuilds/day-30-0-revenue-75-articles-10-days-left-the-one-thing-id-change-92o",
+      "date": "Mon, 20 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "평가 실패: Expecting value: line 1 column 1 (char 0)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "854b02ecee14",
+      "title": "Why Clients Go Silent (And How to Fix It)",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/design-bootcamp/why-clients-go-silent-and-how-to-fix-it-0655ee24dbae?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 36,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 6,
+        "entry_cost": 12,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "클라이언트 이탈 문제를 다루지만 본문이 너무 짧고 단편적 인사이트 수준이라 실제 제품/서비스 아이디어로 보기 어려우며, 오너 프로필(AI 에이전트·보안·자동화)과 연관성도 낮고 한국 시장 적용 각도도 불명확함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "88beaa4373f5",
+      "title": "How we built a data platform for half a million Dutch postcodes — and what the data revealed!",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@kemal_65813/how-we-built-a-data-platform-for-half-a-million-dutch-postcodes-and-what-the-data-revealed-4bdac72f2e54?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 20,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 4,
+        "target_clarity": 3,
+        "market_opportunity": 4,
+        "entry_cost": 8,
+        "domestic_feasibility": 1
+      },
+      "reasoning": "본문 없이 제목만 존재하며, 네덜란드 우편번호 데이터 플랫폼 구축 사례 공유 글로 보임 — 한국 1인 창업과 무관하고, 도메인·타겟·문제 모두 불명확하며 국내 적용 가능성 극히 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a93948436b20",
+      "title": "I Shipped a Free AI Tool Comparison Generator, but the Real Bet Is the /tools/ Directory",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@eibrahim/i-shipped-a-free-ai-tool-comparison-generator-but-the-real-bet-is-the-tools-directory-99abd77c740c?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 39,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 8,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "본문이 'Continue reading on Medium'으로 내용이 없어 평가 근거가 극히 제한적이며, 제목만으로는 AI 툴 비교 디렉토리 SEO 전략 사업으로 추정되나 문제·타겟·수익모델 모두 불명확하고 국내 적용 맥락도 약함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "e1e4278f5da9",
+      "title": "How Demonetization Accidentally Built India’s Payments Revolution",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/buji-bytes/how-demonetization-accidentally-built-indias-payments-revolution-78809a7706b5?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 인도 화폐개혁과 UPI 결제 혁명에 관한 역사적 분석 콘텐츠로, 창업 아이디어가 아닌 미디어 기사임. 금융 도메인에 해당하며, 구체적인 비즈니스 아이디어·문제·타겟이 전혀 없어 즉시 탈락.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "8ce85c300ef8",
+      "title": "Why I Left a Stable Bank Job During a War to Build My Own Business",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@ggtretyak/why-i-left-a-stable-bank-job-during-a-war-to-build-my-own-business-f87c21d5d85e?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문 내용이 없고 제목만 있는 개인 에세이/스토리텔링 글로, 구체적인 사업 아이디어나 해결 문제가 전혀 제시되지 않아 채점 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a00bd54c2e07",
+      "title": "Why Your CAC Is Lying to You",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/marketing-meets-data/why-your-cac-is-lying-to-you-c39e8e5ee244?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 마케팅 지표(CAC)에 대한 블로그 글 제목/티저이며, 실행 가능한 아이디어가 전혀 없음. 제품·서비스·솔루션 형태가 없고 단순 콘텐츠 미리보기에 불과해 채점 대상 아이디어로 성립하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "db2c8e107cf7",
+      "title": "I Built NicheBlogHub After Getting Frustrated With Flippa. Here’s Why",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@evelyn_collins/i-built-nichebloghub-after-getting-frustrated-with-flippa-heres-why-cf3cfc837c2a?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 35,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 8,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "제목과 짧은 티저만 있고 본문이 거의 없어 문제·타겟·솔루션 모두 불명확하며, 니치 블로그 M&A 마켓플레이스는 한국 시장 적합성이 매우 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "2c986161c4f9",
+      "title": "They Called Him “Crash.” Now He’s Running Apple.",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/write-a-catalyst/they-called-him-crash-now-hes-running-apple-8679bbe1612b?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 Apple CEO 관련 인물 스토리 기사이며, 해결할 문제도 없고 사업 아이디어가 전혀 아님 — 즉시 탈락 조건(도메인 부적합 + 아이디어 없음)",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d70ab9c6ee29",
+      "title": "I built FuelFox to make finding cheap fuel in the UK much faster",
+      "source": "medium/startup",
+      "source_url": "https://fuelfox.medium.com/i-built-fuelfox-to-make-finding-cheap-fuel-in-the-uk-much-faster-26ad0bcdc1bc?source=rss------startup-5",
+      "date": "Thu, 23 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "에너지 도메인(연료/주유소 가격 비교) 해당 → 즉시 탈락 조건 적용",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    }
+  ]
+}
