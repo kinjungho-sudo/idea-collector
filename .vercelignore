@@ -1,0 +1,10 @@
+.claude/
+ideas/
+n8n/
+scripts/
+__pycache__/
+*.pyc
+*.py
+requirements.txt
+CLAUDE.md
+README.md
