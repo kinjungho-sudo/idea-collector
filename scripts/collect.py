@@ -9,6 +9,7 @@ Startup idea collection from:
 from __future__ import annotations
 
 import hashlib
+import json
 import os
 import re
 import time
@@ -20,6 +21,7 @@ from typing import Iterator
 from xml.etree import ElementTree as ET
 
 USER_AGENT = os.environ.get("REDDIT_USER_AGENT", "idea-collector/1.0 (startup-screening)")
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 RSS_SOURCES = [
     {"source": "reddit", "tag": "r/entrepreneur",   "url": "https://www.reddit.com/r/entrepreneur/.rss"},
@@ -125,6 +127,47 @@ def _parse_rss(xml: str, source: str, tag: str) -> list[Item]:
     return items
 
 
+GITHUB_QUERIES = [
+    {"tag": "saas-startup",    "q": "topic:saas+topic:startup&sort=updated&order=desc"},
+    {"tag": "ai-automation",   "q": "topic:ai-agent+topic:automation&sort=updated&order=desc"},
+    {"tag": "micro-saas",      "q": "topic:micro-saas&sort=updated&order=desc"},
+    {"tag": "indie-hacker",    "q": "topic:indie-hacker&sort=updated&order=desc"},
+    {"tag": "ai-tools",        "q": "topic:ai+topic:tools+topic:productivity&sort=stars&order=desc"},
+    {"tag": "no-code-tools",   "q": "topic:no-code+topic:automation&sort=updated&order=desc"},
+    {"tag": "saas-boilerplate","q": "topic:saas-boilerplate&sort=stars&order=desc"},
+    {"tag": "startup-ideas",   "q": "startup+ideas+in:name,description+topic:startup&sort=stars&order=desc"},
+]
+
+
+def _fetch_github(query: str, limit: int = 15) -> list[Item]:
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/vnd.github.v3+json",
+    }
+    if GITHUB_TOKEN:
+        headers["Authorization"] = f"token {GITHUB_TOKEN}"
+    url = f"https://api.github.com/search/repositories?q={query}&per_page={limit}"
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read())
+    except Exception:
+        return []
+
+    items: list[Item] = []
+    for repo in data.get("items", []):
+        title = repo.get("name", "").replace("-", " ").replace("_", " ").title()
+        desc = repo.get("description") or ""
+        if not desc or len(desc) < 20:
+            continue
+        readme_url = f"https://github.com/{repo['full_name']}"
+        topics = " ".join(repo.get("topics", []))
+        body = f"{desc}. Topics: {topics}. Stars: {repo.get('stargazers_count', 0)}. Language: {repo.get('language', '')}."
+        pub = repo.get("pushed_at") or repo.get("created_at", "")
+        items.append(Item("github", "repo", f"[GitHub] {desc[:120]}", body, readme_url, repo.get("full_name", ""), pub))
+    return items
+
+
 def _fetch_hn(query_tag: str, limit: int = 15) -> list[Item]:
     import json
     url = (
@@ -184,5 +227,23 @@ def collect_all(limit_per_source: int = 15) -> list[Item]:
             results.append(it)
             added += 1
         print(f"  [hn] {hn['tag']}: {added}건")
+
+    for gq in GITHUB_QUERIES:
+        try:
+            batch = _fetch_github(gq["q"], limit_per_source)
+        except Exception as e:
+            print(f"  [skip] github/{gq['tag']}: {e}")
+            continue
+        added = 0
+        for it in batch:
+            if it.url in seen_urls or not it.title:
+                continue
+            seen_urls.add(it.url)
+            results.append(it)
+            added += 1
+            if added >= limit_per_source:
+                break
+        print(f"  [github] {gq['tag']}: {added}건")
+        time.sleep(0.3)
 
     return results
