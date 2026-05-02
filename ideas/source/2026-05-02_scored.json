@@ -1,0 +1,2832 @@
+{
+  "date": "2026-05-02",
+  "generated_at": "2026-05-02T22:47:19.661748+00:00",
+  "summary": {
+    "total_collected": 128,
+    "top_count": 1,
+    "watchlist_count": 16,
+    "rejected_count": 111
+  },
+  "top": [
+    {
+      "uid": "d0deb51a386e",
+      "title": "How AI Killed Product Photo Studios for My Small Brand",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/gozel_t_8f2c084ded7672955/how-ai-killed-product-photo-studios-for-my-small-brand-4bfl",
+      "date": "Wed, 29 Ap",
+      "total": 72,
+      "grade": "심층분석",
+      "scores": {
+        "problem_clarity": 20,
+        "target_clarity": 18,
+        "market_opportunity": 14,
+        "entry_cost": 14,
+        "domestic_feasibility": 6
+      },
+      "reasoning": "소규모 브랜드의 제품 사진 비용 문제는 실재하는 Pain이나, 이미 Photoroom·Remove.bg·Adobe Firefly 등 경쟁 솔루션이 포화 상태이고 오너 프로필(보안+AI 에이전트 자동화)과 도메인 적합도가 낮으며 국내 커머스 특화 차별화 포인트가 불분명함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "uid": "acd4b6a42179",
+      "title": "Show HN: Rotato – Node.js proxy that rotates LLM API keys on 429 errors",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/p32929/rotato",
+      "date": "2026-05-02",
+      "total": 64,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 14,
+        "market_opportunity": 10,
+        "entry_cost": 17,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "LLM API rate limit 우회라는 개발자 Pain은 실재하나, 타겟이 'Node.js 쓰는 개발자'로 다소 좁고 국내 SaaS화 시 결제·법적 리스크(API 약관 위반 가능성) 존재, 오픈소스 경쟁재 다수로 수익화 경로가 불분명함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d4038f8b6053",
+      "title": "I built a free shift scheduler that checks Taiwan labor law compliance",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/lumandpei_647a9d81c6ce869/i-built-a-free-shift-scheduler-that-checks-taiwan-labor-law-compliance-976",
+      "date": "Sat, 02 Ma",
+      "total": 60,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 14,
+        "market_opportunity": 8,
+        "entry_cost": 16,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "대만 노동법 특화 스케줄러로 문제는 명확하나, 타겟이 '대만 소규모 팀'으로 국내 적용성이 낮고 한국 근로기준법 재구현 비용 필요, 오너 도메인(AI 에이전트/보안)과 거리가 있음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c94b30954ca6",
+      "title": "Cursor Just Launched an SDK for Building AI Agents: What It Means for Indie Hackers",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/devtoolpicks/cursor-just-launched-an-sdk-for-building-ai-agents-what-it-means-for-indie-hackers-44i0",
+      "date": "Thu, 30 Ap",
+      "total": 60,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 14,
+        "market_opportunity": 14,
+        "entry_cost": 15,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "Cursor SDK 출시 소식을 다룬 뉴스성 글로, 실제 해결할 문제나 비즈니스 아이디어가 명확하지 않고 '인디해커에게 의미하는 것'이라는 분석 각도만 있어 직접적인 창업 아이디어로 보기 어려움.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "f9c304d4f509",
+      "title": "From Zero to 3 Enterprise Deals in 30 Days — What We Learned Launching a DevOps Startup",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/nika_lukava_6230697975c5d/from-zero-to-3-enterprise-deals-in-30-days-what-we-learned-launching-a-devops-startup-228j",
+      "date": "Sat, 02 Ma",
+      "total": 57,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 14,
+        "market_opportunity": 12,
+        "entry_cost": 8,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "DevOps 인프라 문제는 실재하나, 오너 프로필(1인/AI 에이전트/자동화)과 거리가 있고 엔터프라이즈 세일즈 사이클·팀 필요성으로 1인 창업 현실성이 낮으며, 국내 DevOps 시장은 대형 SI 중심이라 진입 장벽이 높음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "63f43919be01",
+      "title": "The Aunty Test - what Bengali-speaking patients see when they ask Health AI in their own language",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/godavaii/the-aunty-test-what-bengali-speaking-patients-see-when-they-ask-health-ai-in-their-own-language-884",
+      "date": "Sat, 02 Ma",
+      "total": 56,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 14,
+        "market_opportunity": 10,
+        "entry_cost": 12,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "벵골어 헬스AI 다국어 처리 문제는 실재하나, 타겟이 방글라데시/인도 시장에 국한되고 의료 도메인의 규제·책임 리스크가 높으며 한국 시장과의 연관성이 거의 없어 오너 프로필과 맞지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "092e71bd319c",
+      "title": "The Aunty Test - what Bengali-speaking patients see when they ask Health AI in their own language",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/pururva_agarwal_49847572a/the-aunty-test-what-bengali-speaking-patients-see-when-they-ask-health-ai-in-their-own-language-1bah",
+      "date": "Sat, 02 Ma",
+      "total": 56,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 14,
+        "market_opportunity": 10,
+        "entry_cost": 12,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "벵골어 의료 AI 문제는 실재하나, 타겟이 방글라데시/인도 벵골권에 한정되어 한국 1인 창업자의 도메인·네트워크와 거리가 멀고, 의료 도메인 규제 리스크 및 현지화 비용이 높아 국내 적용 가능성이 거의 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "ab2c6e60b57d",
+      "title": "I Helped a Team Reduce User Confusion Without Changing a Single Feature",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/ezejah_chimkamma_06758a9b/i-helped-a-team-reduce-user-confusion-without-changing-a-single-feature-55gb",
+      "date": "Sat, 02 Ma",
+      "total": 56,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 12,
+        "market_opportunity": 10,
+        "entry_cost": 15,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "UX 글쓰기·온보딩 컨설팅 아이디어로 추정되나 본문이 사례 소개에 그치고 실제 제품/서비스 형태, 타겟, 수익 모델이 전혀 명시되지 않아 전 항목에서 낮은 점수; 국내 SaaS 시장에서의 적용 가능성도 불분명.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "acbb9b2dff69",
+      "title": "GPS Stamping Security: Stop Fraud with Encrypted Anti-Spoofing",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/geotapp/gps-stamping-security-stop-fraud-with-encrypted-anti-spoofing-2110",
+      "date": "Sat, 02 Ma",
+      "total": 55,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 16,
+        "market_opportunity": 10,
+        "entry_cost": 6,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "현장 서비스 업종의 GPS 위조 문제는 실재하지만, 이미 GeoTapp 등 기존 솔루션이 존재하는 레드오션이며 네트워크 보안 전문성을 활용할 수 있으나 하드웨어/모바일 보안 영역이라 초기 구현 비용이 높고, 한국 시장에서는 해당 버티컬(청소·경비 업종)의 디지털화 수준이 낮아 판매 난이도가 높음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "e60b96d10f07",
+      "title": "i made a free list of 100 places where you can promote your SaaS",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/nocodeboring/i-made-a-free-list-of-100-places-where-you-can-promote-your-saas-29ha",
+      "date": "Sat, 02 Ma",
+      "total": 54,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 13,
+        "market_opportunity": 8,
+        "entry_cost": 16,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "SaaS 론칭 디렉토리 목록 공유는 실제 Pain을 건드리지만, 콘텐츠 자체가 아이디어가 아닌 '무료 리소스 배포'에 불과하고 수익 모델·타겟·한국 적용성이 모두 약함",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "67c0cf7e4cf6",
+      "title": "Show HN: Sentient OS – On-device intelligence layer for your entire digital life",
+      "source": "hackernews/show_hn",
+      "source_url": "https://sentient-os.ai",
+      "date": "2026-05-02",
+      "total": 54,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 18,
+        "target_clarity": 12,
+        "market_opportunity": 13,
+        "entry_cost": 6,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "온디바이스 개인 데이터 검색 문제는 실재하나, 1년치 커스텀 LLM 최적화가 필요한 딥테크 제품으로 1인 창업자(네트워크 보안 배경)가 MVP 1~2달 내 재현·활용하기 어렵고, 타겟이 'HN 파워유저' 수준으로 모호하며 초기 비용·진입장벽이 매우 높음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "1ca16dd11579",
+      "title": "Building an API in 2026 still requires five tools. We folded them into one.",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@abdalla.emad.eldin/building-an-api-in-2026-still-requires-five-tools-we-folded-them-into-one-ae9283144ad7?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 53,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 12,
+        "market_opportunity": 11,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "API 개발 툴 통합이라는 문제는 실재하지만, 본문이 너무 단편적이어서 구체적 타겟·차별점이 불분명하고, Postman/Stoplight 등 기존 강자와의 경쟁 구도가 불리하며, 한국 B2B 개발자 시장 접근성도 제한적임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "fd551a383b17",
+      "title": "Interoperability for LLM Applications",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47986693",
+      "date": "2026-05-02",
+      "total": 53,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 10,
+        "market_opportunity": 10,
+        "entry_cost": 14,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "LLM 간 컨텍스트 이식 문제는 실재하지만, 타겟이 '파워유저'로 좁고 시장 규모가 불확실하며 OpenAI/Anthropic이 직접 해결할 가능성이 높아 경쟁 구도가 불리함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "48f307a1d6be",
+      "title": "What is a Fractional CTO? (And When Does a Mid-Market Business Need One)",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@richard.danks_84026/what-is-a-fractional-cto-and-when-does-a-mid-market-business-need-one-04ec6a5bb562?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 52,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 11,
+        "market_opportunity": 10,
+        "entry_cost": 14,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "Fractional CTO 개념 설명 아티클로, 아이디어 자체가 아닌 정보성 글이라 문제 선명도·타겟 구체성 모두 중간 이하이며, 한국 시장에서 'Fractional CTO' 수요는 아직 매우 제한적임",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "799f201ce65d",
+      "title": "Filect",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/filect",
+      "date": "2026-05-02",
+      "total": 51,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 10,
+        "market_opportunity": 10,
+        "entry_cost": 14,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "파일 정리 AI라는 개념은 이해되나 본문 정보가 극히 부족해 실제 Pain·차별점·타겟을 구체적으로 판단하기 어렵고, 이미 유사 도구(Dropbox AI, Notion AI, Apple Intelligence 등)가 포화 상태라 경쟁 구도가 불리함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "b69c02090bb2",
+      "title": "PeekFocus",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/peekfocus",
+      "date": "2026-05-02",
+      "total": 51,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 18,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "집중력 보조 유틸리티로 Pain은 존재하나 니치하고, 타겟이 '집중이 필요한 모든 사람'으로 너무 넓으며 유사 도구(Hazeover 등) 이미 존재해 차별화·수익화 경로가 불분명함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "03dc6c9d3535",
+      "title": "How we built auto-DM for new X followers without making it feel like spam",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/johnbuilds/how-we-built-auto-dm-for-new-x-followers-without-making-it-feel-like-spam-5ag2",
+      "date": "Thu, 30 Ap",
+      "total": 51,
+      "grade": "관심목록",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 13,
+        "market_opportunity": 8,
+        "entry_cost": 13,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "X(트위터) 기반 Auto-DM 도구로 문제는 나름 명확하나, X 플랫폼 의존성·API 제한·국내 X 사용률 저조로 오너 프로필과 거리가 있고 시장·국내 가능성이 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "uid": "45f9a8205b42",
+      "title": "Breaks",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/breaks",
+      "date": "2026-05-02",
+      "total": 43,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 10,
+        "target_clarity": 8,
+        "market_opportunity": 5,
+        "entry_cost": 16,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "포모도로 타이머는 이미 수백 개의 앱이 존재하는 극도로 포화된 시장이며, AI 에이전트·업무 자동화 전문성과의 연관성도 낮고 MRR 300만원 달성 경로가 불명확함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "ef141b375bb2",
+      "title": "Scholé",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/schole-2",
+      "date": "2026-05-02",
+      "total": 49,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 10,
+        "target_clarity": 8,
+        "market_opportunity": 12,
+        "entry_cost": 14,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "일상 업무를 AI 학습으로 전환한다는 컨셉 자체는 흥미하나, 구체적으로 어떤 Pain을 해결하는지(업무 중 학습 단절? 온보딩 비효율?) 본문만으로는 불분명하고, 타겟(직장인 전체? 특정 직군?)도 모호해 채점 한계 존재",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "18ccb5484cbd",
+      "title": "Feather",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/feather-18",
+      "date": "2026-05-02",
+      "total": 40,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 8,
+        "entry_cost": 12,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "로컬 AI 사진 편집기라는 컨셉은 흥미롭지만 정보가 너무 부족하고, 이미 Lightroom·Luminar AI 등 강력한 경쟁자가 포화 상태이며 오너 도메인(보안/자동화)과 접점이 낮아 1인 창업 아이템으로 부적합.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "66b5d24a7e58",
+      "title": "Microsoft Copilot Health",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/copilot-health",
+      "date": "2026-05-02",
+      "total": 31,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 8,
+        "entry_cost": 5,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "본문 정보가 극히 부족하고, Microsoft 생태계 종속 제품으로 1인 창업 관점에서 진입 불가능한 영역—개인 건강 데이터 통합은 의료/헬스 도메인으로 오너 전문성(보안·AI 자동화)과 거리가 멀며, HIPAA·개인정보보호 등 규제 장벽과 초기 인프라 비용이 높아 1~2달 MVP 출시 목표와 불일치.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "47414af5aed3",
+      "title": "Cloud Computer by Manus",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/manus",
+      "date": "2026-05-02",
+      "total": 44,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 10,
+        "market_opportunity": 12,
+        "entry_cost": 5,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "AI 에이전트용 클라우드 인프라 아이디어는 실재하는 수요가 있으나, 본문이 너무 짧아 문제/타겟/차별점이 불명확하며, 인프라 서비스 특성상 초기 비용이 높고 AWS·GCP 등 거대 경쟁자 대비 진입 장벽이 높아 1인 창업에는 부적합",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "cc49580a0374",
+      "title": "Ara",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/dereference-the-100x-ide",
+      "date": "2026-05-02",
+      "total": 41,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 10,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "텍스트로 비즈니스를 구축한다는 콘셉트는 흥미롭지만 정보가 극히 부족해 실제 Pain·타겟·기술스택·수익모델을 전혀 파악할 수 없으며, 영어 기반 해외 제품으로 국내 적용성도 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "51955a69b5a3",
+      "title": "YouTube TV Custom Multiview",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/google",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "YouTube TV의 특정 기능(멀티뷰) 소개로, 오너 프로필(AI 에이전트/업무자동화/SaaS)과 관심 도메인에 전혀 맞지 않으며, 1인 창업 아이디어로서 평가 불가한 대형 플랫폼 기능 업데이트임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "1e37d62ff719",
+      "title": "Beauty Diagram",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/beauty-diagram",
+      "date": "2026-05-02",
+      "total": 39,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 6,
+        "entry_cost": 14,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "다이어그램 미화 도구는 니즈가 있으나 정보가 극히 부족하고, 오너 전문성(보안/AI 에이전트)과 연관성이 낮으며 Canva·Miro·Lucidchart 등 강력한 경쟁자가 이미 포화 상태라 1인 창업 기회로는 부적합.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "790c7f716b1d",
+      "title": "ScreenVeil",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/screenveil",
+      "date": "2026-05-02",
+      "total": 37,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 7,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "화면 숨김 도구는 아이디어 자체는 이해되나, 본문이 너무 짧아 구체적 Pain·타겟·차별점이 전혀 드러나지 않으며, 오너의 AI 에이전트/자동화 도메인과 무관한 단순 유틸리티 앱으로 MRR 300만원 달성 경로가 불분명함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4bc2f26b8f9e",
+      "title": "Postiz",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/postiz",
+      "date": "2026-05-02",
+      "total": 42,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 10,
+        "entry_cost": 14,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "소셜 미디어 스케줄러는 레드오션이고, 'AI 에이전트용' 특화라는 포지셔닝은 흥미하나 본문이 지나치게 빈약해 문제·타겟이 모두 불분명하며, 국내 주요 플랫폼(카카오·네이버) 미지원 가능성 높음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a2fb1a175fcf",
+      "title": "Marx Finance",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/marx-finance",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "금융 도메인에 해당하여 즉시 탈락 조건 적용.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "86746c81a0f0",
+      "title": "Zed 1.0",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/zed",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "Zed는 기존 코드 에디터 제품(VS Code 경쟁)으로, 오너 프로필(AI 에이전트 기반 업무 자동화 1인 창업)과 전혀 무관하며 단순 소개 게시물일 뿐 아이디어가 아님.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "06e455f15677",
+      "title": "Buda",
+      "source": "producthunt/today",
+      "source_url": "https://www.producthunt.com/products/buda-2",
+      "date": "2026-05-02",
+      "total": 49,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 12,
+        "target_clarity": 10,
+        "market_opportunity": 12,
+        "entry_cost": 10,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "AI 에이전트 팀 구성 개념은 흥미하나 본문이 지나치게 추상적이어서 구체적인 Pain, 타겟, 기능이 불분명하고 MVP 복잡도도 높아 1인 창업 적합도가 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "19bab3e6a8d0",
+      "title": "10 Small Businesses Worth Following on X Right Now",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/den_storksoft/10-small-businesses-worth-following-on-x-right-now-1m9j",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 X(트위터)에서 팔로우할 만한 소규모 비즈니스 큐레이션 콘텐츠로, 해결할 문제나 제품 아이디어가 없으며 오너 프로필(AI 에이전트, 업무 자동화, SaaS)과 무관한 단순 소셜 미디어 소개 기사임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "91daac457ba9",
+      "title": "50 Dutch & Benelux Scale-Ups: AI Agent ICP Shortlist",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/storksoft/50-dutch-benelux-scale-ups-ai-agent-icp-shortlist-2hg8",
+      "date": "Sat, 02 Ma",
+      "total": 37,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 12,
+        "market_opportunity": 6,
+        "entry_cost": 10,
+        "domestic_feasibility": 1
+      },
+      "reasoning": "베네룩스 기업 리스트 큐레이션 콘텐츠로 실제 제품/서비스 아이디어가 아닌 잠재고객 목록에 불과하며, 국내 시장 적용성 거의 없고 문제 해결 구조가 불분명함",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "9693b57a7d7b",
+      "title": "50 Polish & Central/Eastern European Tech Companies: AI Agent ICP Shortlist",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/rex_storksoft/50-polish-centraleastern-european-tech-companies-ai-agent-icp-shortlist-2o1m",
+      "date": "Sat, 02 Ma",
+      "total": 40,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 12,
+        "market_opportunity": 8,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "CEE 기업 리스트 큐레이션 자체는 문제 해결이 아닌 잠재 고객 명단에 불과하며, 실제 판매 가능한 제품/서비스가 없고 한국 시장과의 연관성도 희박함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4225139597ac",
+      "title": "50 Turkish & MENA Small Businesses: AI Agent ICP Shortlist",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/ayo_storksoft/50-turkish-mena-small-businesses-ai-agent-icp-shortlist-47ca",
+      "date": "Sat, 02 Ma",
+      "total": 39,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 7,
+        "entry_cost": 12,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "터키/MENA 시장 타겟 ICP 리스트 작성 아이디어로, 오너의 한국 중심 사업 목표와 지역적으로 미스매치가 심하고, 실제 해결하는 Pain보다 리드 리스트 나열에 가까워 비즈니스 모델 불명확.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "ea6d1593c0c8",
+      "title": "50 LATAM Digital Agencies & Content Studios: AI Agent ICP Shortlist",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/mio_storksoft/50-latam-digital-agencies-content-studios-ai-agent-icp-shortlist-546p",
+      "date": "Sat, 02 Ma",
+      "total": 41,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 14,
+        "market_opportunity": 7,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "이 아이디어는 LATAM 디지털 에이전시 50곳 명단을 AI 에이전트 플랫폼의 ICP 리스트로 정리한 콘텐츠/마케팅 자료일 뿐, 실제 제품·서비스·수익 모델이 없으며 국내 오너 프로필과 무관한 해외 B2B 리드 목록에 불과해 사업 아이디어로서 채점 기준 대부분에 미달.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "17cab695e9ab",
+      "title": "50 DACH E-Commerce Brands: AI Agent ICP Shortlist",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/den_storksoft/50-dach-e-commerce-brands-ai-agent-icp-shortlist-1ocd",
+      "date": "Sat, 02 Ma",
+      "total": 38,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 12,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "DACH 이커머스 브랜드 리스트업 자체는 아이디어가 아니라 리서치 자료이며, 한국 1인 창업자가 독일어권 시장을 타겟으로 AI 에이전트 서비스를 판매하는 것은 언어·문화·영업 접근성 면에서 현실적 실행 가능성이 매우 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4168a3478fca",
+      "title": "50 Russian-Speaking & CIS SaaS Startups: AI Agent ICP Shortlist",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/kas_storksoft/50-russian-speaking-cis-saas-startups-ai-agent-icp-shortlist-469",
+      "date": "Sat, 02 Ma",
+      "total": 38,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 12,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "CIS/러시아권 SaaS 스타트업을 AI 에이전트 고객으로 타겟팅하는 리드 리스트 아이디어로, 한국 1인 창업자 관점에서 지리적·문화적 거리가 너무 멀고 현재 지정학적 리스크(러시아/우크라이나)로 사업 기회가 실질적으로 낮으며, 국내 시장과의 연관성이 거의 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "e20791c58e21",
+      "title": "Google-Anthropic 5 GW Deal: AI Capacity Pre-Sold at Gigawatt Scale",
+      "source": "devto/startup",
+      "source_url": "https://dev.to/gentic_news/google-anthropic-5-gw-deal-ai-capacity-pre-sold-at-gigawatt-scale-1m6k",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "에너지/인프라/금융 도메인 딜 뉴스로 즉시 탈락 조건(에너지·금융 도메인) 해당 — 1인 창업 아이디어와 무관한 대형 인프라 투자 계약 소식임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c7ef65ff9dd2",
+      "title": "Agency Profit Margin Analysis: WordPress Maintenance vs Custom Builds vs Visual Component Platforms",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/jasonbiondo/agency-profit-margin-analysis-wordpress-maintenance-vs-custom-builds-vs-visual-component-platforms-2gln",
+      "date": "Sat, 02 Ma",
+      "total": 32,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 5,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "디지털 에이전시 수익구조 분석 콘텐츠 아이디어로, 실제 제품/SaaS가 아닌 블로그 아티클 수준이며 오너 프로필(AI 에이전트·자동화·1인 창업)과 도메인 정합성이 낮고, 한국 시장 적용성도 희박함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d46c25a9ea5d",
+      "title": "50 Bootstrapped SaaS Founders Ideal for AI Agent Delegation — ICP List for AgentHansa",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/mio_storksoft/50-bootstrapped-saas-founders-ideal-for-ai-agent-delegation-icp-list-for-agenthansa-4b8e",
+      "date": "Sat, 02 Ma",
+      "total": 41,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 14,
+        "market_opportunity": 7,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "이 아이디어는 AgentHansa라는 특정 플랫폼의 마케팅/세일즈 리서치 자료로, 실제 SaaS 제품 아이디어라기보다는 ICP(이상적 고객 프로필) 리스트 콘텐츠에 가깝고, 오너 프로필과의 연결성이 낮으며 한국 시장 적용성이 매우 제한적임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d64f8e48a68b",
+      "title": "50 Bootstrapped SaaS Founders Perfect for AI Agent Delegation — ICP Research for AgentHansa",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/den_storksoft/50-bootstrapped-saas-founders-perfect-for-ai-agent-delegation-icp-research-for-agenthansa-5co",
+      "date": "Sat, 02 Ma",
+      "total": 31,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 5,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "이 아이디어는 'SaaS 창업자에게 AI 에이전트를 팔기 위한 ICP 리스트 리서치'인데, 실제 제품이나 서비스가 아니라 잠재 고객 목록 분석 콘텐츠에 가까우며, 국내 시장 적용성이 극히 낮고 수익 모델·MVP 형태가 전혀 없어 사업 아이디어로서 완성도가 매우 부족함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d738d1a23c74",
+      "title": "50 Bootstrapped SaaS Founders Who Need AI Agents — ICP Shortlist for AgentHansa",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/kas_storksoft/50-bootstrapped-saas-founders-who-need-ai-agents-icp-shortlist-for-agenthansa-54g8",
+      "date": "Sat, 02 Ma",
+      "total": 38,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 14,
+        "market_opportunity": 8,
+        "entry_cost": 6,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "이 글은 아이디어 제안이 아니라 특정 제품(AgentHansa)의 영업용 ICP 리스트 공개 콘텐츠로, 해결하려는 문제·제품 형태·사업 모델이 전혀 정의되지 않았으며 한국 시장과의 접점도 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4dc6477d46e2",
+      "title": "Remplacer Teachable : 3 Alternatives Testées et Approuvées en 2026",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/claw_ef20444b63213913bc8b/remplacer-teachable-3-alternatives-testees-et-approuvees-en-2026-14a2",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 콘텐츠는 아이디어 제안이 아니라 프랑스어로 작성된 어필리에이트 마케팅 블로그 포스트로, 창업 아이디어 평가 대상이 아님. 또한 단순 비교/추천 콘텐츠이며 오너 프로필과 관련 도메인과 직접 연결성 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "df816efd4fc8",
+      "title": "How Google Ads Targeting System Works in 2026 (AI Explained)",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/aitoolmind/how-google-ads-targeting-system-works-in-2026-ai-explained-325c",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 아이디어는 비즈니스 아이디어가 아닌 Google Ads 기술 설명 블로그 콘텐츠로, 해결하는 문제·타겟 고객·수익 모델이 전혀 없어 채점 대상 자체가 성립하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a5f0af1545a2",
+      "title": "I Launched First. Then I Found a Hidden Design Bug in My AI Pipeline.",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/aritomofukuda/i-launched-first-then-i-found-a-hidden-design-bug-in-my-ai-pipeline-1a93",
+      "date": "Sat, 02 Ma",
+      "total": 46,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 10,
+        "target_clarity": 8,
+        "market_opportunity": 10,
+        "entry_cost": 14,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "AI 파이프라인 배치 API 설계 버그 수정 경험담으로, 실제 제품(OriginBrief) 개발 후기에 가까워 '아이디어'라기보다 기술 블로그 포스트임 — 해결 문제·타겟·시장이 불명확하고 국내 적용 각도도 약함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "55f7be722e83",
+      "title": "ICO, Employee GPS Tracking and UK GDPR 2026: What Field Service Businesses Need to Know",
+      "source": "devto/saas",
+      "source_url": "https://dev.to/geotapp/ico-employee-gps-tracking-and-uk-gdpr-2026-what-field-service-businesses-need-to-know-13fe",
+      "date": "Sat, 02 Ma",
+      "total": 49,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 13,
+        "market_opportunity": 8,
+        "entry_cost": 12,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "UK GDPR·ICO 규정 준수 문제를 다루는 영국 현지 특화 틈새 SaaS로, 문제 선명도와 타겟(영국 현장 서비스 중소기업)은 나름 구체적이나 한국 시장 적용성이 거의 없고, 오너의 도메인 강점(AI 에이전트·자동화)과의 연관성도 낮으며 영국 법률 전문성 없이 진입하기 어렵다.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a8d6a6f6d99c",
+      "title": "Claude Code Refuses to Work If Your Commits Mention a Competitor",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/devtoolpicks/claude-code-refuses-to-work-if-your-commits-mention-a-competitor-134f",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 창업 아이디어가 아니라 Claude Code의 버그/정책 이슈를 다룬 뉴스/기술 분석 기사이며, 사업화 가능한 아이디어 요소가 전혀 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "342777d922bf",
+      "title": "How to Format Text in LinkedIn Posts (Bold, Italic, Strikethrough)",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/johnbuilds/how-to-format-text-in-linkedin-posts-bold-italic-strikethrough-2dc",
+      "date": "Fri, 01 Ma",
+      "total": 43,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 5,
+        "entry_cost": 18,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "LinkedIn 포스트 서식 문제는 실재하나, 이미 수십 개의 무료 Unicode 변환 웹툴이 포화 상태이며 독립 수익화 경로가 매우 제한적인 콘텐츠/툴 아이디어임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a0594003a4df",
+      "title": "From Side Project to Product: Building an AI Creative Tool",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/sitra_cressman_c8304a5e4e/from-side-project-to-product-building-an-ai-creative-tool-38e1",
+      "date": "Fri, 01 Ma",
+      "total": 44,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 14,
+        "target_clarity": 10,
+        "market_opportunity": 8,
+        "entry_cost": 7,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "콘텐츠 제작 시 비주얼 생성 마찰이라는 문제는 실재하나, 타겟이 '나 자신'에서 벗어나지 못하고 있고, GPU 인프라 비용·Midjourney·Runway 등 초강력 경쟁자 밀집 레드오션이며, 1인 창업자의 초기 진입 비용이 매우 높아 오너 프로필과 미스매치",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "949ea4029bab",
+      "title": "Best GitHub Alternatives for Indie Hackers in 2026 (Honest Picks)",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/devtoolpicks/best-github-alternatives-for-indie-hackers-in-2026-honest-picks-2odb",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 콘텐츠는 GitHub 대안 플랫폼 소개 블로그 포스트로, 구체적인 사업 아이디어가 아니며 오너 프로필의 관심 도메인(AI 에이전트, 업무 자동화, 교육, 콘텐츠, SaaS)과 직접 연결되는 창업 아이디어가 없음. 채점 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "6f714f0e32a5",
+      "title": "Zed 1.0 Just Launched: Should Indie Hackers Switch From Cursor or VS Code?",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/devtoolpicks/zed-10-just-launched-should-indie-hackers-switch-from-cursor-or-vs-code-2ohd",
+      "date": "Thu, 30 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 아이디어는 창업 아이디어가 아니라 Zed 1.0 코드 에디터에 대한 도구 리뷰/비교 기사임 — 해결할 문제, 타겟 고객, 수익 모델이 전혀 없으며, 오너 프로필의 1인 창업 기준에 부합하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "02d495d60620",
+      "title": "How I Built a Production Android App in 75+ AI Sessions",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/superfunicular/how-i-built-a-production-android-app-in-75-ai-sessions-54i5",
+      "date": "Thu, 30 Ap",
+      "total": 37,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 6,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "이 아이디어는 'AI로 앱 만들기' 경험 공유 콘텐츠이지, 판매 가능한 제품/서비스 아이디어가 아님 — 앱 자체(배경 카메라 스트리밍)는 니치하고 국내 수요 불분명하며, 오너의 보안/AI 자동화 역량과 접점이 낮음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "e99d44a6e7a1",
+      "title": "How I Built a Production Android App in 7000+ AI Sessions",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/superfunicular/how-i-built-a-production-android-app-in-75-ai-sessions-1a62",
+      "date": "Thu, 30 Ap",
+      "total": 35,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 6,
+        "entry_cost": 10,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "이 글은 'AI로 앱을 만든 개발 후기'이지 창업 아이디어가 아님 — 실제 해결하는 비즈니스 문제나 수익 모델이 불분명하고, 배경 카메라 앱 자체는 틈새 유틸리티 수준으로 MRR 300만원 달성 가능성 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "2ccae1742088",
+      "title": "Claude Design vs Lovable vs Figma for Indie Hackers in 2026: Which Should You Actually Use?",
+      "source": "devto/indiehacker",
+      "source_url": "https://dev.to/devtoolpicks/claude-design-vs-lovable-vs-figma-for-indie-hackers-in-2026-which-should-you-actually-use-eii",
+      "date": "Wed, 29 Ap",
+      "total": 35,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 8,
+        "entry_cost": 6,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "도구 비교 콘텐츠 아이디어로 명확한 제품이나 SaaS가 아닌 블로그/미디어 콘텐츠에 가까우며, 수익 모델·진입 장벽·국내 적용성 모두 약함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "9bbabfcc4dda",
+      "title": "VS Code inserting 'Co-Authored-by Copilot' into commits regardless of usage",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://github.com/microsoft/vscode/pull/310226",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문 내용이 없고, 제목은 VS Code/Copilot 관련 기술 이슈 뉴스 링크일 뿐 창업 아이디어가 아님 — 채점 불가",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "748519d715b3",
+      "title": "Six Years Perfecting Maps on WatchOS",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://www.david-smith.org/blog/2026/04/29/maps-on-watchos/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments' 한 단어뿐으로 실제 아이디어 내용이 없으며, WatchOS 지도 앱 개발은 관심 도메인(AI 에이전트·업무 자동화·교육·콘텐츠·SaaS)과 무관하고 1인 창업 목표에도 부합하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "3001614eaeed",
+      "title": "Dav2d",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://code.videolan.org/videolan/dav2d",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments'만 존재하고 아이디어 내용이 전혀 없어 평가 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "ad7d0430c9ff",
+      "title": "This Month in Ladybird - April 2026",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://ladybird.org/newsletter/2026-04-30/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments' 한 단어뿐으로 실제 아이디어 내용이 전혀 없어 채점 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "438e343d47f9",
+      "title": "Neanderthals ran 'fat factories' 125,000 years ago",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://www.universiteitleiden.nl/en/news/2025/07/neanderthals-ran-fat-factories-125000-years-ago",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "비즈니스 아이디어가 아닌 고고학 뉴스 기사로, 평가 대상이 아님.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c3b0bbeaa322",
+      "title": "The agent harness belongs outside the sandbox",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments' 한 줄뿐으로 실질적인 아이디어 내용이 전혀 없어 채점 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "171f08f9cd72",
+      "title": "Do_not_track",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://donottrack.sh/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments' 한 단어뿐이라 아이디어 내용을 전혀 파악할 수 없어 채점 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "f1e0c78395a9",
+      "title": "Inventions for battery reuse and recycling increase seven-fold in last decade",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://www.epo.org/en/news-events/news/inventions-battery-reuse-and-recycling-increase-more-seven-fold-last-decade",
+      "date": "Thu, 30 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "에너지/제조 도메인(배터리 재활용)으로 즉시 탈락 조건 해당.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c6d1aa31d5f5",
+      "title": "Show HN: State of the Art of Coding Models, According to Hacker News Commenters",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://hnup.date/hn-sota",
+      "date": "Sat, 02 Ma",
+      "total": 27,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 5,
+        "target_clarity": 5,
+        "market_opportunity": 5,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "본문이 'Comments'만 존재해 실제 아이디어 내용을 파악할 수 없고, HN 커뮤니티 의견 집계 형태로 보이나 문제·타겟·수익 모델 모두 불명확함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "b66d2f902a78",
+      "title": "Clojurists Together – Q2 2026 Open Source Funding Announcement",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://www.clojuriststogether.org/news/q2-2026-funding-announcement/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문 내용이 없고 제목만으로는 오픈소스 펀딩 공지에 불과하며, 1인 창업 아이디어로 평가할 수 있는 문제/솔루션/타겟 정보가 전무함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "5f705f13ae46",
+      "title": "Little Magazines Are Back",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://wsjfreeexpression.substack.com/p/little-magazines-are-back",
+      "date": "Thu, 30 Ap",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments' 한 단어뿐으로 아이디어 내용이 전혀 없어 평가 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "6ef228c03462",
+      "title": "NetHack 5.0.0",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://nethack.org/v500/release.html",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments'만 존재하여 아이디어 내용 자체가 없음 — 평가 불가",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "2ea55fb0835a",
+      "title": "Why does it take so long to release black fan versions?",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://www.noctua.at/en/expertise/blog/how-can-it-take-so-long-to-release-black-fan-versions",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments' 한 단어뿐으로, 평가 가능한 아이디어 내용이 전혀 없음. 제목도 제품/서비스 아이디어가 아닌 단순 질문 형태이며 창업 아이디어로 해석할 근거 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "9d185f321109",
+      "title": "A Physics Engine with Incremental Rollback for Multiplayer Games",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://easel.games/blog/2026-rollback-physics",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Comments' 한 줄뿐으로 아이디어 내용이 전혀 없으며, 게임 물리 엔진/멀티플레이어 롤백 기술은 관심 도메인(AI 에이전트·업무자동화·교육·콘텐츠·SaaS)과 무관하고 1인 창업 오너 프로필과도 부합하지 않아 평가 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "1b9c2a16e69c",
+      "title": "How fast is a macOS VM, and how small could it be?",
+      "source": "hackernews/HN-RSS",
+      "source_url": "https://eclecticlight.co/2026/05/02/how-fast-is-a-macos-vm-and-how-small-could-it-be/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 없고 제목만으로는 구체적인 비즈니스 아이디어가 전혀 식별되지 않음 — macOS VM 성능/크기 탐구는 기술 실험 노트일 뿐, 해결할 Pain·타겟·수익 모델 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "e4f386980be8",
+      "title": "AI-generated actors and scripts are now ineligible for Oscars",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 창업 아이디어가 아니라 오스카 시상식 규정 변경에 관한 뉴스 기사 제목/본문으로, 평가할 아이디어 자체가 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c478c88ac8f9",
+      "title": "Farewell, Jeeves: Ask.com shuts down",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/02/farewell-jeeves-ask-com-shuts-down/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 아이디어가 아니라 Ask.com 서비스 종료에 관한 뉴스 기사로, 평가할 수 있는 창업 아이디어 내용이 전혀 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "28c2b8b79721",
+      "title": "Netflix delays Greta Gerwig’s ‘Narnia’ movie for big theatrical push in 2027",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/02/netflix-delays-greta-gerwigs-narnia-movie-for-big-theatrical-push-in-2027/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 기사는 Netflix의 나니아 영화 개봉 전략에 관한 엔터테인먼트 뉴스로, AI 에이전트·업무 자동화·SaaS 등 오너의 관심 도메인과 무관하며 창업 아이디어가 아님.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "ca5d540b4c05",
+      "title": "The best AI dictation apps, tested and ranked",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/",
+      "date": "Sat, 02 Ma",
+      "total": 32,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 8,
+        "entry_cost": 5,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "단순 앱 리뷰 기사로 창업 아이디어라기보다 트렌드 정보에 가까우며, 문제·타겟·시장이 모두 표면적으로만 언급되어 실질적 창업 기회로 구체화되기 어려움",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "53c56fc98967",
+      "title": "Beyond Lovable and Mistral: 21 European startups to watch",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/02/beyond-lovable-and-mistral-21-european-startups-to-watch/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 입력은 창업 아이디어가 아닌 유럽 스타트업 동향 뉴스 기사로, 채점할 아이디어 자체가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "12ee83426355",
+      "title": "Uber wants to turn its millions of drivers into a sensor grid for self-driving companies",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/01/uber-wants-to-turn-its-millions-of-drivers-into-a-sensor-grid-for-self-driving-companies/",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "자율주행 데이터 수집을 위한 대규모 드라이버 센서 그리드는 에너지/제조/모빌리티 인프라 도메인에 해당하며, 1인 창업으로 접근 불가능한 대기업 전략 아이템임. 즉시 탈락.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4f6e7b2863e1",
+      "title": "Replit’s Amjad Masad on the Cursor deal, fighting Apple, and why he’d rather not sell",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/01/replits-amjad-masad-on-the-cursor-deal-fighting-apple-and-why-hed-rather-not-sell/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 창업 아이디어가 아니라 Replit CEO 인터뷰 기사 제목/본문으로, 평가할 사업 아이디어 자체가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c9392b432e92",
+      "title": "Musely secures $360M from General Catalyst without giving up equity",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/01/musely-secures-360m-from-general-catalyst-without-giving-up-equity/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 기사는 DTC 뷰티/헬스케어 브랜드의 투자 유치 뉴스로, 창업 아이디어가 아니며 오너 프로필(AI 에이전트·업무자동화·SaaS)과 무관한 도메인(소비재·헬스케어)이고 평가할 아이디어 자체가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "dd9cbea75581",
+      "title": "Meta buys robotics startup to bolster its humanoid AI ambitions",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "로봇/제조 도메인 M&A 뉴스로 즉시 탈락 조건(에너지/제조 도메인) 해당, 1인 창업 아이디어와 무관",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c1aa070a8b38",
+      "title": "Coatue has a plan to buy up land for data centers, possibly for Anthropic",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/01/coatue-has-a-plan-to-buy-up-land-for-data-centers-possibly-for-anthropic/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "데이터센터 부지 매입 및 에너지/인프라 투자 도메인으로 즉시 탈락 조건(에너지/제조 도메인) 해당, 또한 1인 창업과 무관한 대규모 자본 집약 사업임.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "33c1ee68ad64",
+      "title": "Pentagon inks deals with Nvidia, Microsoft, and AWS to deploy AI on classified networks",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "미국 국방부(DOD) 대상 군사/방위 도메인 딜로, 에너지/제조/금융/정치에 준하는 정부 방위 도메인이며 1인 창업자가 접근 불가능한 영역. 즉시 탈락.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "196c646c5665",
+      "title": "Ubuntu services hit by outages after DDoS attack",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/01/ubuntu-services-hit-by-outages-after-ddos-attack/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "에너지/제조/금융/정치 도메인은 아니나, 이것은 창업 아이디어가 아닌 단순 뉴스 기사이며, 네트워크 보안 관련 DDoS 사건 보도로 1인 창업 아이디어로 평가할 대상이 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c62c13f0b3da",
+      "title": "Musk v. Altman is just getting started",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/video/musk-v-altman-is-just-getting-started/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 콘텐츠는 Musk vs OpenAI 소송 관련 뉴스 기사로, 창업 아이디어가 아님. 채점 대상 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "ca867521d4c9",
+      "title": "People are finally using Reddit’s search",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/05/01/people-are-finally-using-reddits-search/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 Reddit 검색 사용량 증가에 관한 뉴스 기사로, 창업 아이디어가 아님. 채점 대상 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "caf280296532",
+      "title": "ChatGPT Images 2.0 is a hit in India, but not a big winner elsewhere, yet",
+      "source": "techcrunch/startup",
+      "source_url": "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/",
+      "date": "Fri, 01 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 아이디어가 아니라 인도 시장의 ChatGPT 이미지 기능 사용 트렌드를 보도한 뉴스 기사로, 해결 문제·타겟·사업 모델이 전혀 제시되지 않아 채점 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "00824e1920d0",
+      "title": "Building AVERON Skin Science at 17: Why I Started Earlier Than Most",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@helloaveron4/building-averon-skin-science-at-17-why-i-started-earlier-than-most-d7f53aa9c7c1?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "스킨케어 브랜드 창업 스토리로, AI 에이전트/업무자동화/SaaS 도메인과 무관하며 오너 프로필과 완전히 불일치. 평가 대상 아이디어 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d912712ade7f",
+      "title": "So I’m an author, and I have been wondering what my readers like or dislike.",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@alexzaap49/so-im-an-author-and-i-have-been-wondering-what-my-readers-like-or-dislike-dc5a8569c301?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 'Continue reading on Medium »' 외에 실질적 내용이 없어 아이디어 평가 불가 — 채점 대상 미달",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "7b23ca91d59d",
+      "title": "What is a Fractional COO? When Mid-Market Businesses Need One",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@richard.danks_84026/what-is-a-fractional-coo-when-mid-market-businesses-need-one-d106c0517640?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 38,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 7,
+        "entry_cost": 10,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "Fractional COO 개념 소개 글로 실제 아이디어라기보다 콘텐츠 마케팅 글이며, AI 에이전트/자동화와 연결고리가 약하고 한국 시장에서 Fractional 임원 문화 자체가 미성숙해 사업 기회로 전환이 어려움",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "fe3ccad9069f",
+      "title": "How I raise startup funding for my businesses each time",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/enlightenedcohorts/how-i-raise-startup-funding-for-my-businesses-each-time-8697e5ff93c3?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "사기/기만적 요소 포함 — 'manipulate investors'라는 표현이 명시적으로 기만적 투자 유치 방식을 암시하므로 즉시 탈락 조건 해당",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "5ff059bccdac",
+      "title": "Aligning teams around a unified revenue goal",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@ramaiyar/aligning-teams-around-a-unified-revenue-goal-04f5f0e08ac8?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 36,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 8,
+        "entry_cost": 10,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "본문이 거의 없어 구체적 문제·타겟·솔루션이 불분명하며, 세일즈-마케팅 정렬 문제는 실재하나 아이디어가 아닌 블로그 요약 수준이라 평가 근거 부족",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "5a0e4ae6940c",
+      "title": "Project Zero: Why a €130 Parking Fine Was the Best Investment for JuicyCore",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@juicycore.official/project-zero-why-a-130-parking-fine-was-the-best-investment-for-juicycore-79fd51385ab9?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 사실상 없음 — 주차 딱지 일화 한 줄 외에 아이디어·문제·솔루션·타겟 등 평가 가능한 내용이 전혀 없는 미리보기 낚시형 Medium 포스트로, 채점 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a242a94f5c43",
+      "title": "6/6/26 – Why Does This Date Feel Different?",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@fatimabeuty1/6-6-26-why-does-this-date-feel-different-165af597ed2e?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문 내용이 사실상 없고, 제목만으로는 어떤 문제를 해결하려는지, 누구를 대상으로 하는지 전혀 파악 불가 — 아이디어로서 평가 불가능한 클릭베이트성 글",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "045b1531b20e",
+      "title": "Most Startup Websites Are a Joke — And It’s Killing Your Growth",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@anmoldevta/most-startup-websites-are-a-joke-and-its-killing-your-growth-977787aa3bc1?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 28,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 6,
+        "target_clarity": 5,
+        "market_opportunity": 6,
+        "entry_cost": 8,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "제목만 있고 본문이 사실상 없어 구체적인 문제·솔루션·타겟을 파악할 수 없으며, 평가 가능한 아이디어가 제시되지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "992e690e7abb",
+      "title": "İngilizce konuşma pratiği için yıllardır ödüyoruz. Konuşamıyoruz. Sorunun adı.",
+      "source": "medium/startup",
+      "source_url": "https://medium.com/@mstgnz/i%CC%87ngilizce-konu%C5%9Fma-prati%C4%9Fi-i%C3%A7in-y%C4%B1llard%C4%B1r-%C3%B6d%C3%BCyoruz-konu%C5%9Fam%C4%B1yoruz-sorunun-ad%C4%B1-37fe813fd9ff?source=rss------startup-5",
+      "date": "Sat, 02 Ma",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 터키어로 작성되어 있고 HTML 인코딩 오류로 내용 파악 불가 — 아이디어 실체 평가 불가능하여 채점 불가 처리",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "ec7b1ac5f2d8",
+      "title": "Designing for trust: what healthcare SaaS UX taught me about UI decisions",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@hmimichiouukh/designing-for-trust-what-healthcare-saas-ux-taught-me-about-ui-decisions-fda13232380f?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 33,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 6,
+        "entry_cost": 10,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "이 글은 헬스케어 SaaS UX에 관한 블로그 에세이로, 해결할 구체적 문제나 제품 아이디어가 아닌 단순 인사이트 공유 콘텐츠여서 사업 아이디어로서의 실체가 매우 희박하고, 오너 프로필(네트워크 보안·AI 에이전트 자동화)과 도메인 적합성도 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "3a172beb8045",
+      "title": "Ship the Half-Built Thing: How GTM is Inverted in the AI Era",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@xuwanting.hk/ship-the-half-built-thing-how-gtm-is-inverted-in-the-ai-era-5be92c14ed9e?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 36,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 8,
+        "entry_cost": 10,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "본문이 거의 없어 아이디어 실체 파악 불가 — 'GTM 역전' 개념 언급만 있을 뿐 구체적 문제·타겟·솔루션이 전무하여 전 항목 저점",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a3cc5c0533e5",
+      "title": "The Real Moat for AI-Era SaaS Isn’t the LLM. It’s How Deep You Sit in the Workflow.",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@xuwanting.hk/the-real-moat-for-ai-era-saas-isnt-the-llm-it-s-how-deep-you-sit-in-the-workflow-680def1d8d1c?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 43,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 12,
+        "entry_cost": 12,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "제목은 흥미로운 전략 인사이트를 담고 있으나 본문이 사실상 없어 실제 아이디어나 실행 방향을 평가할 수 없음 — 콘텐츠 단편에 불과해 채점 신뢰도 매우 낮음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "e8e711453edc",
+      "title": "From Seats to Agents: Early Evidence on the Future of Work in the Agentic AI Era",
+      "source": "medium/saas",
+      "source_url": "https://blog.gopenai.com/from-seats-to-agents-early-evidence-on-the-future-of-work-in-the-agentic-ai-era-d51e89440e28?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 40,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 10,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "본문이 지나치게 단편적이고 추상적인 트렌드 분석 수준에 머물러 있어, 실제 해결하는 문제·타겟·사업 모델이 전혀 특정되지 않음. 아이디어라기보다 미디엄 아티클 티저에 가까움.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "21103bc030f7",
+      "title": "RedesignProfile: The Branded Link Control System Built From 7 Years of Frustration",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@abhishekadhikari1254/redesignprofile-the-branded-link-control-system-built-from-7-years-of-frustration-77d52bec89b1?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 39,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 8,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "본문이 거의 없어 실제 문제·타겟·기능을 파악하기 어려우며, 'Branded Link Control'이라는 키워드만으로는 Bitly류 링크 단축/브랜딩 SaaS로 추정되나 오너 프로필(네트워크 보안·AI 에이전트)과 관련성이 낮고 국내 수요도 불명확함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "049061b4de24",
+      "title": "How to Achieve Product-Market Fit The Only Guide SAAS Founders Need",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@KalsoomBacklink/how-to-achieve-product-market-fit-the-only-guide-saas-founders-need-601d139c4063?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 37,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 10,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "PMF 관련 일반 가이드 콘텐츠로, 실제 제품/서비스 아이디어가 아닌 블로그 글이며 오너 프로필과 직접적인 사업 기회 연결이 없음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "574bba34b611",
+      "title": "I tried using a colorful gradient background for screenshots in my posts.",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@parthbhovad710/i-tried-using-a-colorful-gradient-background-for-screenshots-in-my-posts-af1a2c2bdade?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 19,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 2,
+        "target_clarity": 3,
+        "market_opportunity": 2,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "콘텐츠 미적 팁 공유 글로, 해결하는 비즈니스 문제가 없고 SaaS/자동화 아이디어로 볼 수 없음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "1a6ee3e70f0a",
+      "title": "Why AI Agents Are Making Traditional SaaS Software Look Obsolete",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@collinsogbuju/why-ai-agents-are-making-traditional-saas-software-look-obsolete-a0adb1ab132c?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 45,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 12,
+        "entry_cost": 10,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "Medium 블로그 글 발췌로 본문이 사실상 없어 아이디어가 아닌 트렌드 논평 수준이며, 구체적 문제·솔루션·타겟이 모두 미정의 상태",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "5410919f62fe",
+      "title": "“Building an Automated AI-Agent Store in Telegram: A Python Architecture Deep Dive”",
+      "source": "medium/saas",
+      "source_url": "https://medium.com/@watrado.pro/building-an-automated-ai-agent-store-in-telegram-a-python-architecture-deep-dive-2fa3a79508ed?source=rss------saas-5",
+      "date": "Sat, 02 Ma",
+      "total": 43,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 9,
+        "entry_cost": 14,
+        "domestic_feasibility": 5
+      },
+      "reasoning": "제목은 흥미롭지만 본문이 거의 없는 Medium 티저 수준이라 실제 문제·타겟·비즈니스 모델이 전혀 드러나지 않으며, 'AI-Agent Store in Telegram'이라는 컨셉 자체도 아이디어라기보다 기술 아티클에 가까워 사업 아이디어로 평가하기 어렵다.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "25e5c9732391",
+      "title": "Show HN: Headcam - head tracking & streaming app (iOS) [video]",
+      "source": "hackernews/show_hn",
+      "source_url": "https://www.youtube.com/watch?v=s8khQ_-6aM8",
+      "date": "2026-05-02",
+      "total": 39,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 6,
+        "entry_cost": 12,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "게임 헤드트래킹 접근성 향상이라는 니치한 문제를 다루지만, 오너 프로필(AI 에이전트·업무자동화·B2B SaaS)과 도메인 미스매치가 크고, 국내 시장 적용성·수익화 경로 모두 불명확함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "e607f7a0b5c4",
+      "title": "Show HN: Plannotator for Codex",
+      "source": "hackernews/show_hn",
+      "source_url": "https://twitter.com/plannotator/status/2050683552581468172",
+      "date": "2026-05-02",
+      "total": 36,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 5,
+        "target_clarity": 6,
+        "market_opportunity": 8,
+        "entry_cost": 14,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "본문이 비어 있어 실제 문제·타겟·기능을 전혀 파악할 수 없으며, 제목만으로는 'Plannotator'가 무엇인지, Codex와의 연동이 어떤 Pain을 해결하는지 추론 불가 — 채점은 제목 키워드(코드 계획/주석 자동화 추정) 기반 최소치 부여.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "7f8e01a57e77",
+      "title": "Show HN: I Built a Museum Exhibit",
+      "source": "hackernews/show_hn",
+      "source_url": "https://knhash.in/built-an-exhibit/",
+      "date": "2026-05-02",
+      "total": 19,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 2,
+        "target_clarity": 2,
+        "market_opportunity": 3,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "본문이 완전히 비어 있어 어떤 문제를 해결하는지, 누구를 위한 것인지, 어떤 기술/방식인지 전혀 파악 불가 — 뮤지엄 전시물이라는 키워드만으로는 오너 관심 도메인(AI 에이전트/자동화/SaaS)과의 연관성도 희박함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "1a62a8409ae9",
+      "title": "Show HN: A marketplace for LLM-powered webapps earning on token margins",
+      "source": "hackernews/show_hn",
+      "source_url": "https://codeplusequalsai.com/dashboard",
+      "date": "2026-05-02",
+      "total": 41,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 10,
+        "target_clarity": 8,
+        "market_opportunity": 10,
+        "entry_cost": 10,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "두 가지 문제(에이전트 파일 편집 정확성 + 토큰 마진 마켓플레이스)를 섞어 설명해 문제 초점이 흐리고, 본문이 잘려 핵심 비즈니스 모델 파악 불완전; 타겟도 'AI 앱 빌더+캐주얼 유저' 혼재, 국내 적용성 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "2e86142cfffd",
+      "title": "Show HN: Clipmon is a macOS clipboard manager on steroids",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/c9-labs/clipmon",
+      "date": "2026-05-02",
+      "total": 24,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 7,
+        "market_opportunity": 6,
+        "entry_cost": 0,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "macOS 클립보드 매니저는 이미 Paste, Raycast, Alfred 등 강력한 경쟁자가 포화된 레드오션이며, 본문이 없어 차별점·문제 정의·타겟이 전혀 불명확하고, 오너 프로필(AI 에이전트/SaaS/보안)과도 도메인 미스매치",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "63d8fec2106a",
+      "title": "Show HN: I built a dev workspace with AI as backbone",
+      "source": "hackernews/show_hn",
+      "source_url": "https://thekit.dev/",
+      "date": "2026-05-02",
+      "total": 44,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 10,
+        "entry_cost": 12,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "본문이 없어 구체적인 문제 정의·기능·차별점을 전혀 파악할 수 없으며, 제목만으로는 'AI 기반 개발자 워크스페이스'라는 포화된 레드오션 영역임만 확인되어 전반적으로 낮은 점수 불가피.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "4ce209585500",
+      "title": "Show HN: Virshle – Make ordinary virtual machines",
+      "source": "hackernews/show_hn",
+      "source_url": "https://virshle.crocuda.com/",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문 내용이 없고 제목만으로는 문제·타겟·가치제안을 전혀 파악할 수 없어 평가 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "3e13c97891b9",
+      "title": "Show HN: Fabrica – A minimal terminal-based coding agent built in Rust",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/Endi1/fabrica",
+      "date": "2026-05-02",
+      "total": 44,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 10,
+        "market_opportunity": 8,
+        "entry_cost": 14,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "터미널 기반 Rust 코딩 에이전트는 기술적 완성도와 차별화가 불분명하고, 국내 시장 수요·수익화 경로가 매우 제한적이며 Claude/Cursor 등 강력한 경쟁자가 이미 포화 상태",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "a32671e1b142",
+      "title": "Show HN: Which public repos are friendliest to an AI coding agent?",
+      "source": "hackernews/show_hn",
+      "source_url": "https://www.agentfriendlycode.com/",
+      "date": "2026-05-02",
+      "total": 43,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 10,
+        "target_clarity": 8,
+        "market_opportunity": 8,
+        "entry_cost": 14,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "AI 코딩 에이전트 친화적 공개 저장소 랭킹이라는 아이디어는 흥미롭지만 본문이 없어 문제 정의와 타겟이 모호하고, 한국 시장 적용성도 낮으며 수익 모델이 불분명함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "7d7fe5f8e41a",
+      "title": "Show HN: High perfomance database - Graph, vector, array, columnar, KV",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/nodedb-lab/nodedb",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 비어 있어 평가할 내용이 없으며, 데이터베이스 엔진 개발은 에너지/제조/금융/정치 도메인은 아니지만 1인 창업 AI 에이전트/자동화 관심 도메인과 완전히 벗어난 인프라 기술 제품으로 초기 비용·개발 기간이 극단적으로 높고 오너 프로필과 맞지 않아 전 항목 0점 처리.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "81f8e45e695f",
+      "title": "Show HN: A Universal Stability Criterion for Symbolic Complex Systems",
+      "source": "hackernews/show_hn",
+      "source_url": "https://zenodo.org/records/18883274",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "금융 시스템 및 생물학적 시퀀스 도메인 포함으로 즉시 탈락 조건 해당, 또한 추상적 학술 이론으로 실제 사업화 가능한 아이디어가 아님",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "9fe30ffb1ea3",
+      "title": "Show HN: Rust library for Undo/Redo using deltas, snapshots or commands",
+      "source": "hackernews/show_hn",
+      "source_url": "https://github.com/mikwielgus/undoredo",
+      "date": "2026-05-02",
+      "total": 36,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 8,
+        "target_clarity": 6,
+        "market_opportunity": 5,
+        "entry_cost": 15,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "Rust 라이브러리로 개발자 도구 영역이나 본문 내용 없이 오너 프로필(AI 에이전트/업무 자동화/교육/SaaS)과 무관한 저수준 기술 라이브러리로, 국내 1인 SaaS 사업화 가능성 극히 낮음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "eea1a9107941",
+      "title": "Ask HN: How long do you commute by car each day?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47989285",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "사업 아이디어가 없는 단순 커뮤니티 설문 질문으로, 채점 대상이 아님.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "80cfd7b55b32",
+      "title": "Ask HN: Where can I go to ask for help?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47989105",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "사업 아이디어가 아닌 개인 재정 지원 요청 게시글로, 평가 대상 자체가 아님.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d104a2aa3ade",
+      "title": "Ask HN: Where do you promote your writing in 2026?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47988711",
+      "date": "2026-05-02",
+      "total": 24,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 4,
+        "target_clarity": 5,
+        "market_opportunity": 3,
+        "entry_cost": 10,
+        "domestic_feasibility": 2
+      },
+      "reasoning": "이 글은 창업 아이디어가 아니라 콘텐츠 배포 채널을 묻는 커뮤니티 토론 게시물이며, 해결할 비즈니스 문제나 타겟 고객이 존재하지 않음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "6c061c39ca61",
+      "title": "Ask HN: Is the Job Market Actually Bad?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47988268",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 사업 아이디어가 아닌 채용 시장에 대한 개인 경험 공유 글로, 평가할 수 있는 제품/서비스 아이디어 자체가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "2e0ff0f09655",
+      "title": "Ask HN: Are small local LLMs good at coding?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47988241",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 아이디어 제안이 아니라 HackerNews의 질문 글(Ask HN)로, 로컬 LLM 코딩 가능성을 묻는 개인 질문입니다. 평가할 사업 아이디어가 존재하지 않습니다.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "fcc5748c086d",
+      "title": "Ask HN: What does a 9-year undetected memory-only Linux LPE imply?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47988049",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "금융/보안 인프라 취약점 관련 기술 토론 스레드로, 제품/서비스 아이디어가 아니며 즉시 탈락 조건(에너지/제조/금융/정치 도메인 외에도 사업 아이디어 자체가 부재)에 해당함.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "7469260242a7",
+      "title": "Internet of Agents",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47986703",
+      "date": "2026-05-02",
+      "total": 33,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 6,
+        "target_clarity": 4,
+        "market_opportunity": 12,
+        "entry_cost": 8,
+        "domestic_feasibility": 3
+      },
+      "reasoning": "프로토콜 설계 논의 수준의 추상적 질문으로, 해결할 구체적 문제·타겟 고객·수익 모델이 전혀 특정되지 않아 사업 아이디어로 평가하기 어려움",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "85e541616003",
+      "title": "Ask HN: Which is better–macOS/Windows/Linux?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47986379",
+      "date": "2026-05-02",
+      "total": 3,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 2,
+        "target_clarity": 1,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "OS 선호도 토론 게시글로 사업 아이디어가 전혀 없음 — 채점 불가 수준의 비구조적 입력",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c6d4060a8cf4",
+      "title": "Ubuntu back up, In Saturday after DDoS attacks",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47985502",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이것은 창업 아이디어가 아님 — Ubuntu/Canonical 웹사이트 DDoS 복구 확인을 공유하는 단순 뉴스/상태 업데이트 게시물이며, 해결할 문제·타겟·비즈니스 모델 요소가 전혀 없음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "c97439ce5bea",
+      "title": "Ask HN: Try npx -y sharedmemory/MCP-server",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47985393",
+      "date": "2026-05-02",
+      "total": 42,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 6,
+        "target_clarity": 8,
+        "market_opportunity": 10,
+        "entry_cost": 14,
+        "domestic_feasibility": 4
+      },
+      "reasoning": "MCP 서버 기반 팀/AI 에이전트용 공유 메모리 아이디어는 방향성은 흥미하나, 어떤 구체적 Pain을 해결하는지·누가 쓰는지·수익 모델이 모두 불명확하고 기술 데모 수준의 HN 포스트에 불과함",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "3aff71368f03",
+      "title": "Ask HN: Best way to develop games for beginners",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47985156",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "이 글은 비즈니스 아이디어가 아닌 단순 Q&A 질문으로, 평가할 사업 아이디어가 존재하지 않음.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "d1866a0e90be",
+      "title": "Ask HN: Is it possible to upgrade the RAM of a MacBook Air M2?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47984652",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "하드웨어 업그레이드 질문으로, AI 에이전트/자동화/SaaS 창업 아이디어와 무관하며 평가 대상 비즈니스 아이디어가 아님.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "624b738419d0",
+      "title": "Ask HN: Is the AI running out of capacity?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47984627",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 비어 있고 제목만으로는 구체적인 아이디어나 문제 정의가 전혀 없어 채점 불가.",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    },
+    {
+      "uid": "b0895393f3fe",
+      "title": "Ask HN: What book have you given as a gift?",
+      "source": "hackernews/ask_hn",
+      "source_url": "https://news.ycombinator.com/item?id=47984463",
+      "date": "2026-05-02",
+      "total": 0,
+      "grade": "탈락",
+      "scores": {
+        "problem_clarity": 0,
+        "target_clarity": 0,
+        "market_opportunity": 0,
+        "entry_cost": 0,
+        "domestic_feasibility": 0
+      },
+      "reasoning": "본문이 없고 제목도 단순 HN 설문 스레드로, 사업 아이디어 자체가 존재하지 않음",
+      "deep": {
+        "mvp": "",
+        "first_revenue_path": "",
+        "domestic_angle": ""
+      }
+    }
+  ]
+}
