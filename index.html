@@ -255,9 +255,8 @@ tfoot td{background:#edf8ff;padding:10px 8px;font-weight:800;color:#2b6cb0;font-
 // ==================== DATA ====================
 let acc = {};
 let ppl = [
-  {id:'p1', name:'수정', color:'#e53e3e'},
   {id:'p2', name:'은미', color:'#38a169'},
-  {id:'p3', name:'탁이', color:'#805ad5'},
+  {id:'p4', name:'남수', color:'#3182ce'},
 ];
 const CATS = [
   {id:'술음료', lbl:'🍺 술/음료',    bg:'#fefcbf', tx:'#744210'},
@@ -283,82 +282,61 @@ const C  = id => CATS.find(c=>c.id===id) || CATS[CATS.length-1];
 const P  = id => ppl.find(p=>p.id===id);
 const IT = it => it.qty * it.price;
 const SUM = arr => arr.reduce((a,v)=>a+v, 0);
-let nid = 74;
+let nid = 48;
 
 let items = [
-{id:1,  name:'소주',                    cat:'술음료',qty:20,  unit:'병',   price:1500,  person:'',  pt:'마트', done:false},
-{id:2,  name:'맥주',                    cat:'술음료',qty:3,   unit:'박스', price:28000, person:'',  pt:'마트', done:false},
-{id:3,  name:'백화수복',                cat:'술음료',qty:2,   unit:'병',   price:25000, person:'',  pt:'마트', done:false},
-{id:4,  name:'샹그리아',                cat:'술음료',qty:2,   unit:'병',   price:15000, person:'',  pt:'마트', done:false},
-{id:5,  name:'물 (정수기 여부 확인)',    cat:'술음료',qty:0,   unit:'',     price:0,     person:'',  pt:'확인', done:false},
-{id:6,  name:'헛개수',                  cat:'술음료',qty:10,  unit:'캔',   price:1500,  person:'',  pt:'마트', done:false},
-{id:7,  name:'애들음료',                cat:'술음료',qty:10,  unit:'개',   price:1500,  person:'',  pt:'마트', done:false},
-{id:8,  name:'얼음',                    cat:'술음료',qty:20,  unit:'kg',   price:2000,  person:'',  pt:'마트', done:false},
-{id:9,  name:'목살',                    cat:'고기',  qty:2,   unit:'kg',   price:28000, person:'',  pt:'마트', done:false},
-{id:10, name:'항정살',                  cat:'고기',  qty:1.5, unit:'kg',   price:38000, person:'',  pt:'마트', done:false},
-{id:11, name:'숯닭',                    cat:'고기',  qty:2,   unit:'마리', price:18000, person:'',  pt:'주문', done:false},
-{id:12, name:'토마호크',                cat:'고기',  qty:2,   unit:'개',   price:80000, person:'',  pt:'주문', done:false},
-{id:13, name:'양갈비',                  cat:'고기',  qty:2,   unit:'rack', price:40000, person:'',  pt:'주문', done:false},
-{id:14, name:'뭉티기',                  cat:'고기',  qty:1,   unit:'kg',   price:45000, person:'',  pt:'주문', done:false},
-{id:15, name:'육회',                    cat:'고기',  qty:500, unit:'g',    price:35000, person:'',  pt:'주문', done:false},
-{id:16, name:'소세지꼬치',              cat:'고기',  qty:30,  unit:'개',   price:500,   person:'',  pt:'마트', done:false},
-{id:17, name:'버섯 새송이',             cat:'채소',  qty:3,   unit:'팩',   price:3000,  person:'',  pt:'마트', done:false},
-{id:18, name:'버섯 팽이',               cat:'채소',  qty:3,   unit:'팩',   price:2000,  person:'',  pt:'마트', done:false},
-{id:19, name:'김치',                    cat:'채소',  qty:2,   unit:'봉',   price:12000, person:'',  pt:'마트', done:false},
-{id:20, name:'쌈야채 (깻잎+상추)',      cat:'채소',  qty:3,   unit:'봉',   price:2000,  person:'',  pt:'마트', done:false},
-{id:21, name:'마늘',                    cat:'채소',  qty:1,   unit:'통',   price:5000,  person:'',  pt:'마트', done:false},
-{id:22, name:'청양고추',                cat:'채소',  qty:1,   unit:'봉',   price:2000,  person:'',  pt:'마트', done:false},
-{id:23, name:'옥수수',                  cat:'채소',  qty:10,  unit:'개',   price:1500,  person:'',  pt:'마트', done:false},
-{id:24, name:'우삼겹 된장찌개',         cat:'안주',  qty:10,  unit:'인분', price:3000,  person:'',  pt:'마트', done:false},
-{id:25, name:'비빔면',                  cat:'안주',  qty:10,  unit:'봉',   price:1500,  person:'',  pt:'마트', done:false},
-{id:26, name:'콘치즈',                  cat:'안주',  qty:2,   unit:'세트', price:5000,  person:'',  pt:'마트', done:false},
-{id:27, name:'햇반',                    cat:'안주',  qty:10,  unit:'개',   price:1500,  person:'',  pt:'마트', done:false},
-{id:28, name:'김치우동 or 즉석떡볶이',  cat:'안주',  qty:1,   unit:'팩',   price:10000, person:'',  pt:'마트', done:false},
-{id:29, name:'감자채전 재료',           cat:'안주',  qty:2,   unit:'인분', price:3000,  person:'',  pt:'마트', done:false},
-{id:30, name:'호박채전 재료',           cat:'안주',  qty:2,   unit:'인분', price:2000,  person:'',  pt:'마트', done:false},
-{id:31, name:'명란구이',                cat:'안주',  qty:1,   unit:'팩',   price:15000, person:'',  pt:'주문', done:false},
-{id:32, name:'마른안주',                cat:'안주',  qty:1,   unit:'세트', price:20000, person:'',  pt:'마트', done:false},
-{id:33, name:'군만두',                  cat:'안주',  qty:2,   unit:'봉',   price:8000,  person:'',  pt:'마트', done:false},
-{id:34, name:'오돌뼈',                  cat:'안주',  qty:1,   unit:'kg',   price:12000, person:'',  pt:'마트', done:false},
-{id:35, name:'피자',                    cat:'안주',  qty:2,   unit:'판',   price:25000, person:'',  pt:'주문', done:false},
-{id:36, name:'라면',                    cat:'안주',  qty:1,   unit:'박스', price:6000,  person:'',  pt:'마트', done:false},
-{id:37, name:'토스트 재료',             cat:'안주',  qty:1,   unit:'세트', price:8000,  person:'',  pt:'마트', done:false},
-{id:38, name:'수박',                    cat:'과일',  qty:1,   unit:'통',   price:30000, person:'p3',pt:'마트', done:false},
-{id:39, name:'방울토마토',              cat:'과일',  qty:2,   unit:'팩',   price:5000,  person:'',  pt:'마트', done:false},
-{id:40, name:'파인애플',                cat:'과일',  qty:1,   unit:'개',   price:8000,  person:'',  pt:'마트', done:false},
-{id:41, name:'포도통조림',              cat:'과일',  qty:2,   unit:'캔',   price:3000,  person:'',  pt:'마트', done:false},
-{id:42, name:'과자/팝콘',               cat:'과일',  qty:3,   unit:'봉',   price:3000,  person:'',  pt:'마트', done:false},
-{id:43, name:'마시멜로',                cat:'과일',  qty:2,   unit:'봉',   price:4000,  person:'',  pt:'마트', done:false},
-{id:44, name:'참기름',                  cat:'양념',  qty:1,   unit:'개',   price:8000,  person:'',  pt:'마트', done:false},
-{id:45, name:'마늘소금',                cat:'양념',  qty:1,   unit:'개',   price:5000,  person:'',  pt:'마트', done:false},
-{id:46, name:'트러플소금',              cat:'양념',  qty:1,   unit:'개',   price:15000, person:'',  pt:'개인', done:false},
-{id:47, name:'소금',                    cat:'양념',  qty:1,   unit:'개',   price:2000,  person:'',  pt:'마트', done:false},
-{id:48, name:'쌈장',                    cat:'양념',  qty:2,   unit:'개',   price:3000,  person:'',  pt:'마트', done:false},
-{id:49, name:'마늘짱아찌',              cat:'반찬',  qty:1,   unit:'통',   price:8000,  person:'',  pt:'개인', done:false},
-{id:50, name:'고추짱아찌',              cat:'반찬',  qty:1,   unit:'통',   price:8000,  person:'',  pt:'개인', done:false},
-{id:51, name:'부추무침',                cat:'반찬',  qty:1,   unit:'통',   price:5000,  person:'',  pt:'개인', done:false},
-{id:52, name:'젓가락 (일회용)',         cat:'일회용',qty:30,  unit:'개',   price:50,    person:'',  pt:'마트', done:false},
-{id:53, name:'숟가락 (일회용)',         cat:'일회용',qty:30,  unit:'개',   price:50,    person:'',  pt:'마트', done:false},
-{id:54, name:'소주컵',                  cat:'일회용',qty:30,  unit:'개',   price:100,   person:'',  pt:'마트', done:false},
-{id:55, name:'맥주컵',                  cat:'일회용',qty:30,  unit:'개',   price:100,   person:'',  pt:'마트', done:false},
-{id:56, name:'국접시',                  cat:'일회용',qty:20,  unit:'개',   price:100,   person:'',  pt:'마트', done:false},
-{id:57, name:'앞접시',                  cat:'일회용',qty:30,  unit:'개',   price:100,   person:'',  pt:'마트', done:false},
-{id:58, name:'은박지',                  cat:'일회용',qty:2,   unit:'롤',   price:3000,  person:'',  pt:'마트', done:false},
-{id:59, name:'물티슈',                  cat:'일회용',qty:3,   unit:'팩',   price:3000,  person:'',  pt:'마트', done:false},
-{id:60, name:'키친타올',                cat:'일회용',qty:2,   unit:'롤',   price:4000,  person:'',  pt:'마트', done:false},
-{id:61, name:'버그트랩',                cat:'위생',  qty:2,   unit:'개',   price:10000, person:'',  pt:'마트', done:false},
-{id:62, name:'모기기피제',              cat:'위생',  qty:2,   unit:'개',   price:8000,  person:'',  pt:'마트', done:false},
-{id:63, name:'상비약 (타이레놀,밴드,소화제)',cat:'위생',qty:1,unit:'세트',price:15000, person:'',  pt:'개인', done:false},
-{id:64, name:'손선풍기',                cat:'위생',  qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
-{id:65, name:'선크림 SPF50+',          cat:'물놀이',qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
-{id:66, name:'튜브',                    cat:'물놀이',qty:3,   unit:'개',   price:12000, person:'',  pt:'마트', done:false},
-{id:67, name:'물총',                    cat:'물놀이',qty:3,   unit:'개',   price:5000,  person:'',  pt:'마트', done:false},
-{id:68, name:'보드게임/카드게임',       cat:'물놀이',qty:1,   unit:'세트', price:0,     person:'',  pt:'개인', done:false},
-{id:69, name:'불꽃놀이',                cat:'물놀이',qty:1,   unit:'세트', price:15000, person:'',  pt:'마트', done:false},
-{id:70, name:'모자 (썬캡)',             cat:'물놀이',qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
-{id:71, name:'선글라스',                cat:'물놀이',qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
-{id:72, name:'양산',                    cat:'물놀이',qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
-{id:73, name:'소화잘되는우유 (바나나맛)',cat:'탁이네',qty:6,  unit:'개',   price:1500,  person:'p3',pt:'마트', done:false},
+// ===== 마트 =====
+{id:1,  name:'소주',                cat:'술음료',qty:6,   unit:'병',     price:1500,  person:'',  pt:'마트', done:false},
+{id:2,  name:'맥주',                cat:'술음료',qty:2,   unit:'박스',   price:28000, person:'',  pt:'마트', done:false},
+{id:3,  name:'핸드릭스 진',         cat:'술음료',qty:2,   unit:'병',     price:45000, person:'',  pt:'마트', done:false},
+{id:4,  name:'바나나우유',          cat:'술음료',qty:6,   unit:'개',     price:1500,  person:'',  pt:'마트', done:false},
+{id:5,  name:'헛개수',              cat:'술음료',qty:1,   unit:'박스',   price:9000,  person:'',  pt:'마트', done:false},
+{id:6,  name:'라임',                cat:'과일',  qty:1,   unit:'봉',     price:5000,  person:'',  pt:'마트', done:false},
+{id:7,  name:'목살',                cat:'고기',  qty:2,   unit:'kg',     price:28000, person:'',  pt:'마트', done:false},
+{id:8,  name:'양갈비',              cat:'고기',  qty:2,   unit:'rack',   price:40000, person:'',  pt:'마트', done:false},
+{id:9,  name:'토마호크',            cat:'고기',  qty:2,   unit:'개',     price:80000, person:'',  pt:'마트', done:false},
+{id:10, name:'소세지',              cat:'고기',  qty:2,   unit:'봉',     price:8000,  person:'',  pt:'마트', done:false},
+{id:11, name:'버섯',                cat:'채소',  qty:3,   unit:'팩',     price:3000,  person:'',  pt:'마트', done:false},
+{id:12, name:'비빔면',              cat:'안주',  qty:1,   unit:'멀티팩', price:6000,  person:'',  pt:'마트', done:false},
+{id:13, name:'상추',                cat:'채소',  qty:2,   unit:'봉',     price:2000,  person:'',  pt:'마트', done:false},
+{id:14, name:'햇반',                cat:'안주',  qty:12,  unit:'개',     price:1500,  person:'',  pt:'마트', done:false},
+// ===== 쿠팡 주문 =====
+{id:15, name:'싱하 탄산수',         cat:'술음료',qty:1,   unit:'박스',   price:15000, person:'',  pt:'주문', done:false},
+{id:16, name:'육개장 사발면',       cat:'안주',  qty:1,   unit:'박스',   price:9000,  person:'',  pt:'주문', done:false},
+{id:17, name:'군만두',              cat:'안주',  qty:2,   unit:'봉',     price:8000,  person:'',  pt:'주문', done:false},
+{id:18, name:'과자',                cat:'과일',  qty:3,   unit:'봉',     price:3000,  person:'',  pt:'주문', done:false},
+{id:19, name:'참기름',              cat:'양념',  qty:1,   unit:'개',     price:8000,  person:'',  pt:'주문', done:false},
+{id:20, name:'와사비',              cat:'양념',  qty:1,   unit:'개',     price:4000,  person:'',  pt:'주문', done:false},
+{id:21, name:'홀그레인 머스타드',   cat:'양념',  qty:1,   unit:'개',     price:6000,  person:'',  pt:'주문', done:false},
+{id:22, name:'계란 (10구)',         cat:'기타',  qty:1,   unit:'판',     price:4000,  person:'',  pt:'주문', done:false},
+{id:23, name:'모기향',              cat:'위생',  qty:1,   unit:'개',     price:5000,  person:'',  pt:'주문', done:false},
+// ===== 밀키트 =====
+{id:24, name:'된장찌개 밀키트',     cat:'안주',  qty:1,   unit:'세트',   price:12000, person:'',  pt:'주문', done:false},
+{id:25, name:'콘치즈 밀키트',       cat:'안주',  qty:2,   unit:'세트',   price:5000,  person:'',  pt:'주문', done:false},
+{id:26, name:'김치우동 밀키트',     cat:'안주',  qty:1,   unit:'팩',     price:10000, person:'',  pt:'주문', done:false},
+{id:27, name:'마른안주',            cat:'안주',  qty:1,   unit:'세트',   price:20000, person:'',  pt:'주문', done:false},
+{id:28, name:'먹태',                cat:'안주',  qty:1,   unit:'봉',     price:12000, person:'',  pt:'주문', done:false},
+{id:29, name:'팝콘',                cat:'과일',  qty:2,   unit:'봉',     price:3000,  person:'',  pt:'주문', done:false},
+// ===== 은미 담당 =====
+{id:30, name:'공단떡볶이',          cat:'안주',  qty:1,   unit:'팩',     price:10000, person:'p2',pt:'마트', done:false},
+{id:31, name:'김치',                cat:'채소',  qty:1,   unit:'통',     price:0,     person:'p2',pt:'개인', done:false},
+{id:32, name:'쌈장',                cat:'양념',  qty:1,   unit:'개',     price:0,     person:'p2',pt:'개인', done:false},
+{id:33, name:'양념 (각종)',         cat:'양념',  qty:1,   unit:'세트',   price:0,     person:'p2',pt:'개인', done:false},
+{id:34, name:'잼',                  cat:'양념',  qty:1,   unit:'개',     price:0,     person:'p2',pt:'개인', done:false},
+{id:35, name:'물티슈',              cat:'일회용',qty:3,   unit:'팩',     price:3000,  person:'p2',pt:'마트', done:false},
+{id:36, name:'키친타올',            cat:'일회용',qty:2,   unit:'롤',     price:4000,  person:'p2',pt:'마트', done:false},
+{id:37, name:'전기모기채',          cat:'위생',  qty:1,   unit:'개',     price:0,     person:'p2',pt:'개인', done:false},
+// ===== 남수 담당 =====
+{id:38, name:'수박',                cat:'과일',  qty:1,   unit:'통',     price:30000, person:'p4',pt:'마트', done:false},
+{id:39, name:'옥수수',              cat:'채소',  qty:10,  unit:'개',     price:1500,  person:'p4',pt:'마트', done:false},
+{id:40, name:'올리브유',            cat:'양념',  qty:1,   unit:'개',     price:0,     person:'p4',pt:'개인', done:false},
+{id:41, name:'소금',                cat:'양념',  qty:1,   unit:'개',     price:0,     person:'p4',pt:'개인', done:false},
+{id:42, name:'식빵+버터',           cat:'안주',  qty:1,   unit:'세트',   price:8000,  person:'p4',pt:'마트', done:false},
+{id:43, name:'항정살',              cat:'고기',  qty:1.5, unit:'kg',     price:38000, person:'p4',pt:'마트', done:false},
+{id:44, name:'컵',                  cat:'일회용',qty:30,  unit:'개',     price:100,   person:'p4',pt:'마트', done:false},
+{id:45, name:'은박지',              cat:'일회용',qty:2,   unit:'롤',     price:3000,  person:'p4',pt:'마트', done:false},
+{id:46, name:'물총',                cat:'물놀이',qty:3,   unit:'개',     price:5000,  person:'p4',pt:'마트', done:false},
+{id:47, name:'설탕',                cat:'양념',  qty:1,   unit:'개',     price:0,     person:'p4',pt:'개인', done:false},
 ];
 
 // ==================== HELPERS ====================
@@ -666,7 +644,7 @@ function go(nm) {
 }
 
 // ==================== INIT ====================
-document.getElementById('hs').textContent = `총 ${items.length}개 | 10인 기준 | 수정 · 은미 · 탁이`;
+document.getElementById('hs').textContent = `총 ${items.length}개 | 10인 기준 | 은미 · 남수`;
 rTable();
 </script>
 </body>
