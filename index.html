@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a365d">
+<title>🏖️ 가평 여행 일정</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:#e3e9f0;color:#2d3748;font-size:14px}
+
+/* RESPONSIVE WRAPPER — centers + caps width on desktop, full-bleed on mobile */
+.wrap{max-width:1080px;margin:0 auto;background:#f0f4f8;min-height:100vh}
+
+/* HEADER */
+.hdr{background:linear-gradient(135deg,#1a365d 0%,#2b6cb0 55%,#4299e1 100%);color:#fff;padding:18px 16px 14px}
+.hdr h1{font-size:20px;font-weight:800;letter-spacing:-.3px}
+.hdr p{font-size:11px;opacity:.75;margin-top:4px}
+
+/* TABS */
+.tabs{display:flex;background:#fff;border-bottom:2px solid #e2e8f0;overflow-x:auto;-webkit-overflow-scrolling:touch;position:sticky;top:0;z-index:20}
+.tab{padding:11px 16px;font-size:12px;font-weight:700;color:#a0aec0;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .15s}
+.tab:hover{color:#4a5568}
+.tab.on{color:#2b6cb0;border-bottom-color:#2b6cb0}
+.panel{display:none}.panel.on{display:block}
+
+/* SUMMARY */
+.sum{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:12px}
+.card{background:#fff;border-radius:12px;padding:12px 8px;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,.07)}
+.card .v{font-size:15px;font-weight:800;color:#2b6cb0}
+.card .l{font-size:10px;color:#a0aec0;margin-top:3px}
+
+/* CONTROLS */
+.ctl{padding:0 12px 8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.addbtn{background:#2b6cb0;color:#fff;border:none;border-radius:9px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:4px}
+.addbtn:hover{background:#2c5282}
+.fsel{border:1.5px solid #e2e8f0;border-radius:8px;padding:6px 8px;font-size:12px;outline:none;font-family:inherit;color:#4a5568;cursor:pointer}
+.fsel:focus{border-color:#63b3ed}
+
+/* TABLE WRAPPER */
+.tw{padding:0 12px 20px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* TABLE BASE */
+table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08);min-width:660px}
+thead tr{background:#f8fafc}
+thead th{padding:10px 8px;text-align:left;font-size:10px;font-weight:700;color:#a0aec0;white-space:nowrap;letter-spacing:.5px;text-transform:uppercase;border-bottom:1.5px solid #edf2f7}
+
+/* BODY ROWS */
+tbody tr{border-bottom:1px solid #f0f4f8;border-left:4px solid transparent;transition:background .12s}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:#f8faff}
+tbody tr.dn{opacity:.38}
+tbody tr.dn .ni{text-decoration:line-through}
+
+/* INLINE INPUTS */
+.ni{border:none;background:transparent;font-family:inherit;font-size:13px;font-weight:600;color:#1a202c;padding:5px 6px;width:100%;border-radius:6px;outline:none}
+.ni:focus{background:#ebf8ff;box-shadow:inset 0 0 0 1.5px #63b3ed;color:#2b6cb0}
+.nu{border:none;background:transparent;font-family:inherit;font-size:12px;color:#718096;padding:4px 5px;width:100%;border-radius:6px;outline:none;text-align:center}
+.nu:focus{background:#ebf8ff;box-shadow:inset 0 0 0 1.5px #63b3ed}
+.nn{border:none;background:transparent;font-family:inherit;font-size:13px;color:#2d3748;padding:5px 4px;width:100%;border-radius:6px;outline:none;text-align:center}
+.nn:focus{background:#ebf8ff;box-shadow:inset 0 0 0 1.5px #63b3ed}
+.ns{border:none;background:transparent;font-family:inherit;font-size:11px;padding:4px 3px;border-radius:7px;cursor:pointer;width:100%;color:#2d3748;outline:none}
+.ns:hover{background:#f0f4f8}
+.ns:focus{background:#ebf8ff;outline:1.5px solid #63b3ed}
+
+/* TABLE CELLS */
+td{padding:4px 6px;vertical-align:middle}
+.tc{font-weight:800;color:#2b6cb0;white-space:nowrap;font-size:13px;text-align:right;padding-right:8px}
+.delbtn{background:none;border:none;color:#e2e8f0;cursor:pointer;font-size:14px;padding:3px 5px;border-radius:6px;transition:all .15s}
+.delbtn:hover{background:#fff5f5;color:#e53e3e}
+
+/* TABLE FOOTER */
+tfoot td{background:#edf8ff;padding:10px 8px;font-weight:800;color:#2b6cb0;font-size:13px;border-top:2px solid #bee3f8}
+
+/* ACCORDION PANELS */
+.sec{margin:0 12px 12px}
+.ac-card{background:#fff;border-radius:12px;margin-bottom:8px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden}
+.ac-hd{padding:12px 16px;display:flex;align-items:center;gap:9px;cursor:pointer;transition:background .1s}
+.ac-hd:hover{background:#f9fafb}
+.av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:13px;flex-shrink:0}
+.acn{font-weight:700;font-size:14px;flex:1}
+.ac-amt{font-weight:800;font-size:15px;color:#2b6cb0}
+.ac-cnt{font-size:11px;color:#718096;background:#edf2f7;padding:2px 8px;border-radius:10px}
+.ac-body{display:none}.ac-body.op{display:block}
+
+/* ACCORDION ROWS */
+.ac-row{display:flex;align-items:center;gap:8px;padding:9px 16px;border-top:1px solid #f7fafc;font-size:12px}
+.ac-row:hover{background:#f9fafb}
+.ac-name{flex:1;font-weight:500;color:#2d3748}
+.ac-qty{color:#a0aec0;font-size:11px;min-width:54px}
+.ac-price{font-weight:700;color:#2b6cb0;min-width:64px;text-align:right;font-size:12px}
+
+/* PERSONAL GRID */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.pg-item{background:#fff;border-radius:10px;padding:11px 14px;box-shadow:0 1px 4px rgba(0,0,0,.07);display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .1s}
+.pg-item:hover{background:#f7faff}
+.pg-item.dn .pg-name{text-decoration:line-through;color:#a0aec0}
+.pg-name{font-size:13px;font-weight:600;flex:1}
+.pg-sub{font-size:11px;color:#a0aec0;margin-top:2px}
+
+/* PEOPLE */
+.pp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:8px}
+.pp-card{background:#fff;border-radius:10px;padding:12px 14px;box-shadow:0 1px 4px rgba(0,0,0,.07);display:flex;align-items:center;gap:10px}
+.pp-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0}
+.pp-del{background:none;border:none;color:#e2e8f0;cursor:pointer;font-size:15px;margin-left:auto;transition:color .1s}
+.pp-del:hover{color:#fc8181}
+
+/* MISC */
+.emp{text-align:center;padding:44px 20px;color:#c0ccda}
+.emp .ei{font-size:36px;margin-bottom:8px}
+.inp-s{border:1.5px solid #e2e8f0;border-radius:8px;padding:6px 9px;font-size:12px;outline:none;font-family:inherit;color:#2d3748}
+.inp-s:focus{border-color:#63b3ed}
+
+/* ============ RESPONSIVE ============ */
+/* Phones: tighter summary so 4 cards never overflow; 2-up on very small */
+@media (max-width:520px){
+  .sum{grid-template-columns:repeat(2,1fr)}
+  .card .v{font-size:14px}
+  .ctl{padding:0 10px 8px}
+  .tw{padding:0 10px 20px}
+  .sec,.pp-grid,#pgrid{margin-left:10px;margin-right:10px}
+}
+@media (max-width:360px){
+  body{font-size:13px}
+  .hdr h1{font-size:18px}
+  .tab{padding:11px 12px}
+}
+/* Tablet / desktop: roomier header, full-height card look, larger touch areas */
+@media (min-width:768px){
+  body{padding:0}
+  .wrap{box-shadow:0 0 40px rgba(26,54,93,.12);min-height:100vh}
+  .hdr{padding:26px 28px 22px}
+  .hdr h1{font-size:26px}
+  .hdr p{font-size:13px;margin-top:6px}
+  .tab{padding:14px 22px;font-size:13px}
+  .sum{grid-template-columns:repeat(4,1fr);gap:14px;padding:18px 20px}
+  .card{padding:18px 12px;border-radius:14px}
+  .card .v{font-size:20px}
+  .card .l{font-size:12px}
+  .ctl{padding:0 20px 12px;gap:8px}
+  .tw,.sec{padding-left:20px;padding-right:20px}
+  .sec{margin-left:8px;margin-right:8px}
+  table{font-size:14px}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+}
+@media (min-width:1080px){
+  body{padding:24px 0}
+  .wrap{min-height:calc(100vh - 48px);border-radius:18px;overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hdr">
+  <h1>🏖️ 가평 여행 일정</h1>
+  <p id="hs">준비 중...</p>
+</div>
+
+<div class="tabs">
+  <div class="tab on" onclick="go('list')">📋 전체목록</div>
+  <div class="tab" onclick="go('mart')">🛒 마트장보기</div>
+  <div class="tab" onclick="go('personal')">🎒 개인지참</div>
+  <div class="tab" onclick="go('by')">👥 담당자별</div>
+  <div class="tab" onclick="go('ppl')">⚙️ 참여자</div>
+</div>
+
+<!-- 📋 전체목록 -->
+<div class="panel on" id="panel-list">
+  <div class="sum" id="sum1"></div>
+  <div class="ctl">
+    <button class="addbtn" onclick="addRow()">＋ 항목 추가</button>
+    <select class="fsel" id="fcat" onchange="rTable()">
+      <option value="">전체 카테고리</option>
+    </select>
+    <select class="fsel" id="fper" onchange="rTable()">
+      <option value="">전체 담당자</option>
+    </select>
+    <select class="fsel" id="fpt" onchange="rTable()">
+      <option value="">전체 구매유형</option>
+      <option value="마트">🛒 마트구매</option>
+      <option value="개인">🎒 개인지참</option>
+      <option value="주문">📦 주문/배달</option>
+      <option value="확인">❓ 확인필요</option>
+    </select>
+  </div>
+  <div class="tw">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:26px"></th>
+          <th style="min-width:140px">품목명</th>
+          <th style="width:118px">카테고리</th>
+          <th style="width:52px">수량</th>
+          <th style="width:46px">단위</th>
+          <th style="width:86px">단가(원)</th>
+          <th style="width:88px">합계</th>
+          <th style="width:86px">구매유형</th>
+          <th style="width:72px">담당자</th>
+          <th style="width:26px"></th>
+        </tr>
+      </thead>
+      <tbody id="tb"></tbody>
+      <tfoot id="tf"></tfoot>
+    </table>
+    <div class="emp" id="emp" style="display:none">
+      <div class="ei">🛒</div><p>항목을 추가하세요</p>
+    </div>
+  </div>
+</div>
+
+<!-- 🛒 마트장보기 -->
+<div class="panel" id="panel-mart">
+  <div class="sum" id="sum2"></div>
+  <div style="padding:0 12px 8px;font-size:12px;color:#a0aec0">🛒 마트구매 + 📦 주문 품목을 담당자별로 정리합니다</div>
+  <div class="sec" id="mart-sec"></div>
+</div>
+
+<!-- 🎒 개인지참 -->
+<div class="panel" id="panel-personal">
+  <div style="padding:10px 12px 8px;font-size:12px;color:#a0aec0">🎒 각자 챙겨와야 할 개인 소지품입니다 · 클릭 시 체크!</div>
+  <div style="padding:0 12px 16px" id="personal-sec"></div>
+</div>
+
+<!-- 👥 담당자별 -->
+<div class="panel" id="panel-by">
+  <div class="sum" id="sum3"></div>
+  <div class="sec" id="by-sec"></div>
+</div>
+
+<!-- ⚙️ 참여자 -->
+<div class="panel" id="panel-ppl">
+  <div style="padding:14px 12px 10px;font-weight:700;font-size:14px;color:#2d3748">👥 참여자 명단</div>
+  <div class="pp-grid" id="pgrid" style="padding:0 12px 14px"></div>
+  <div style="padding:0 12px 6px;font-weight:700;font-size:13px;color:#4a5568">참여자 추가</div>
+  <div style="padding:0 12px 6px;display:flex;gap:6px;flex-wrap:wrap">
+    <input type="text" class="inp-s" id="nname" placeholder="이름" style="width:110px" onkeydown="if(event.key==='Enter')addPP()">
+    <input type="text" class="inp-s" id="ncolor" placeholder="#색상코드" style="width:130px">
+    <button class="addbtn" onclick="addPP()">추가</button>
+  </div>
+  <div style="padding:6px 12px 12px;font-size:11px;color:#c0ccda">색상: #e53e3e #dd6b20 #38a169 #3182ce #805ad5 #d53f8c</div>
+  <div style="padding:0 12px 14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#4a5568">
+    <strong>총 인원</strong>
+    <input type="number" id="nppl" value="10" min="1" max="50"
+      style="width:54px;border:1.5px solid #e2e8f0;border-radius:8px;padding:5px 8px;font-size:13px;outline:none;text-align:center"
+      onchange="rSumAll()">
+    <span style="color:#a0aec0">명 (1인당 금액 계산용)</span>
+  </div>
+</div>
+
+</div><!-- /.wrap -->
+
+<script>
+// ==================== DATA ====================
+let acc = {};
+let ppl = [
+  {id:'p1', name:'수정', color:'#e53e3e'},
+  {id:'p2', name:'은미', color:'#38a169'},
+  {id:'p3', name:'탁이', color:'#805ad5'},
+];
+const CATS = [
+  {id:'술음료', lbl:'🍺 술/음료',    bg:'#fefcbf', tx:'#744210'},
+  {id:'고기',   lbl:'🥩 고기/메인',  bg:'#fed7d7', tx:'#822727'},
+  {id:'채소',   lbl:'🥬 채소',       bg:'#c6f6d5', tx:'#1a4731'},
+  {id:'안주',   lbl:'🍜 안주/조리',  bg:'#feebc8', tx:'#7b341e'},
+  {id:'과일',   lbl:'🍉 과일/디저트',bg:'#fed7e2', tx:'#702459'},
+  {id:'양념',   lbl:'🧂 양념/소스',  bg:'#e9d8fd', tx:'#44337a'},
+  {id:'반찬',   lbl:'🥗 반찬',       bg:'#bee3f8', tx:'#2a4365'},
+  {id:'일회용', lbl:'🧻 일회용품',   bg:'#e2e8f0', tx:'#2d3748'},
+  {id:'위생',   lbl:'💊 위생/안전',  bg:'#b2f5ea', tx:'#1d4044'},
+  {id:'물놀이', lbl:'🏊 물놀이/야외',bg:'#90cdf4', tx:'#1a365d'},
+  {id:'탁이네', lbl:'🎁 탁이네',     bg:'#d6bcfa', tx:'#44337a'},
+  {id:'기타',   lbl:'📦 기타',       bg:'#edf2f7', tx:'#4a5568'},
+];
+const PT = {
+  '마트': {lbl:'🛒 마트'},
+  '개인': {lbl:'🎒 개인'},
+  '주문': {lbl:'📦 주문'},
+  '확인': {lbl:'❓ 확인'},
+};
+const C  = id => CATS.find(c=>c.id===id) || CATS[CATS.length-1];
+const P  = id => ppl.find(p=>p.id===id);
+const IT = it => it.qty * it.price;
+const SUM = arr => arr.reduce((a,v)=>a+v, 0);
+let nid = 74;
+
+let items = [
+{id:1,  name:'소주',                    cat:'술음료',qty:20,  unit:'병',   price:1500,  person:'',  pt:'마트', done:false},
+{id:2,  name:'맥주',                    cat:'술음료',qty:3,   unit:'박스', price:28000, person:'',  pt:'마트', done:false},
+{id:3,  name:'백화수복',                cat:'술음료',qty:2,   unit:'병',   price:25000, person:'',  pt:'마트', done:false},
+{id:4,  name:'샹그리아',                cat:'술음료',qty:2,   unit:'병',   price:15000, person:'',  pt:'마트', done:false},
+{id:5,  name:'물 (정수기 여부 확인)',    cat:'술음료',qty:0,   unit:'',     price:0,     person:'',  pt:'확인', done:false},
+{id:6,  name:'헛개수',                  cat:'술음료',qty:10,  unit:'캔',   price:1500,  person:'',  pt:'마트', done:false},
+{id:7,  name:'애들음료',                cat:'술음료',qty:10,  unit:'개',   price:1500,  person:'',  pt:'마트', done:false},
+{id:8,  name:'얼음',                    cat:'술음료',qty:20,  unit:'kg',   price:2000,  person:'',  pt:'마트', done:false},
+{id:9,  name:'목살',                    cat:'고기',  qty:2,   unit:'kg',   price:28000, person:'',  pt:'마트', done:false},
+{id:10, name:'항정살',                  cat:'고기',  qty:1.5, unit:'kg',   price:38000, person:'',  pt:'마트', done:false},
+{id:11, name:'숯닭',                    cat:'고기',  qty:2,   unit:'마리', price:18000, person:'',  pt:'주문', done:false},
+{id:12, name:'토마호크',                cat:'고기',  qty:2,   unit:'개',   price:80000, person:'',  pt:'주문', done:false},
+{id:13, name:'양갈비',                  cat:'고기',  qty:2,   unit:'rack', price:40000, person:'',  pt:'주문', done:false},
+{id:14, name:'뭉티기',                  cat:'고기',  qty:1,   unit:'kg',   price:45000, person:'',  pt:'주문', done:false},
+{id:15, name:'육회',                    cat:'고기',  qty:500, unit:'g',    price:35000, person:'',  pt:'주문', done:false},
+{id:16, name:'소세지꼬치',              cat:'고기',  qty:30,  unit:'개',   price:500,   person:'',  pt:'마트', done:false},
+{id:17, name:'버섯 새송이',             cat:'채소',  qty:3,   unit:'팩',   price:3000,  person:'',  pt:'마트', done:false},
+{id:18, name:'버섯 팽이',               cat:'채소',  qty:3,   unit:'팩',   price:2000,  person:'',  pt:'마트', done:false},
+{id:19, name:'김치',                    cat:'채소',  qty:2,   unit:'봉',   price:12000, person:'',  pt:'마트', done:false},
+{id:20, name:'쌈야채 (깻잎+상추)',      cat:'채소',  qty:3,   unit:'봉',   price:2000,  person:'',  pt:'마트', done:false},
+{id:21, name:'마늘',                    cat:'채소',  qty:1,   unit:'통',   price:5000,  person:'',  pt:'마트', done:false},
+{id:22, name:'청양고추',                cat:'채소',  qty:1,   unit:'봉',   price:2000,  person:'',  pt:'마트', done:false},
+{id:23, name:'옥수수',                  cat:'채소',  qty:10,  unit:'개',   price:1500,  person:'',  pt:'마트', done:false},
+{id:24, name:'우삼겹 된장찌개',         cat:'안주',  qty:10,  unit:'인분', price:3000,  person:'',  pt:'마트', done:false},
+{id:25, name:'비빔면',                  cat:'안주',  qty:10,  unit:'봉',   price:1500,  person:'',  pt:'마트', done:false},
+{id:26, name:'콘치즈',                  cat:'안주',  qty:2,   unit:'세트', price:5000,  person:'',  pt:'마트', done:false},
+{id:27, name:'햇반',                    cat:'안주',  qty:10,  unit:'개',   price:1500,  person:'',  pt:'마트', done:false},
+{id:28, name:'김치우동 or 즉석떡볶이',  cat:'안주',  qty:1,   unit:'팩',   price:10000, person:'',  pt:'마트', done:false},
+{id:29, name:'감자채전 재료',           cat:'안주',  qty:2,   unit:'인분', price:3000,  person:'',  pt:'마트', done:false},
+{id:30, name:'호박채전 재료',           cat:'안주',  qty:2,   unit:'인분', price:2000,  person:'',  pt:'마트', done:false},
+{id:31, name:'명란구이',                cat:'안주',  qty:1,   unit:'팩',   price:15000, person:'',  pt:'주문', done:false},
+{id:32, name:'마른안주',                cat:'안주',  qty:1,   unit:'세트', price:20000, person:'',  pt:'마트', done:false},
+{id:33, name:'군만두',                  cat:'안주',  qty:2,   unit:'봉',   price:8000,  person:'',  pt:'마트', done:false},
+{id:34, name:'오돌뼈',                  cat:'안주',  qty:1,   unit:'kg',   price:12000, person:'',  pt:'마트', done:false},
+{id:35, name:'피자',                    cat:'안주',  qty:2,   unit:'판',   price:25000, person:'',  pt:'주문', done:false},
+{id:36, name:'라면',                    cat:'안주',  qty:1,   unit:'박스', price:6000,  person:'',  pt:'마트', done:false},
+{id:37, name:'토스트 재료',             cat:'안주',  qty:1,   unit:'세트', price:8000,  person:'',  pt:'마트', done:false},
+{id:38, name:'수박',                    cat:'과일',  qty:1,   unit:'통',   price:30000, person:'p3',pt:'마트', done:false},
+{id:39, name:'방울토마토',              cat:'과일',  qty:2,   unit:'팩',   price:5000,  person:'',  pt:'마트', done:false},
+{id:40, name:'파인애플',                cat:'과일',  qty:1,   unit:'개',   price:8000,  person:'',  pt:'마트', done:false},
+{id:41, name:'포도통조림',              cat:'과일',  qty:2,   unit:'캔',   price:3000,  person:'',  pt:'마트', done:false},
+{id:42, name:'과자/팝콘',               cat:'과일',  qty:3,   unit:'봉',   price:3000,  person:'',  pt:'마트', done:false},
+{id:43, name:'마시멜로',                cat:'과일',  qty:2,   unit:'봉',   price:4000,  person:'',  pt:'마트', done:false},
+{id:44, name:'참기름',                  cat:'양념',  qty:1,   unit:'개',   price:8000,  person:'',  pt:'마트', done:false},
+{id:45, name:'마늘소금',                cat:'양념',  qty:1,   unit:'개',   price:5000,  person:'',  pt:'마트', done:false},
+{id:46, name:'트러플소금',              cat:'양념',  qty:1,   unit:'개',   price:15000, person:'',  pt:'개인', done:false},
+{id:47, name:'소금',                    cat:'양념',  qty:1,   unit:'개',   price:2000,  person:'',  pt:'마트', done:false},
+{id:48, name:'쌈장',                    cat:'양념',  qty:2,   unit:'개',   price:3000,  person:'',  pt:'마트', done:false},
+{id:49, name:'마늘짱아찌',              cat:'반찬',  qty:1,   unit:'통',   price:8000,  person:'',  pt:'개인', done:false},
+{id:50, name:'고추짱아찌',              cat:'반찬',  qty:1,   unit:'통',   price:8000,  person:'',  pt:'개인', done:false},
+{id:51, name:'부추무침',                cat:'반찬',  qty:1,   unit:'통',   price:5000,  person:'',  pt:'개인', done:false},
+{id:52, name:'젓가락 (일회용)',         cat:'일회용',qty:30,  unit:'개',   price:50,    person:'',  pt:'마트', done:false},
+{id:53, name:'숟가락 (일회용)',         cat:'일회용',qty:30,  unit:'개',   price:50,    person:'',  pt:'마트', done:false},
+{id:54, name:'소주컵',                  cat:'일회용',qty:30,  unit:'개',   price:100,   person:'',  pt:'마트', done:false},
+{id:55, name:'맥주컵',                  cat:'일회용',qty:30,  unit:'개',   price:100,   person:'',  pt:'마트', done:false},
+{id:56, name:'국접시',                  cat:'일회용',qty:20,  unit:'개',   price:100,   person:'',  pt:'마트', done:false},
+{id:57, name:'앞접시',                  cat:'일회용',qty:30,  unit:'개',   price:100,   person:'',  pt:'마트', done:false},
+{id:58, name:'은박지',                  cat:'일회용',qty:2,   unit:'롤',   price:3000,  person:'',  pt:'마트', done:false},
+{id:59, name:'물티슈',                  cat:'일회용',qty:3,   unit:'팩',   price:3000,  person:'',  pt:'마트', done:false},
+{id:60, name:'키친타올',                cat:'일회용',qty:2,   unit:'롤',   price:4000,  person:'',  pt:'마트', done:false},
+{id:61, name:'버그트랩',                cat:'위생',  qty:2,   unit:'개',   price:10000, person:'',  pt:'마트', done:false},
+{id:62, name:'모기기피제',              cat:'위생',  qty:2,   unit:'개',   price:8000,  person:'',  pt:'마트', done:false},
+{id:63, name:'상비약 (타이레놀,밴드,소화제)',cat:'위생',qty:1,unit:'세트',price:15000, person:'',  pt:'개인', done:false},
+{id:64, name:'손선풍기',                cat:'위생',  qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
+{id:65, name:'선크림 SPF50+',          cat:'물놀이',qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
+{id:66, name:'튜브',                    cat:'물놀이',qty:3,   unit:'개',   price:12000, person:'',  pt:'마트', done:false},
+{id:67, name:'물총',                    cat:'물놀이',qty:3,   unit:'개',   price:5000,  person:'',  pt:'마트', done:false},
+{id:68, name:'보드게임/카드게임',       cat:'물놀이',qty:1,   unit:'세트', price:0,     person:'',  pt:'개인', done:false},
+{id:69, name:'불꽃놀이',                cat:'물놀이',qty:1,   unit:'세트', price:15000, person:'',  pt:'마트', done:false},
+{id:70, name:'모자 (썬캡)',             cat:'물놀이',qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
+{id:71, name:'선글라스',                cat:'물놀이',qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
+{id:72, name:'양산',                    cat:'물놀이',qty:1,   unit:'개',   price:0,     person:'',  pt:'개인', done:false},
+{id:73, name:'소화잘되는우유 (바나나맛)',cat:'탁이네',qty:6,  unit:'개',   price:1500,  person:'p3',pt:'마트', done:false},
+];
+
+// ==================== HELPERS ====================
+const npl = () => parseInt(document.getElementById('nppl')?.value||10)||10;
+
+function rSum(el) {
+  const e = document.getElementById(el); if(!e) return;
+  const t = SUM(items.map(IT)), n = npl(), dn = items.filter(i=>i.done).length;
+  const mt = SUM(items.filter(i=>i.pt==='마트').map(IT));
+  e.innerHTML = `
+    <div class="card"><div class="v">${t>0?t.toLocaleString()+'원':'0원'}</div><div class="l">총 예상금액</div></div>
+    <div class="card"><div class="v">${(Math.round(t/n)).toLocaleString()}원</div><div class="l">1인당 (${n}명)</div></div>
+    <div class="card"><div class="v">${mt>0?mt.toLocaleString()+'원':'-'}</div><div class="l">마트구매액</div></div>
+    <div class="card"><div class="v">${dn}/${items.length}</div><div class="l">완료</div></div>`;
+}
+function rSumAll() { ['sum1','sum2','sum3'].forEach(rSum); }
+
+function catOpts(sel) {
+  return CATS.map(c=>`<option value="${c.id}"${sel===c.id?' selected':''}>${c.lbl}</option>`).join('');
+}
+function ptOpts(sel) {
+  return Object.entries(PT).map(([k,v])=>`<option value="${k}"${sel===k?' selected':''}>${v.lbl}</option>`).join('');
+}
+function perOpts(sel) {
+  return `<option value=""${sel===''?' selected':''}>미정</option>` +
+    ppl.map(p=>`<option value="${p.id}"${sel===p.id?' selected':''}>${p.name}</option>`).join('');
+}
+
+function fillFilters() {
+  const cs = document.getElementById('fcat');
+  const ep = [...cs.options].map(o=>o.value);
+  CATS.forEach(c=>{ if(!ep.includes(c.id)) cs.add(new Option(c.lbl, c.id)); });
+  const ps = document.getElementById('fper');
+  const ep2 = [...ps.options].map(o=>o.value);
+  ppl.forEach(p=>{ if(!ep2.includes(p.id)) ps.add(new Option(p.name, p.id)); });
+}
+
+function getFiltered() {
+  const cf = document.getElementById('fcat').value;
+  const pf = document.getElementById('fper').value;
+  const ptf = document.getElementById('fpt').value;
+  let d = [...items];
+  if(cf)  d = d.filter(i=>i.cat===cf);
+  if(pf)  d = d.filter(i=>i.person===pf);
+  if(ptf) d = d.filter(i=>i.pt===ptf);
+  return d;
+}
+
+// ==================== INLINE SAVE (no re-render) ====================
+function sv(id, f, v) {
+  const it = items.find(i=>i.id===id); if(!it) return;
+  it[f] = v;
+  if(f==='cat') {
+    const row = document.getElementById('r'+id);
+    if(row) row.style.borderLeftColor = C(v).bg;
+  }
+  rSum('sum1');
+}
+function svn(id, f, v) {
+  const it = items.find(i=>i.id===id); if(!it) return;
+  it[f] = parseFloat(v)||0;
+  const tc = document.getElementById('tc'+id);
+  if(tc) tc.textContent = IT(it)>0 ? IT(it).toLocaleString()+'원' : '-';
+  updateFoot();
+  rSum('sum1');
+}
+function tgDone(id) {
+  const it = items.find(i=>i.id===id); if(!it) return;
+  it.done = !it.done;
+  const row = document.getElementById('r'+id);
+  if(row) row.classList.toggle('dn', it.done);
+  rSum('sum1');
+}
+function updateFoot() {
+  const d = getFiltered(), t = SUM(d.map(IT));
+  const tf = document.getElementById('tf');
+  if(tf) tf.innerHTML = t>0 ?
+    `<tr><td colspan="6" style="text-align:right;padding:10px 8px">합계</td>
+     <td style="padding:10px 8px">${t.toLocaleString()}원</td>
+     <td colspan="3"></td></tr>` : '';
+}
+
+// ==================== ROW HTML ====================
+function rowHTML(it) {
+  const sn = it.name.replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  return `
+    <td style="padding:4px 4px 4px 8px">
+      <input type="checkbox" ${it.done?'checked':''} onchange="tgDone(${it.id})"
+        style="cursor:pointer;width:15px;height:15px;accent-color:#3182ce">
+    </td>
+    <td><input type="text" class="ni" value="${sn}"
+      onchange="sv(${it.id},'name',this.value)"
+      onkeydown="if(event.key==='Enter')this.blur()"></td>
+    <td><select class="ns" onchange="sv(${it.id},'cat',this.value)">${catOpts(it.cat)}</select></td>
+    <td><input type="number" class="nn" value="${it.qty}" step="0.5" min="0"
+      onchange="svn(${it.id},'qty',this.value)"></td>
+    <td><input type="text" class="nu" value="${it.unit}"
+      onchange="sv(${it.id},'unit',this.value)"></td>
+    <td><input type="number" class="nn" value="${it.price}" min="0"
+      onchange="svn(${it.id},'price',this.value)"></td>
+    <td class="tc" id="tc${it.id}">${IT(it)>0?IT(it).toLocaleString()+'원':'-'}</td>
+    <td><select class="ns" onchange="sv(${it.id},'pt',this.value)">${ptOpts(it.pt)}</select></td>
+    <td><select class="ns" onchange="sv(${it.id},'person',this.value)">${perOpts(it.person)}</select></td>
+    <td style="padding:4px 6px 4px 2px">
+      <button class="delbtn" onclick="delI(${it.id})" title="삭제">✕</button>
+    </td>`;
+}
+
+// ==================== TABLE RENDER ====================
+function rTable() {
+  fillFilters(); rSum('sum1');
+  const d = getFiltered();
+  const tb = document.getElementById('tb');
+  const em = document.getElementById('emp');
+  if(!d.length) { tb.innerHTML=''; em.style.display='block'; updateFoot(); return; }
+  em.style.display = 'none';
+  tb.innerHTML = d.map(it => {
+    const cat = C(it.cat);
+    return `<tr id="r${it.id}" class="${it.done?'dn':''}" style="border-left:4px solid ${cat.bg}">${rowHTML(it)}</tr>`;
+  }).join('');
+  updateFoot();
+}
+
+// ==================== ADD / DELETE ====================
+function addRow() {
+  // clear filters first so new row is visible
+  document.getElementById('fcat').value = '';
+  document.getElementById('fper').value = '';
+  document.getElementById('fpt').value  = '';
+  const it = {id:nid++, name:'새 항목', cat:'기타', qty:1, unit:'개', price:0, person:'', pt:'마트', done:false};
+  items.push(it);
+  rTable();
+  // focus the name input of the new row
+  setTimeout(()=>{
+    const newRow = document.getElementById('r'+it.id);
+    if(newRow) {
+      const inp = newRow.querySelector('.ni');
+      if(inp) { inp.focus(); inp.select(); }
+      newRow.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  }, 60);
+}
+
+function delI(id) {
+  if(!confirm('삭제할까요?')) return;
+  items = items.filter(i=>i.id!==id);
+  const row = document.getElementById('r'+id);
+  if(row) row.remove();
+  updateFoot(); rSum('sum1');
+  if(getFiltered().length===0) document.getElementById('emp').style.display='block';
+}
+
+// ==================== MART PANEL ====================
+function rMart() {
+  rSum('sum2');
+  const mi = items.filter(i=>i.pt==='마트'||i.pt==='주문');
+  const gs = [];
+  ppl.forEach(p=>{
+    const pi = mi.filter(i=>i.person===p.id);
+    if(pi.length) gs.push({p, its:pi});
+  });
+  const ua = mi.filter(i=>!ppl.find(p=>p.id===i.person));
+  if(ua.length) gs.push({p:null, its:ua});
+  if(!gs.length) {
+    document.getElementById('mart-sec').innerHTML='<div class="emp"><div class="ei">🛒</div><p>마트구매 항목 없음</p></div>';
+    return;
+  }
+  document.getElementById('mart-sec').innerHTML = gs.map(g=>{
+    const p=g.p, k=(p?p.id:'ua')+'m', op=acc[k], t2=SUM(g.its.map(IT));
+    return `<div class="ac-card">
+      <div class="ac-hd" onclick="tgA('${k}',rMart)">
+        <div class="av" style="background:${p?p.color:'#a0aec0'}">${p?p.name[0]:'?'}</div>
+        <span class="acn">${p?p.name:'담당자 미정'}</span>
+        <span class="ac-cnt">${g.its.length}개</span>
+        <span class="ac-amt">${t2>0?t2.toLocaleString()+'원':'-'}</span>
+        <span style="color:#c0ccda;margin-left:4px;font-size:12px">${op?'▲':'▼'}</span>
+      </div>
+      <div class="ac-body ${op?'op':''}">
+        ${g.its.map(it=>`<div class="ac-row">
+          <input type="checkbox" ${it.done?'checked':''} onchange="tgPD(${it.id},'mart')"
+            style="cursor:pointer;width:13px;height:13px;flex-shrink:0;accent-color:#3182ce">
+          <span class="ac-name" id="mn${it.id}" style="${it.done?'text-decoration:line-through;opacity:.4':''}">${it.name}</span>
+          <span class="ac-qty">${it.qty}${it.unit?' '+it.unit:''}</span>
+          <span style="font-size:10px;color:#a0aec0">${(PT[it.pt]||{lbl:''}).lbl}</span>
+          <span class="ac-price">${IT(it)>0?IT(it).toLocaleString()+'원':'-'}</span>
+        </div>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ==================== PERSONAL PANEL ====================
+function rPersonal() {
+  const pi = items.filter(i=>i.pt==='개인');
+  const sec = document.getElementById('personal-sec');
+  if(!pi.length) { sec.innerHTML='<div class="emp"><div class="ei">🎒</div><p>개인지참 항목 없음</p></div>'; return; }
+  const bc = {};
+  pi.forEach(it=>{ if(!bc[it.cat]) bc[it.cat]=[]; bc[it.cat].push(it); });
+  sec.innerHTML = Object.entries(bc).map(([cid, its])=>{
+    const cat = C(cid);
+    return `<div style="margin-bottom:16px">
+      <div style="display:inline-flex;align-items:center;gap:6px;background:${cat.bg};color:${cat.tx};
+        padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:8px">${cat.lbl}</div>
+      <div class="pgrid">
+        ${its.map(it=>`
+          <div class="pg-item ${it.done?'dn':''}" id="pg${it.id}" onclick="tgPD(${it.id},'personal')">
+            <div style="flex:1">
+              <div class="pg-name">${it.name}</div>
+              <div class="pg-sub">${it.qty}${it.unit?' '+it.unit:''}</div>
+            </div>
+            <span style="font-size:20px">${it.done?'✅':'⬜'}</span>
+          </div>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ==================== BY PANEL ====================
+function rBy() {
+  rSum('sum3');
+  const gs = [
+    ...ppl.map(p=>({p, its:items.filter(i=>i.person===p.id)})),
+    {p:null, its:items.filter(i=>!ppl.find(p=>p.id===i.person))}
+  ].filter(g=>g.its.length);
+  if(!gs.length) {
+    document.getElementById('by-sec').innerHTML='<div class="emp"><div class="ei">👥</div><p>담당자 배정 없음</p></div>';
+    return;
+  }
+  document.getElementById('by-sec').innerHTML = gs.map(g=>{
+    const p=g.p, k=(p?p.id:'nn')+'b', op=acc[k], t2=SUM(g.its.map(IT));
+    return `<div class="ac-card">
+      <div class="ac-hd" onclick="tgA('${k}',rBy)">
+        <div class="av" style="background:${p?p.color:'#a0aec0'}">${p?p.name[0]:'?'}</div>
+        <span class="acn">${p?p.name:'미배정'}</span>
+        <span class="ac-cnt">${g.its.length}개</span>
+        <span class="ac-amt">${t2>0?t2.toLocaleString()+'원':'-'}</span>
+        <span style="color:#c0ccda;margin-left:4px;font-size:12px">${op?'▲':'▼'}</span>
+      </div>
+      <div class="ac-body ${op?'op':''}">
+        ${g.its.map(it=>{const cat=C(it.cat); return `<div class="ac-row">
+          <input type="checkbox" ${it.done?'checked':''} onchange="tgPD(${it.id},'by')"
+            style="cursor:pointer;width:13px;height:13px;flex-shrink:0;accent-color:#3182ce">
+          <span style="font-size:10px;padding:1px 6px;border-radius:4px;background:${cat.bg};color:${cat.tx};white-space:nowrap;flex-shrink:0">${it.cat}</span>
+          <span class="ac-name" id="bn${it.id}" style="${it.done?'text-decoration:line-through;opacity:.4':''}">${it.name}</span>
+          <span class="ac-qty">${it.qty}${it.unit?' '+it.unit:''}</span>
+          <span style="font-size:10px;color:#a0aec0">${(PT[it.pt]||{lbl:''}).lbl}</span>
+          <span class="ac-price">${IT(it)>0?IT(it).toLocaleString()+'원':'-'}</span>
+        </div>`}).join('')}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function tgA(k, fn) { acc[k]=!acc[k]; fn(); }
+
+// Panel done toggle (re-renders the current panel)
+function tgPD(id, panel) {
+  const it = items.find(i=>i.id===id); if(!it) return;
+  it.done = !it.done;
+  if(panel==='mart') rMart();
+  else if(panel==='by') rBy();
+  else if(panel==='personal') rPersonal();
+  rSum('sum1');
+}
+
+// ==================== PEOPLE PANEL ====================
+function rPpl() {
+  document.getElementById('pgrid').innerHTML = ppl.map(p=>`
+    <div class="pp-card">
+      <div class="pp-av" style="background:${p.color}">${p.name[0]}</div>
+      <div style="flex:1">
+        <div style="font-weight:700;font-size:13px">${p.name}</div>
+        <div style="font-size:11px;color:#a0aec0">${items.filter(i=>i.person===p.id).length}개 담당</div>
+      </div>
+      <button class="pp-del" onclick="delPP('${p.id}')">✕</button>
+    </div>`).join('');
+}
+function addPP() {
+  const nm = document.getElementById('nname').value.trim();
+  const cl = document.getElementById('ncolor').value.trim() || '#718096';
+  if(!nm) return alert('이름을 입력하세요');
+  ppl.push({id:'p'+Date.now(), name:nm, color:cl});
+  document.getElementById('nname').value = '';
+  document.getElementById('ncolor').value = '';
+  rPpl();
+  if(document.getElementById('panel-list').classList.contains('on')) rTable();
+}
+function delPP(id) {
+  if(!confirm('삭제하면 해당 담당자 품목이 미배정됩니다')) return;
+  items.forEach(i=>{ if(i.person===id) i.person=''; });
+  ppl = ppl.filter(p=>p.id!==id);
+  document.querySelectorAll(`#fper option[value="${id}"]`).forEach(o=>o.remove());
+  rPpl();
+  if(document.getElementById('panel-list').classList.contains('on')) rTable();
+}
+
+// ==================== TABS ====================
+const PR = {list:rTable, mart:rMart, personal:rPersonal, by:rBy, ppl:rPpl};
+function go(nm) {
+  const names = ['list','mart','personal','by','ppl'];
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('on', names[i]===nm));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.getElementById('panel-'+nm).classList.add('on');
+  PR[nm]();
+}
+
+// ==================== INIT ====================
+document.getElementById('hs').textContent = `총 ${items.length}개 | 10인 기준 | 수정 · 은미 · 탁이`;
+rTable();
+</script>
+</body>
+</html>
