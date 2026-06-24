@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>여행 비용 공유 · Travel Split</title>
+<style>
+  :root{
+    --bg:#0f1419; --panel:#1a212b; --panel2:#222c38; --line:#2c3744;
+    --text:#e6edf3; --muted:#8b97a5; --accent:#4cc2ff; --accent2:#5bd6a0;
+    --warn:#ffb454; --danger:#ff6b6b; --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.5;font-size:15px}
+  header{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  header h1{font-size:18px;margin:0;font-weight:700;display:flex;align-items:center;gap:8px}
+  header .sub{color:var(--muted);font-size:12px}
+  .grow{flex:1}
+  .wrap{max-width:1100px;margin:0 auto;padding:20px;display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:860px){.wrap{grid-template-columns:1.4fr 1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+  .card h2{font-size:14px;margin:0 0 12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+  label{display:block;font-size:12px;color:var(--muted);margin:0 0 4px}
+  input,select,button,textarea{font-family:inherit;font-size:14px}
+  input,select,textarea{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--text);
+    border-radius:9px;padding:9px 11px;outline:none}
+  input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+  button{cursor:pointer;border:none;border-radius:9px;padding:9px 14px;font-weight:600;background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+  button:hover{filter:brightness(1.15)}
+  button.primary{background:var(--accent);color:#05222e;border-color:transparent}
+  button.good{background:var(--accent2);color:#053021;border-color:transparent}
+  button.ghost{background:transparent}
+  button.danger{background:transparent;color:var(--danger);border-color:#5a2a2a}
+  button.sm{padding:5px 9px;font-size:12px}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+  .row>*{flex:1;min-width:0}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+  td.amt,th.amt{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .pill{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:2px 9px;font-size:11px;color:var(--muted)}
+  .muted{color:var(--muted)}
+  .big{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums}
+  .balance{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line)}
+  .pos{color:var(--accent2)}.neg{color:var(--danger)}
+  .settle{padding:8px 10px;background:var(--panel2);border-radius:9px;margin-bottom:6px;font-size:13.5px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+  .chip{padding:4px 9px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);font-size:12px;cursor:pointer;user-select:none}
+  .chip.on{background:var(--accent);color:#05222e;border-color:transparent;font-weight:600}
+  .search-results{margin-top:8px;max-height:230px;overflow:auto;border:1px solid var(--line);border-radius:9px}
+  .sr-item{display:flex;justify-content:space-between;gap:8px;padding:9px 11px;border-bottom:1px solid var(--line);cursor:pointer}
+  .sr-item:last-child{border-bottom:none}
+  .sr-item:hover{background:var(--panel2)}
+  .tag{font-size:10px;padding:1px 7px;border-radius:999px;background:#2a3a48;color:var(--accent)}
+  .empty{color:var(--muted);text-align:center;padding:26px 10px;font-size:13px}
+  .topbar-status{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2)}
+  .live{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--accent2)}
+  .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+  .modal-bg.show{display:flex}
+  .modal{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;max-width:480px;width:100%}
+  .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--line);
+    padding:10px 16px;border-radius:10px;opacity:0;transition:.25s;pointer-events:none;z-index:99}
+  .toast.show{opacity:1}
+  .footnote{font-size:11px;color:var(--muted);margin-top:8px}
+  a{color:var(--accent)}
+  hr{border:none;border-top:1px solid var(--line);margin:14px 0}
+</style>
+</head>
+<body>
+<header>
+  <h1>✈️ 여행 비용 공유 <span class="sub">Travel Split</span></h1>
+  <div class="grow"></div>
+  <div class="topbar-status"><span class="dot"></span><span id="liveStatus">로컬 저장됨</span></div>
+</header>
+
+<div class="wrap">
+  <!-- LEFT COLUMN -->
+  <div style="display:flex;flex-direction:column;gap:18px">
+
+    <!-- TRIP SELECTOR -->
+    <div class="card">
+      <h2>여행 선택</h2>
+      <div class="row">
+        <div style="flex:2">
+          <label>현재 여행</label>
+          <select id="tripSelect"></select>
+        </div>
+        <div style="flex:0 0 auto;display:flex;gap:8px">
+          <button class="primary" id="newTripBtn">+ 새 여행</button>
+          <button class="ghost" id="editTripBtn">설정</button>
+        </div>
+      </div>
+      <div class="chips" id="memberChips"></div>
+    </div>
+
+    <!-- ADD EXPENSE -->
+    <div class="card">
+      <h2>비용 추가</h2>
+
+      <!-- search autofill -->
+      <label>🔎 항목·가격 검색 (선택하면 자동 입력)</label>
+      <input id="searchInput" placeholder="예: 항공권, 호텔, 택시, 라멘, 입장권 ..." autocomplete="off" />
+      <div class="search-results" id="searchResults" style="display:none"></div>
+
+      <hr/>
+
+      <div class="row">
+        <div style="flex:2">
+          <label>내용</label>
+          <input id="descInput" placeholder="예: 오사카 → 교토 신칸센" />
+        </div>
+        <div>
+          <label>분류</label>
+          <select id="catInput">
+            <option>교통</option><option>숙박</option><option>식비</option>
+            <option>관광</option><option>쇼핑</option><option>기타</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <div>
+          <label>금액</label>
+          <input id="amountInput" type="number" min="0" step="0.01" placeholder="0" inputmode="decimal" />
+        </div>
+        <div style="flex:0 0 110px">
+          <label>통화</label>
+          <select id="curInput"></select>
+        </div>
+        <div>
+          <label>결제자</label>
+          <select id="payerInput"></select>
+        </div>
+        <div style="flex:0 0 130px">
+          <label>날짜</label>
+          <input id="dateInput" type="date" />
+        </div>
+      </div>
+
+      <div id="convertHint" class="footnote"></div>
+
+      <label style="margin-top:10px">분담 인원 (체크된 사람끼리 N분의 1)</label>
+      <div class="chips" id="splitChips"></div>
+
+      <div class="toolbar" style="margin-top:14px">
+        <button class="good" id="addBtn">＋ 추가</button>
+        <button class="ghost" id="clearFormBtn">초기화</button>
+      </div>
+    </div>
+
+    <!-- EXPENSE LIST -->
+    <div class="card">
+      <div class="toolbar" style="margin-bottom:10px">
+        <h2 style="margin:0">비용 내역 <span class="pill" id="countPill">0건</span></h2>
+        <div class="grow"></div>
+        <span class="muted" style="font-size:12px">합계</span>
+        <span class="big" id="totalBase" style="font-size:18px"></span>
+      </div>
+      <div style="overflow-x:auto">
+        <table id="expTable">
+          <thead><tr>
+            <th>날짜</th><th>내용</th><th>분류</th><th>결제자</th>
+            <th class="amt">원금액</th><th class="amt">환산</th><th></th>
+          </tr></thead>
+          <tbody id="expBody"></tbody>
+        </table>
+      </div>
+      <div class="empty" id="emptyExp">아직 비용이 없습니다. 위에서 추가하세요.</div>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div style="display:flex;flex-direction:column;gap:18px">
+
+    <!-- SUMMARY -->
+    <div class="card">
+      <h2>정산 요약</h2>
+      <div class="muted" style="font-size:12px">총 지출 (기준통화 <span id="baseCurLabel"></span>)</div>
+      <div class="big" id="grandTotal">0</div>
+      <div class="muted" style="font-size:12px;margin-top:4px">1인 평균 <span id="perHead">0</span></div>
+      <hr/>
+      <h2>인원별 잔액</h2>
+      <div id="balances"></div>
+      <hr/>
+      <h2>송금 정산 (누가 누구에게)</h2>
+      <div id="settlement"></div>
+    </div>
+
+    <!-- SHARE / SYNC -->
+    <div class="card">
+      <h2>공유 · 동기화</h2>
+      <p class="muted" style="font-size:12.5px;margin-top:0">
+        같은 브라우저의 여러 탭은 <span class="live">●&nbsp;실시간</span> 동시 편집됩니다.
+        다른 사람과는 아래 링크/파일로 공유하세요.
+      </p>
+      <div class="toolbar">
+        <button class="primary" id="shareLinkBtn">🔗 공유 링크 복사</button>
+        <button id="exportBtn">⬇ JSON 내보내기</button>
+        <button id="importBtn">⬆ 가져오기</button>
+        <input type="file" id="importFile" accept="application/json" hidden />
+      </div>
+      <p class="footnote">
+        공유 링크에는 이 여행 데이터가 통째로 담깁니다. 받은 사람이 열면 자기 기기에 복사됩니다(읽고 → 수정 → 다시 링크로 공유).
+      </p>
+      <hr/>
+      <div class="toolbar">
+        <button class="danger sm" id="deleteTripBtn">현재 여행 삭제</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>환율</h2>
+      <div id="rateInfo" class="muted" style="font-size:12.5px">불러오는 중…</div>
+      <button class="ghost sm" id="refreshRateBtn" style="margin-top:8px">환율 새로고침</button>
+      <p class="footnote">open.er-api.com 무료 환율 사용. 오프라인이면 마지막 캐시 또는 1:1로 처리합니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TRIP SETTINGS MODAL -->
+<div class="modal-bg" id="tripModal">
+  <div class="modal">
+    <h2 id="tripModalTitle">여행 설정</h2>
+    <label>여행 이름</label>
+    <input id="tripName" placeholder="예: 2026 오사카 여행" />
+    <label style="margin-top:10px">기준 통화 (정산 환산 기준)</label>
+    <select id="tripBaseCur"></select>
+    <label style="margin-top:10px">참여자 (쉼표로 구분)</label>
+    <input id="tripMembers" placeholder="정호, 민지, 수아" />
+    <div class="toolbar" style="margin-top:16px;justify-content:flex-end">
+      <button class="ghost" id="tripCancel">취소</button>
+      <button class="primary" id="tripSave">저장</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+/* ============================================================
+   여행 비용 공유 — 단일 파일 앱 (localStorage)
+   - 다중 여행 / 다중 참여자 / N분의 1 분담
+   - 통화 환율 자동 환산 (open.er-api.com)
+   - 항목·가격 검색 자동 입력 + 수동 입력
+   - 탭 간 실시간 동기화 (BroadcastChannel + storage 이벤트)
+   - 공유 링크(데이터 인코딩) / JSON 내보내기·가져오기
+   ============================================================ */
+
+const LS_KEY = "travelSplit.v1";
+const RATE_KEY = "travelSplit.rates.v1";
+const CURRENCIES = ["KRW","USD","JPY","EUR","CNY","THB","VND","GBP","AUD","HKD","SGD","TWD","PHP","IDR"];
+
+/* ---------- 검색 자동입력용 항목 카탈로그 (대략 시세) ---------- */
+const CATALOG = [
+  // 교통
+  {q:"항공권 국제선",  cat:"교통", price:450000, cur:"KRW"},
+  {q:"항공권 국내선",  cat:"교통", price:90000,  cur:"KRW"},
+  {q:"공항 리무진",    cat:"교통", price:18000,  cur:"KRW"},
+  {q:"신칸센",         cat:"교통", price:6000,   cur:"JPY"},
+  {q:"지하철 1회권",   cat:"교통", price:240,    cur:"JPY"},
+  {q:"택시 기본요금",  cat:"교통", price:500,    cur:"JPY"},
+  {q:"렌터카 1일",     cat:"교통", price:8000,   cur:"JPY"},
+  // 숙박
+  {q:"호텔 1박",       cat:"숙박", price:120,    cur:"USD"},
+  {q:"게스트하우스 1박",cat:"숙박", price:40,    cur:"USD"},
+  {q:"에어비앤비 1박", cat:"숙박", price:90,     cur:"USD"},
+  // 식비
+  {q:"라멘",           cat:"식비", price:1000,   cur:"JPY"},
+  {q:"스시 오마카세",  cat:"식비", price:12000,  cur:"JPY"},
+  {q:"카페/커피",      cat:"식비", price:550,    cur:"JPY"},
+  {q:"편의점 식사",    cat:"식비", price:700,    cur:"JPY"},
+  {q:"디너 코스",      cat:"식비", price:60,     cur:"USD"},
+  // 관광
+  {q:"테마파크 입장권",cat:"관광", price:8400,   cur:"JPY"},
+  {q:"박물관 입장권",  cat:"관광", price:1800,   cur:"JPY"},
+  {q:"투어/액티비티",  cat:"관광", price:50,     cur:"USD"},
+  // 쇼핑
+  {q:"기념품",         cat:"쇼핑", price:2000,   cur:"JPY"},
+  {q:"화장품/드럭스토어",cat:"쇼핑",price:3000,  cur:"JPY"},
+];
+
+/* ---------- 상태 ---------- */
+let state = load();
+let currentTripId = state.currentTripId || (state.trips[0] && state.trips[0].id);
+let rates = loadRates();        // { base:"USD", at: ts, rates:{...} }  (base->cur)
+let editMode = null;            // "new" | "edit"
+let splitSel = new Set();       // 추가폼 분담 인원
+
+const channel = ("BroadcastChannel" in window) ? new BroadcastChannel("travelSplit") : null;
+
+/* ============================================================
+   저장 / 로드 / 동기화
+   ============================================================ */
+function blankState(){
+  const tid = uid();
+  return {
+    currentTripId: tid,
+    trips: [{
+      id: tid, name:"내 여행", baseCur:"KRW",
+      members:["나"], expenses:[]
+    }]
+  };
+}
+function load(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if(raw){ const s = JSON.parse(raw); if(s && s.trips && s.trips.length) return s; }
+  }catch(e){}
+  // 공유 링크로 들어온 경우
+  const fromUrl = readShareFromUrl();
+  if(fromUrl) return fromUrl;
+  return blankState();
+}
+function persist(broadcast=true){
+  state.currentTripId = currentTripId;
+  localStorage.setItem(LS_KEY, JSON.stringify(state));
+  setLive("로컬 저장됨");
+  if(broadcast && channel) channel.postMessage({type:"sync", ts:Date.now()});
+}
+function reloadFromStorage(){
+  try{
+    const s = JSON.parse(localStorage.getItem(LS_KEY));
+    if(s && s.trips){ state = s; if(!getTrip()) currentTripId = s.trips[0].id; renderAll(); setLive("동기화됨 ✓"); }
+  }catch(e){}
+}
+if(channel) channel.onmessage = (e)=>{ if(e.data && e.data.type==="sync") reloadFromStorage(); };
+window.addEventListener("storage", (e)=>{ if(e.key===LS_KEY) reloadFromStorage(); });
+
+/* ============================================================
+   환율
+   ============================================================ */
+function loadRates(){ try{ return JSON.parse(localStorage.getItem(RATE_KEY)) || null; }catch(e){ return null; } }
+async function ensureRates(base){
+  const fresh = rates && rates.base===base && (Date.now()-rates.at) < 6*3600*1000;
+  if(fresh){ renderRateInfo(); return; }
+  try{
+    const r = await fetch("https://open.er-api.com/v6/latest/"+base);
+    const j = await r.json();
+    if(j && j.rates){
+      rates = { base, at:Date.now(), rates:j.rates };
+      localStorage.setItem(RATE_KEY, JSON.stringify(rates));
+    }
+  }catch(e){ /* 오프라인: 기존 캐시 유지 */ }
+  renderRateInfo();
+  renderAll();
+}
+// amount(cur) -> base
+function toBase(amount, cur, base){
+  if(cur===base) return amount;
+  if(rates && rates.base===base && rates.rates[cur]) return amount / rates.rates[cur];
+  // 역방향 캐시(base가 다름)라도 시도
+  if(rates && rates.rates[cur] && rates.rates[base]){
+    // rates are base0->x ; convert: amount in cur -> base0 -> base
+    const inBase0 = amount / rates.rates[cur];
+    return inBase0 * rates.rates[base];
+  }
+  return amount; // 폴백 1:1
+}
+function renderRateInfo(){
+  const t = getTrip();
+  const el = document.getElementById("rateInfo");
+  if(!rates){ el.textContent = "환율 정보 없음 (1:1 처리)"; return; }
+  const when = new Date(rates.at).toLocaleString("ko-KR");
+  el.innerHTML = `기준 <b>${rates.base}</b> · ${when}<br>` +
+    ["USD","JPY","EUR","CNY"].filter(c=>rates.rates[c]).map(c=>`1 ${rates.base} = ${fmt(rates.rates[c])} ${c}`).join(" · ");
+}
+
+/* ============================================================
+   헬퍼
+   ============================================================ */
+function uid(){ return Math.random().toString(36).slice(2,9); }
+function getTrip(){ return state.trips.find(t=>t.id===currentTripId); }
+function fmt(n){ if(n==null||isNaN(n)) return "0"; return Number(n).toLocaleString("ko-KR",{maximumFractionDigits:2}); }
+function money(n, cur){ return fmt(Math.round(n)) + " " + cur; }
+function todayStr(){ return new Date().toISOString().slice(0,10); }
+function toast(msg){ const t=document.getElementById("toast"); t.textContent=msg; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),1800); }
+function setLive(msg){ document.getElementById("liveStatus").textContent = msg; }
+
+/* ============================================================
+   렌더
+   ============================================================ */
+function renderAll(){
+  renderTripSelect();
+  renderMemberChips();
+  renderFormSelectors();
+  renderExpenses();
+  renderSummary();
+  renderRateInfo();
+}
+
+function renderTripSelect(){
+  const sel = document.getElementById("tripSelect");
+  sel.innerHTML = state.trips.map(t=>`<option value="${t.id}">${escapeHtml(t.name)} (${t.baseCur})</option>`).join("");
+  sel.value = currentTripId;
+}
+function renderMemberChips(){
+  const t = getTrip();
+  document.getElementById("memberChips").innerHTML =
+    t.members.map(m=>`<span class="pill">👤 ${escapeHtml(m)}</span>`).join("") || `<span class="muted">참여자 없음 — 설정에서 추가</span>`;
+}
+function renderFormSelectors(){
+  const t = getTrip();
+  // currency selects
+  const curOpts = CURRENCIES.map(c=>`<option ${c===t.baseCur?"selected":""}>${c}</option>`).join("");
+  const curEl = document.getElementById("curInput");
+  if(curEl.dataset.touched!=="1"){ curEl.innerHTML = curOpts; }
+  else { curEl.innerHTML = CURRENCIES.map(c=>`<option ${c===curEl.value?"selected":""}>${c}</option>`).join(""); }
+  // payer
+  const payer = document.getElementById("payerInput");
+  const prev = payer.value;
+  payer.innerHTML = t.members.map(m=>`<option>${escapeHtml(m)}</option>`).join("");
+  if(t.members.includes(prev)) payer.value = prev;
+  // split chips (default: all)
+  if(splitSel.size===0) t.members.forEach(m=>splitSel.add(m));
+  // remove non-members
+  [...splitSel].forEach(m=>{ if(!t.members.includes(m)) splitSel.delete(m); });
+  renderSplitChips();
+  // date default
+  const d = document.getElementById("dateInput");
+  if(!d.value) d.value = todayStr();
+  updateConvertHint();
+}
+function renderSplitChips(){
+  const t = getTrip();
+  document.getElementById("splitChips").innerHTML = t.members.map(m=>
+    `<span class="chip ${splitSel.has(m)?"on":""}" data-m="${escapeHtml(m)}">${escapeHtml(m)}</span>`).join("")
+    || `<span class="muted">참여자를 먼저 추가하세요</span>`;
+  document.querySelectorAll("#splitChips .chip").forEach(c=>{
+    c.onclick = ()=>{ const m=c.dataset.m; splitSel.has(m)?splitSel.delete(m):splitSel.add(m); renderSplitChips(); };
+  });
+}
+function renderExpenses(){
+  const t = getTrip();
+  const body = document.getElementById("expBody");
+  const empty = document.getElementById("emptyExp");
+  const list = [...t.expenses].sort((a,b)=> (b.date||"").localeCompare(a.date||"") || b.ts-a.ts);
+  document.getElementById("countPill").textContent = list.length+"건";
+  if(!list.length){ body.innerHTML=""; empty.style.display="block"; }
+  else{
+    empty.style.display="none";
+    body.innerHTML = list.map(e=>{
+      const base = toBase(e.amount, e.cur, t.baseCur);
+      const who = (e.split && e.split.length) ? e.split.join(", ") : "전원";
+      return `<tr>
+        <td class="muted">${e.date||""}</td>
+        <td>${escapeHtml(e.desc||"")}<div class="muted" style="font-size:11px">분담: ${escapeHtml(who)}</div></td>
+        <td><span class="pill">${escapeHtml(e.cat||"")}</span></td>
+        <td>${escapeHtml(e.payer||"")}</td>
+        <td class="amt">${money(e.amount,e.cur)}</td>
+        <td class="amt">${money(base,t.baseCur)}</td>
+        <td class="amt"><button class="danger sm" data-del="${e.id}">✕</button></td>
+      </tr>`;
+    }).join("");
+    body.querySelectorAll("[data-del]").forEach(b=> b.onclick=()=>delExpense(b.dataset.del));
+  }
+  const total = t.expenses.reduce((s,e)=>s+toBase(e.amount,e.cur,t.baseCur),0);
+  document.getElementById("totalBase").textContent = money(total,t.baseCur);
+}
+function renderSummary(){
+  const t = getTrip();
+  document.getElementById("baseCurLabel").textContent = t.baseCur;
+  const total = t.expenses.reduce((s,e)=>s+toBase(e.amount,e.cur,t.baseCur),0);
+  document.getElementById("grandTotal").textContent = money(total,t.baseCur);
+  document.getElementById("perHead").textContent = t.members.length ? money(total/t.members.length,t.baseCur) : "0";
+
+  // 잔액 계산: 낸 돈 - 내 몫
+  const paid={}, owe={};
+  t.members.forEach(m=>{paid[m]=0;owe[m]=0;});
+  t.expenses.forEach(e=>{
+    const base = toBase(e.amount,e.cur,t.baseCur);
+    if(paid[e.payer]!=null) paid[e.payer]+=base;
+    const sp = (e.split && e.split.length)? e.split.filter(m=>t.members.includes(m)) : t.members;
+    const share = sp.length? base/sp.length : 0;
+    sp.forEach(m=>{ if(owe[m]!=null) owe[m]+=share; });
+  });
+  const bal={}; t.members.forEach(m=> bal[m]=paid[m]-owe[m]);
+  document.getElementById("balances").innerHTML = t.members.map(m=>{
+    const v=bal[m]; const cls=v>=0?"pos":"neg"; const sign=v>=0?"+":"";
+    return `<div class="balance"><span>👤 ${escapeHtml(m)}</span><span class="${cls}">${sign}${money(v,t.baseCur)}</span></div>`;
+  }).join("") || `<div class="muted">참여자 없음</div>`;
+
+  // 송금 정산 (greedy)
+  document.getElementById("settlement").innerHTML = settle(bal,t.baseCur) || `<div class="muted">정산할 내역이 없습니다.</div>`;
+}
+function settle(bal, cur){
+  const creditors=[], debtors=[];
+  Object.entries(bal).forEach(([m,v])=>{ if(v>0.5)creditors.push({m,v}); else if(v<-0.5)debtors.push({m,v:-v}); });
+  creditors.sort((a,b)=>b.v-a.v); debtors.sort((a,b)=>b.v-a.v);
+  const lines=[]; let i=0,j=0;
+  while(i<debtors.length && j<creditors.length){
+    const pay=Math.min(debtors[i].v,creditors[j].v);
+    lines.push(`<div class="settle">💸 <b>${escapeHtml(debtors[i].m)}</b> → <b>${escapeHtml(creditors[j].m)}</b> : ${money(pay,cur)}</div>`);
+    debtors[i].v-=pay; creditors[j].v-=pay;
+    if(debtors[i].v<0.5)i++; if(creditors[j].v<0.5)j++;
+  }
+  return lines.join("");
+}
+
+/* ============================================================
+   비용 추가 / 삭제
+   ============================================================ */
+function addExpense(){
+  const t=getTrip();
+  if(!t.members.length){ toast("먼저 참여자를 추가하세요"); openTripModal("edit"); return; }
+  const amount = parseFloat(document.getElementById("amountInput").value);
+  const desc = document.getElementById("descInput").value.trim();
+  if(!amount || amount<=0){ toast("금액을 입력하세요"); return; }
+  if(!desc){ toast("내용을 입력하세요"); return; }
+  const e = {
+    id: uid(), ts: Date.now(),
+    desc, cat: document.getElementById("catInput").value,
+    amount, cur: document.getElementById("curInput").value,
+    payer: document.getElementById("payerInput").value,
+    date: document.getElementById("dateInput").value || todayStr(),
+    split: [...splitSel]
+  };
+  t.expenses.push(e);
+  persist();
+  clearForm(false);
+  renderAll();
+  toast("추가됨 ✓");
+}
+function delExpense(id){
+  const t=getTrip();
+  t.expenses = t.expenses.filter(e=>e.id!==id);
+  persist(); renderAll(); toast("삭제됨");
+}
+function clearForm(resetSplit=true){
+  document.getElementById("amountInput").value="";
+  document.getElementById("descInput").value="";
+  document.getElementById("searchInput").value="";
+  document.getElementById("searchResults").style.display="none";
+  if(resetSplit){ splitSel.clear(); renderFormSelectors(); }
+  updateConvertHint();
+}
+function updateConvertHint(){
+  const t=getTrip();
+  const amt=parseFloat(document.getElementById("amountInput").value);
+  const cur=document.getElementById("curInput").value;
+  const el=document.getElementById("convertHint");
+  if(!amt || cur===t.baseCur){ el.textContent=""; return; }
+  el.textContent = `≈ ${money(toBase(amt,cur,t.baseCur),t.baseCur)} (기준통화 환산)`;
+}
+
+/* ============================================================
+   검색 자동입력
+   ============================================================ */
+function runSearch(q){
+  const box=document.getElementById("searchResults");
+  q=q.trim().toLowerCase();
+  if(!q){ box.style.display="none"; return; }
+  const hits = CATALOG.filter(it=> it.q.toLowerCase().includes(q) || it.cat.includes(q)).slice(0,8);
+  if(!hits.length){
+    box.innerHTML = `<div class="sr-item muted">검색 결과 없음 — 아래에 직접 입력하세요</div>`;
+    box.style.display="block"; return;
+  }
+  box.innerHTML = hits.map((it,idx)=>
+    `<div class="sr-item" data-idx="${CATALOG.indexOf(it)}">
+       <span>${escapeHtml(it.q)} <span class="tag">${escapeHtml(it.cat)}</span></span>
+       <span class="muted">${fmt(it.price)} ${it.cur}</span>
+     </div>`).join("");
+  box.style.display="block";
+  box.querySelectorAll(".sr-item[data-idx]").forEach(el=>{
+    el.onclick=()=>applyCatalog(CATALOG[+el.dataset.idx]);
+  });
+}
+function applyCatalog(it){
+  document.getElementById("descInput").value = it.q;
+  document.getElementById("catInput").value = it.cat;
+  document.getElementById("amountInput").value = it.price;
+  const curEl=document.getElementById("curInput");
+  curEl.value=it.cur; curEl.dataset.touched="1";
+  document.getElementById("searchResults").style.display="none";
+  document.getElementById("searchInput").value="";
+  updateConvertHint();
+  toast("자동 입력됨 — 금액 수정 가능");
+}
+
+/* ============================================================
+   여행 관리
+   ============================================================ */
+function openTripModal(mode){
+  editMode=mode;
+  const t=getTrip();
+  document.getElementById("tripModalTitle").textContent = mode==="new"?"새 여행":"여행 설정";
+  document.getElementById("tripBaseCur").innerHTML = CURRENCIES.map(c=>`<option>${c}</option>`).join("");
+  if(mode==="new"){
+    document.getElementById("tripName").value="";
+    document.getElementById("tripBaseCur").value="KRW";
+    document.getElementById("tripMembers").value="";
+  }else{
+    document.getElementById("tripName").value=t.name;
+    document.getElementById("tripBaseCur").value=t.baseCur;
+    document.getElementById("tripMembers").value=t.members.join(", ");
+  }
+  document.getElementById("tripModal").classList.add("show");
+}
+function saveTrip(){
+  const name=document.getElementById("tripName").value.trim()||"내 여행";
+  const baseCur=document.getElementById("tripBaseCur").value;
+  const members=document.getElementById("tripMembers").value.split(",").map(s=>s.trim()).filter(Boolean);
+  if(!members.length){ toast("참여자를 1명 이상 입력하세요"); return; }
+  if(editMode==="new"){
+    const id=uid();
+    state.trips.push({id,name,baseCur,members,expenses:[]});
+    currentTripId=id;
+  }else{
+    const t=getTrip(); t.name=name; t.baseCur=baseCur; t.members=members;
+  }
+  document.getElementById("tripModal").classList.remove("show");
+  splitSel.clear();
+  persist();
+  ensureRates(baseCur);
+  renderAll();
+  toast("저장됨 ✓");
+}
+function deleteTrip(){
+  if(state.trips.length<=1){ toast("최소 1개의 여행은 필요합니다"); return; }
+  if(!confirm("현재 여행을 삭제할까요? 되돌릴 수 없습니다.")) return;
+  state.trips=state.trips.filter(t=>t.id!==currentTripId);
+  currentTripId=state.trips[0].id;
+  persist(); renderAll(); ensureRates(getTrip().baseCur); toast("삭제됨");
+}
+
+/* ============================================================
+   공유 (링크 / JSON)
+   ============================================================ */
+function encodeTrip(trip){
+  const json=JSON.stringify(trip);
+  return encodeURIComponent(btoa(unescape(encodeURIComponent(json))));
+}
+function decodeTrip(s){
+  try{ return JSON.parse(decodeURIComponent(escape(atob(decodeURIComponent(s))))); }catch(e){ return null; }
+}
+function readShareFromUrl(){
+  const m=location.hash.match(/[#&]trip=([^&]+)/);
+  if(!m) return null;
+  const trip=decodeTrip(m[1]);
+  if(trip && trip.members){
+    trip.id=uid(); // 로컬에 새 사본으로
+    return { currentTripId:trip.id, trips:[trip] };
+  }
+  return null;
+}
+function shareLink(){
+  const t=getTrip();
+  const url=location.origin+location.pathname+"#trip="+encodeTrip(t);
+  navigator.clipboard.writeText(url).then(
+    ()=>toast("공유 링크 복사됨 ✓ ("+(url.length)+"자)"),
+    ()=>{ prompt("아래 링크를 복사하세요:", url); }
+  );
+}
+function exportJson(){
+  const t=getTrip();
+  const blob=new Blob([JSON.stringify(t,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download=(t.name||"trip").replace(/[^\w가-힣]+/g,"_")+".json";
+  a.click(); URL.revokeObjectURL(a.href);
+  toast("내보냄 ✓");
+}
+function importJson(file){
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      const trip=JSON.parse(r.result);
+      if(!trip.members) throw 0;
+      trip.id=uid();
+      if(!trip.expenses) trip.expenses=[];
+      state.trips.push(trip); currentTripId=trip.id;
+      persist(); ensureRates(trip.baseCur); renderAll(); toast("가져옴 ✓");
+    }catch(e){ toast("잘못된 파일입니다"); }
+  };
+  r.readAsText(file);
+}
+
+/* ============================================================
+   유틸
+   ============================================================ */
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+/* ============================================================
+   이벤트 바인딩
+   ============================================================ */
+document.getElementById("tripSelect").onchange=e=>{ currentTripId=e.target.value; splitSel.clear(); persist(); ensureRates(getTrip().baseCur); renderAll(); };
+document.getElementById("newTripBtn").onclick=()=>openTripModal("new");
+document.getElementById("editTripBtn").onclick=()=>openTripModal("edit");
+document.getElementById("tripCancel").onclick=()=>document.getElementById("tripModal").classList.remove("show");
+document.getElementById("tripSave").onclick=saveTrip;
+document.getElementById("deleteTripBtn").onclick=deleteTrip;
+
+document.getElementById("addBtn").onclick=addExpense;
+document.getElementById("clearFormBtn").onclick=()=>clearForm(true);
+document.getElementById("amountInput").oninput=updateConvertHint;
+document.getElementById("curInput").onchange=()=>{ document.getElementById("curInput").dataset.touched="1"; updateConvertHint(); };
+
+const si=document.getElementById("searchInput");
+si.oninput=()=>runSearch(si.value);
+si.onkeydown=e=>{ if(e.key==="Enter"){ const f=document.querySelector("#searchResults .sr-item[data-idx]"); if(f)f.click(); } };
+document.addEventListener("click",e=>{ if(!e.target.closest("#searchResults") && e.target!==si) document.getElementById("searchResults").style.display="none"; });
+
+document.getElementById("shareLinkBtn").onclick=shareLink;
+document.getElementById("exportBtn").onclick=exportJson;
+document.getElementById("importBtn").onclick=()=>document.getElementById("importFile").click();
+document.getElementById("importFile").onchange=e=>{ if(e.target.files[0]) importJson(e.target.files[0]); e.target.value=""; };
+document.getElementById("refreshRateBtn").onclick=()=>{ rates=null; ensureRates(getTrip().baseCur); toast("환율 새로고침"); };
+
+/* ============================================================
+   시작
+   ============================================================ */
+(function init(){
+  // 공유 링크로 진입 시 사본 저장 후 해시 정리
+  if(location.hash.includes("trip=")){
+    const fromUrl=readShareFromUrl();
+    if(fromUrl){ state=fromUrl; currentTripId=fromUrl.currentTripId; history.replaceState(null,"",location.pathname); persist(false); toast("공유된 여행을 불러왔습니다"); }
+  }
+  if(!getTrip()) currentTripId=state.trips[0].id;
+  renderAll();
+  ensureRates(getTrip().baseCur);
+})();
+</script>
+</body>
+</html>
